@@ -150,6 +150,6 @@ entity SpaceItineraries : flight.Itineraries {
 
 // Extend the Bookings entity in the base model with SpaceItineraries 
 extend flight.Bookings with {
-    SpaceItinerary : Association to SpaceItineraries;
+  SpaceItinerary : Association to SpaceItineraries;
 }
 

@@ -1,18 +1,18 @@
 _schema-version: "2.0.0"
-ID: flightjourney
+ID: spacetravel
 version: 1.0.0
 
 modules:
- - name: flightjourney-db
+ - name: spacetravel-db
    type: hdb
    path: db
    parameters:
      memory: 256M
      disk-quota: 256M
    requires:
-     - name: flightjourney-hdi2
+     - name: spacetravel-hdi2
 
- - name: flightjourney-srv
+ - name: spacetravel-srv
    type: java
    path: srv
    parameters:
@@ -22,7 +22,7 @@ modules:
       properties:
          url: ${default-url}
    requires:
-    - name: flightjourney-hdi2
+    - name: spacetravel-hdi2
       properties:
          JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
             {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
@@ -43,15 +43,15 @@ modules:
          strictSSL: false
          name: srv_api
          url: ~{url}
-    - name: uaa_flightjourney
+    - name: uaa_spacetravel
 
 resources:
- - name: flightjourney-hdi2
+ - name: spacetravel-hdi2
    properties:
      hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
 
- - name: uaa_flightjourney
+ - name: uaa_spacetravel
    parameters:
       path: ./xs-security.json
       service-plan: application

@@ -43,7 +43,7 @@ entity Airlines : Named {
 // This entity is so named in order to distinguish routes travelled on earth from routes travelled in space
 //
 // Only direct flights are stored in this entity.  If a journey cannot be made using a direct flight, then the ID of
-// each EarthRoute entry will be used to define the legs (or stages) or the journey as stored in EarthItineraries
+// each EarthRoute entry will be used to define the legs (or stages) of the journey as stored in EarthItineraries
 // ---------------------------------------------------------------------------------------------------------------------
 entity EarthRoutes       : Named {
   key ID                 : Integer;

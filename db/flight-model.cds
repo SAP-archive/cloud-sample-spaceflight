@@ -5,10 +5,8 @@
 // *********************************************************************************************************************
 namespace teched.flight.trip;
 
-using {
-  common.Named
-, common.Managed
-} from './common';
+using common.Named   from './common';
+using common.Managed from './common';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Airports

@@ -1,9 +1,9 @@
 namespace common;
 
 abstract entity Managed {
-    key ID        : UUID;
+  key ID : UUID;
 }
 
 abstract entity Named {
-    Name      : String(100);
+  Name   : String(100);
 }

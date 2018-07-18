@@ -5,7 +5,6 @@
 // *********************************************************************************************************************
 namespace teched.flight.trip;
 
-using common.Named   from './common';
 using common.Managed from './common';
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -14,8 +13,9 @@ using common.Managed from './common';
 // Each airport is stored using its the 3-character IATA code as the key
 // E.G. "LHR" = London, Heathrow; "JFK" = New York, John F. Kennedy, etc
 // ---------------------------------------------------------------------------------------------------------------------
-entity Airports  : Named {
+entity Airports {
   key IATA3      : String(3);
+      Name       : String(100) @title: "Airport";
       City       : String(30);
       Country    : String(50);
       Altitude   : Integer        default 0 ;
@@ -31,8 +31,9 @@ entity Airports  : Named {
 // Each airline company is stored using its 2-character IATA code as the key
 // E.G. "BA" = British Airways, "LH" = Lufthansa, etc
 // ---------------------------------------------------------------------------------------------------------------------
-entity Airlines : Named {
+entity Airlines {
   key IATA2     : String(2);
+      Name      : String(100) @title: "Airline";
       Country   : String(50) ;
       Routes    : Association to many EarthRoutes on Routes.Airline=$self;
 };
@@ -45,8 +46,9 @@ entity Airlines : Named {
 // Only direct flights are stored in this entity.  If a journey cannot be made using a direct flight, then the ID of
 // each EarthRoute entry will be used to define the legs (or stages) of the journey as stored in EarthItineraries
 // ---------------------------------------------------------------------------------------------------------------------
-entity EarthRoutes       : Named {
+entity EarthRoutes {
   key ID                 : Integer;
+      Name               : String(100) @title: "Earth Route";
       Airline            : Association to Airlines;
       StartingAirport    : Association to Airports;
       DestinationAirport : Association to Airports;
@@ -56,11 +58,11 @@ entity EarthRoutes       : Named {
 // ---------------------------------------------------------------------------------------------------------------------
 // Itineraries
 //
-// The properties common to EarthRoutes and SpaceRoutes are combined into this abstract entity, which in turn, uses the
-// abstract entity "Named"
+// The properties common to EarthRoutes and SpaceRoutes are combined into this abstract entity
 // ---------------------------------------------------------------------------------------------------------------------
-abstract entity Itineraries : Named {
-  key ID : Integer;
+abstract entity Itineraries {
+  key ID   : Integer;
+      Name : String(100);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -78,6 +80,7 @@ abstract entity Itineraries : Named {
 //   }
 // ---------------------------------------------------------------------------------------------------------------------
 entity EarthItineraries : Itineraries {
+  Name      : String(100) @title: "Earth Itinerary";
   EarthLegs : {
     leg1  : Association to EarthRoutes;
     leg2  : Association to EarthRoutes;
@@ -103,12 +106,12 @@ entity EarthItineraries : Itineraries {
 // exercises that first use this data model, this field will be left blank.
 // ---------------------------------------------------------------------------------------------------------------------
 entity Bookings : Managed {
-  BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
-  EarthItinerary     : Association to EarthItineraries;
-  CustomerName       : String(50)     not null;
-  EmailAddress       : String(50)     not null;
-  DateOfBooking      : DateTime       not null;
-  DateOfTravel       : DateTime       not null;
-  Cost               : Decimal(10, 2) not null;
-  NumberOfPassengers : Integer        default 1;
+      BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
+      EarthItinerary     : Association to EarthItineraries;
+      CustomerName       : String(50)     not null;
+      EmailAddress       : String(50)     not null;
+      DateOfBooking      : DateTime       not null;
+      DateOfTravel       : DateTime       not null;
+      Cost               : Decimal(10, 2) not null;
+      NumberOfPassengers : Integer        default 1;
 };

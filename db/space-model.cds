@@ -5,9 +5,8 @@
 // *********************************************************************************************************************
 namespace teched.space.trip;
 
-// Reference the base data model and any abstract types 
+// Reference the base data model and any abstract types
 using teched.flight.trip as flight from './flight-model';
-using common.Named                 from './common';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // AstronomicalBodies
@@ -17,8 +16,9 @@ using common.Named                 from './common';
 // SolarDistance is measured in astronomical units (AUs) where the distance from the Earth to the Sun = 1.0
 // SurfaceGravity is that fraction of Earth's gravity experienced on the surface of this body
 // ---------------------------------------------------------------------------------------------------------------------
-entity AstronomicalBodies : Named {
+entity AstronomicalBodies {
   key ID             : Integer;
+      Name           : String(100) @title: "Earth Itinerary";
       SolarDistance  : Decimal(10, 8);
       SurfaceGravity : Decimal(10, 6);
       Arrivals       : Association to many SpaceRoutes on Arrivals.DestinationPlanet=$self;
@@ -37,8 +37,9 @@ entity AstronomicalBodies : Named {
 // located.  3, non-terrestrial Spaceports have been added; 1 on the Moon at Tranquility Base (the Apollo 11 landing
 // site) and 2 on Mars (two proposed sites for the Mars 2020 mission)
 // ---------------------------------------------------------------------------------------------------------------------
-entity Spaceports : Named {
+entity Spaceports {
   key ID         : Integer;
+      Name       : String(100) @title: "Spaceport";
       OnPlanet   : Association to AstronomicalBodies;
       Latitude   : Decimal(12, 9) ;
       Longitude  : Decimal(12, 9) ;
@@ -56,8 +57,9 @@ entity Spaceports : Named {
 //
 // A space flight company can operate from up to three different spaceports
 // ---------------------------------------------------------------------------------------------------------------------
-entity SpaceFlightCompanies : Named {
+entity SpaceFlightCompanies {
   key ID            : Integer;
+      Name          : String(100) @title: "Space flight company";
       OperatesFrom1 : Association to Spaceports;
       OperatesFrom2 : Association to Spaceports;
       OperatesFrom3 : Association to Spaceports;
@@ -114,8 +116,9 @@ entity SpaceFlightCompanies : Named {
 // Therefore, it is valid for the fields StartingSpaceport and DestinationSpaceport to remain null; however, the fields
 // StartingPlanet and DestinationPlanet will always be populated.
 // ---------------------------------------------------------------------------------------------------------------------
-entity SpaceRoutes : Named {
+entity SpaceRoutes {
   key ID                       : Integer;
+      Name                     : String(100) @title: "Space Route";
       StartingPlanet           : Association to AstronomicalBodies;
       DestinationPlanet        : Association to AstronomicalBodies;
       StartingSpaceport        : Association to Spaceports;
@@ -135,6 +138,7 @@ entity SpaceRoutes : Named {
 // The ID and Name fields for this entity come from the datatype flight.Itineraries
 // ---------------------------------------------------------------------------------------------------------------------
 entity SpaceItineraries : flight.Itineraries {
+  Name      : String(100) @title: "Space Itinerary";
   SpaceLegs : {
     leg1  : Association to SpaceRoutes;
     leg2  : Association to SpaceRoutes;
@@ -148,7 +152,7 @@ entity SpaceItineraries : flight.Itineraries {
   };
 };
 
-// Extend the Bookings entity in the base model with SpaceItineraries 
+// Extend the Bookings entity in the base model with SpaceItineraries
 extend flight.Bookings with {
   SpaceItinerary : Association to SpaceItineraries;
 }

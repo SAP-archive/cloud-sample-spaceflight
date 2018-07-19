@@ -12,48 +12,8 @@ modules:
    requires:
      - name: spacetravel-hdi2
 
- - name: spacetravel-srv
-   type: java
-   path: srv
-   parameters:
-      memory: 768M
-   provides:
-    - name: srv_api
-      properties:
-         url: ${default-url}
-   requires:
-    - name: spacetravel-hdi2
-      properties:
-         JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
-            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
-
- - name: app
-   type: html5
-   path: app
-   parameters:
-      disk-quota: 256M
-      memory: 256M
-   build-parameters:
-      builder: grunt
-   requires:
-    - name: srv_api
-      group: destinations
-      properties:
-         forwardAuthToken: true
-         strictSSL: false
-         name: srv_api
-         url: ~{url}
-    - name: uaa_spacetravel
-
 resources:
  - name: spacetravel-hdi2
    properties:
      hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
-
- - name: uaa_spacetravel
-   parameters:
-      path: ./xs-security.json
-      service-plan: application
-   type: com.sap.xs.uaa
-

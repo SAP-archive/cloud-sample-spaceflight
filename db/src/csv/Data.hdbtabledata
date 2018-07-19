@@ -16,8 +16,8 @@
 	{
 		"target_table": "TECHED_FLIGHT_TRIP_EARTHROUTES",
 		"source_data" : { "data_type" : "CSV", "file_name" : "earthroutes.csv", "has_header" : true },
-		"import_settings" : { "import_columns" : [ "ID", "IATA2", "STARTINGAIRPORT_IATA", "DESTINATIONAIRPORT_IATA", "EQUIPMENT"] },
-		"column_mappings" : { "ID":1, "IATA2":2, "STARTINGAIRPORT_IATA":3, "DESTINATIONAIRPORT_IATA":4, "EQUIPMENT":5 }
+		"import_settings" : { "import_columns" : [ "ID", "AIRLINE_IATA2", "STARTINGAIRPORT_IATA3", "DESTINATIONAIRPORT_IATA3", "EQUIPMENT"] },
+		"column_mappings" : { "ID":1, "AIRLINE_IATA2":2, "STARTINGAIRPORT_IATA3":3, "DESTINATIONAIRPORT_IATA3":4, "EQUIPMENT":5 }
 	},
 	{
 		"target_table": "TECHED_SPACE_TRIP_SPACEPORTS",

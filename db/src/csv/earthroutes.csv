@@ -1,4 +1,4 @@
-﻿ID,IATA2,StartingAirport,DestinationAirport,Equipment
+ID,Airline_IATA2,StartingAirport_IATA3,DestinationAirport_IATA3,Equipment
 1,2B,AER,KZN,CR2
 2,2B,ASF,KZN,CR2
 3,2B,ASF,MRV,CR2

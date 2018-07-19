@@ -11,6 +11,6 @@ By default, the CDS compiler will assume that the following directory names are 
 ### The `index.cds` file
 The CDS compiler will then look in each of the above directories for an `index.cds` file.  If such a file is found, then it is explicitly opened and parsed.
 
-Creating your own `index.cds` is not a requirement and if you choose to create one, it can contain any CDS statements you like.  However, the main purpose for this file is to act as a useful central point from which all the other CDS files can be referenced.
+Creating your own `index.cds` is not a requirement but if you choose to create one, it can contain any CDS statements you like.  The main purpose for this file however is to act as a useful central point from which all the other CDS files can be referenced.
 
 No error will occur if `index.cds` cannot be found.  In this case, the CDS compiler will simply open and parse ***all*** files with an extension of `.cds`.

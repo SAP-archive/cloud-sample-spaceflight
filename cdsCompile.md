@@ -1,6 +1,6 @@
 ## CDS Compiler Conventions
 
-When you select "Build CDS" from the project context menu, or "Build" from the "db" folder's context menu, the CDS compiler will be invoked.  Although it is perfectly possible to configure the behaviour of this compiler, in the absence of any explicit configuration, it will follow certain conventions concerning directory and file names.
+In Web IDE, when you select "Build CDS" from the project context menu, or "Build" from the "db" folder's context menu, the CDS compiler will be invoked.  Although it is perfectly possible to configure the behaviour of this compiler, in the absence of any explicit configuration, it will follow certain conventions concerning directory and file names.
 
 ### Directory Name Conventions
 By default, the CDS compiler will assume that the following directory names are present in your project:

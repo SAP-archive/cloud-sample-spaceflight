@@ -1,4 +1,4 @@
-﻿IATA2,Name,Country
+IATA2,Name,Country
 0A,Amber Air,Lithuania
 0B,Blue Air,Romania
 0C,IBL Aviation,Mauritius
@@ -13,7 +13,6 @@
 1F,INFINI Travel Information,Japan
 1G,Galileo International,United States
 1H,Siren-Travel,Russia
-1I,NetJets,United States
 1I,Novair,Sweden
 1K,Southern Cross Distribution,Australia
 1L,Open Skies Consultative Commission,United States
@@ -65,7 +64,6 @@
 4C,"Aires, Aerovías de Integración Regional, S.A.",Colombia
 4D,Air Sinai,Egypt
 4F,Air City,Germany
-4G,Gazpromavia,Russia
 4G,Advance Leasing Company,United States
 4H,United Airways,Bangladesh
 4K,Askari Aviation,Pakistan
@@ -93,7 +91,6 @@
 5X,United Parcel Service,United States
 5Y,Atlas Air,United States
 5Z,Bismillah Airlines,Bangladesh
-5Z,CemAir,South Africa
 6A,Aviacsa,Mexico
 6B,TUIfly Nordic,Sweden
 6E,IndiGo Airlines,India
@@ -216,10 +213,8 @@ BT,Air Baltic,Latvia
 BU,Buryat Airlines Aircompany,Russia
 BV,Blue Panorama Airlines,Italy
 BW,Caribbean Airlines,Trinidad and Tobago
-BX,Air Busan,Republic of Korea
 BX,Coast Air,Norway
 BY,Thomson Airways,United Kingdom
-BZ,Blue Dart Aviation,India
 BZ,Keystone Air Service,Canada
 C3,Independent Carrier (ICAR),Ukraine
 C4,Zimex Aviation,Switzerland
@@ -898,4 +893,4 @@ ZT,Titan Airways,United Kingdom
 ZU,Helios Airways,Cyprus
 ZW,Air Wisconsin,United States
 ZX,Air Georgian,Canada
-ZY,Sky Airlines,Turkey,
+ZY,Sky Airlines,Turkey

@@ -18,7 +18,7 @@ using teched.flight.trip as flight from './flight-model';
 // ---------------------------------------------------------------------------------------------------------------------
 entity AstronomicalBodies {
   key ID             : Integer;
-      Name           : String(100) @title: "Earth Itinerary";
+      Name           : String(100) @title: "Astronomical Body";
       SolarDistance  : Decimal(10, 8);
       SurfaceGravity : Decimal(10, 6);
       Arrivals       : Association to many SpaceRoutes on Arrivals.DestinationPlanet=$self;
@@ -59,7 +59,7 @@ entity Spaceports {
 // ---------------------------------------------------------------------------------------------------------------------
 entity SpaceFlightCompanies {
   key ID            : Integer;
-      Name          : String(100) @title: "Space flight company";
+      Name          : String(100) @title: "Space Flight Company";
       OperatesFrom1 : Association to Spaceports;
       OperatesFrom2 : Association to Spaceports;
       OperatesFrom3 : Association to Spaceports;
@@ -129,16 +129,12 @@ entity SpaceRoutes {
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// SpaceItineraries
+// Extension to Itineraries
 //
-// This entity serves the same purpose EarthItineraries in the base model, but is used to represent the legs (or stages)
-// of a journey in space.  Due to the extra complexity of space travel (compared to travelling on earth), each space
-// journey can be comprised of up to 9 legs.
-//
-// The ID and Name fields for this entity come from the datatype flight.Itineraries
+// This extension is used to represent the legs (or stages) of a journey in space.  Due to the extra complexity of
+// space travel (compared to travelling on earth), each space journey can be comprised of up to 9 legs.
 // ---------------------------------------------------------------------------------------------------------------------
-entity SpaceItineraries : flight.Itineraries {
-  Name      : String(100) @title: "Space Itinerary";
+extend flight.Itineraries {
   SpaceLegs : {
     leg1  : Association to SpaceRoutes;
     leg2  : Association to SpaceRoutes;
@@ -151,9 +147,3 @@ entity SpaceItineraries : flight.Itineraries {
     leg9  : Association to SpaceRoutes;
   };
 };
-
-// Extend the Bookings entity in the base model with SpaceItineraries
-extend flight.Bookings with {
-  SpaceItinerary : Association to SpaceItineraries;
-}
-

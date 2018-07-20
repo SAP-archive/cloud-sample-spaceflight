@@ -1,19 +1,12 @@
 using BookingService as srv from './booking-service';
-using teched.flight.trip as flight from '../db/space-model';
 
 
-annotate flight.Itineraries with {
+annotate srv.Itineraries with {
   ID @UI.TextArrangement: #TextOnly;
 };
-annotate flight.Itineraries with @(
+annotate srv.Itineraries with @(
   UI.Identification:  [ {$Type: 'UI.DataField', Value: Name} ]
 );
-annotate srv.EarthItineraries with {
-  Name @title : 'Earth Itinerary';
-};
-annotate srv.SpaceItineraries with {
-  Name @title : 'Space Itinerary';
-};
 
 annotate srv.Bookings with {
   ID
@@ -34,41 +27,22 @@ annotate srv.Bookings with {
   Cost
     @title: 'Cost'
     @Common.FieldControl: #Mandatory;
-  EarthItinerary
+  Itinerary
     // @sap.value.list: 'fixed-values'
     @Common: {
-      Label : 'Earth Trip',
+      Label : 'Trip',
       FieldControl: #Mandatory,
-      Text: {$value: EarthItinerary.Name, "@UI.TextArrangement": #TextOnly},
+      Text: {$value: Itinerary.Name, "@UI.TextArrangement": #TextOnly},
       ValueList: {
-        entity: 'EarthItineraries',
+        entity: 'Itineraries',
         type: #fixed,
-        //CollectionPath: 'EarthItinerary',
+        //CollectionPath: 'Itinerary',
         //Label: 'Trip',
         SearchSupported: true,
         //Parameters: [
-        //  { $Type: 'Common.ValueListParameterOut', LocalDataProperty: EarthItinerary_ID', ValueListProperty: 'ID'},
+        //  { $Type: 'Common.ValueListParameterOut', LocalDataProperty: Itinerary_ID', ValueListProperty: 'ID'},
         //  { $Type: 'Common.ValueListParameterDisplayOnly', ValueListProperty: 'ID'},
         //]
-      },
-      ValueListWithFixedValues
-    };
-    SpaceItinerary
-      // @sap.value.list: 'fixed-values'
-      @Common: {
-        Label : 'Space Trip',
-        FieldControl: #Mandatory,
-        Text: {$value: SpaceItinerary.Name, "@UI.TextArrangement": #TextOnly},
-        ValueList: {
-          entity: 'SpaceItineraries',
-          type: #fixed,
-          //CollectionPath: 'SpaceItinerary',
-          //Label: 'Trip',
-          SearchSupported: true,
-          //Parameters: [
-          //  { $Type: 'Common.ValueListParameterOut', LocalDataProperty: SpaceItinerary_ID', ValueListProperty: 'ID'},
-          //  { $Type: 'Common.ValueListParameterDisplayOnly', ValueListProperty: 'ID'},
-          //]
       },
       ValueListWithFixedValues
     };
@@ -77,8 +51,7 @@ annotate srv.Bookings with {
 annotate srv.Bookings with @(
   UI.LineItem: [
     {$Type: 'UI.DataField', Value: CustomerName},
-    {$Type: 'UI.DataField', Value: EarthItinerary.Name},
-    {$Type: 'UI.DataField', Value: SpaceItinerary.Name},
+    {$Type: 'UI.DataField', Value: Itinerary.Name},
     {$Type: 'UI.DataField', Value: DateOfTravel},
     {$Type: 'UI.DataField', Value: NumberOfPassengers},
     {$Type: 'UI.DataField', Value: Cost},

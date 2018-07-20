@@ -58,16 +58,6 @@ entity EarthRoutes {
 // ---------------------------------------------------------------------------------------------------------------------
 // Itineraries
 //
-// The properties common to EarthRoutes and SpaceRoutes are combined into this abstract entity
-// ---------------------------------------------------------------------------------------------------------------------
-abstract entity Itineraries {
-  key ID   : Integer;
-      Name : String(100);
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// EarthItineraries
-//
 // This entity represents any journey made on earth and can be broken into a maximum of 5 legs (or stages)
 //
 // E.G. There is no direct flight from Banaglore, India to the Russian Space Centre at Baikonur, so this journey must
@@ -79,8 +69,9 @@ abstract entity Itineraries {
 //     leg3 = ID of Almaty    -> Yubileyniy
 //   }
 // ---------------------------------------------------------------------------------------------------------------------
-entity EarthItineraries : Itineraries {
-  Name      : String(100) @title: "Earth Itinerary";
+entity Itineraries {
+  key ID    : Integer;
+  Name      : String(100) @title: "Itinerary";
   EarthLegs : {
     leg1  : Association to EarthRoutes;
     leg2  : Association to EarthRoutes;
@@ -88,8 +79,7 @@ entity EarthItineraries : Itineraries {
     leg4  : Association to EarthRoutes;
     leg5  : Association to EarthRoutes;
   };
-
-  Bookings : Association to many Bookings on Bookings.EarthItinerary=$self;
+  Bookings  : Association to many Bookings on Bookings.Itinerary=$self;
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -107,7 +97,7 @@ entity EarthItineraries : Itineraries {
 // ---------------------------------------------------------------------------------------------------------------------
 entity Bookings : Managed {
       BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
-      EarthItinerary     : Association to EarthItineraries;
+      Itinerary          : Association to Itineraries;
       CustomerName       : String(50)     not null;
       EmailAddress       : String(50)     not null;
       DateOfBooking      : DateTime       not null;

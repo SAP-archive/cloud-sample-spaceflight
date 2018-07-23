@@ -2,6 +2,12 @@
 //                                                S P A C E   M O D E L
 //
 // Uses the Flight data model as its base and then extends it to represent journeys made in space
+//
+// The key difference between travveling on earth and travelling in space, is that on earth, for short journeys, you
+// think in straight lines, and for longer journeys, you think in "Great Circles".
+// However, when travelling in space, you must think in ellipses. Also, due to the weight and cost of rocket fuel, you
+// will always choose the most energy efficient path between two points.  This path will be an ellipse that approximates
+// a Hohmann Transfer Orbit.
 // *********************************************************************************************************************
 namespace teched.space.trip;
 
@@ -53,7 +59,7 @@ entity Spaceports {
 // SpaceFlightCompanies
 //
 // This entity performs the same role as "Airlines" in the base data model, but is used exclusively to represent
-// operating launch vehicles suitable for space travel.
+// companies operating launch vehicles suitable for Lunar space travel or beyond.
 //
 // A space flight company can operate from up to three different spaceports
 // ---------------------------------------------------------------------------------------------------------------------
@@ -70,11 +76,13 @@ entity SpaceFlightCompanies {
 //
 // This entity serves the same purpose EarthRoutes in the base model; however, travelling through space is not a simple
 // matter of taking off from one planet and landing on another.  Interplanetary flight is divided into distinct stages,
-// and not all of these stages start from the surface of a planet.
+// and not all of these stages start from, or end on the surface of a planet.
+//
+// By contrast to the Earthroutes entity, each route in this entity uses an aribrary integer id as its key.
 //
 // E.G. In order to travel from the Earth to the Moon, we must first decide whether or not we are going to land on the
 // target planet.  For instance, if we decide to follow the flight path of the Apollo 8 mission, then we will orbit, but
-// not land on, the Moon The journey will then be comprised of the following stages:
+// not land on, the Moon.  The journey will then be comprised of the following stages:
 //
 // 1) Take-off
 //    This launches the vehicle from the surface of the Earth into Low Earth Orbit (LEO)
@@ -86,7 +94,7 @@ entity SpaceFlightCompanies {
 //    without needing to fire its motors again - hence the term "Free Return"
 //
 // 3) Re-enter Low Earth Orbit (LEO)
-//    The motors are fired to deccelerate the vehicle and allow it to be captured by Earth's gravity, thus entering LEO
+//    The motors are fired to decelerate the vehicle and allow it to be captured by Earth's gravity, re-entering LEO
 //
 // 4) Final descent to the surface
 //    The motors are fired for the last time to bring the vehicle out of LEO in order to descend to the surface
@@ -94,17 +102,17 @@ entity SpaceFlightCompanies {
 // Each one of these stages of the journey is represented as separate route in the SpaceRoutes entity
 //
 // If however, we want to follow the Apollo 11 flight path and actually land on the surface of the Moon, then the
-// journey will be comprosed of the following slightly differnt stages:
+// journey will be comprised of the following slightly different stages:
 //
 // 1) Take-off
 //    Launches the vehicle into LEO
 //
 // 2) Lunar Injection Orbit
-//    The motors are fired to inject the vehicle into an elliptical path allows it to be captured by the Moon's
+//    The motors are fired to inject the vehicle into an elliptical path that allows it to be captured by the Moon's
 //    gravitational field.
 //
 // 3) Enter Low Lunar Orbit
-//    The motors are fired to deccelerate the vehicle and allow it to be captured by the Moon's gravity, thus entering
+//    The motors are fired to decelerate the vehicle and allow it to be captured by the Moon's gravity, thus entering
 //    Low Lunar Orbit
 //
 // 4) Final descent to the surface
@@ -113,8 +121,8 @@ entity SpaceFlightCompanies {
 // The homeward journey will be the reverse of the above.
 //
 // As can be seen from the examples above, a SpaceRoute is not required to start or end on the surface of a planet.
-// Therefore, it is valid for the fields StartingSpaceport and DestinationSpaceport to remain null; however, the fields
-// StartingPlanet and DestinationPlanet will always be populated.
+// Therefore, it is valid for the fields StartingSpaceport, DestinationSpaceport and StartingPlanet to remain null;
+// however, the DestinationPlanet field shoudl always be populated.
 // ---------------------------------------------------------------------------------------------------------------------
 entity SpaceRoutes {
   key ID                       : Integer;

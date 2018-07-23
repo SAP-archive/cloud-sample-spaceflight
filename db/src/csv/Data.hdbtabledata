@@ -30,17 +30,17 @@
       },
       "import_settings" : {
         "import_columns" : [
-          "IATA3"
+          "EQUIPMENTCODE"
         , "MANUFACTURER"
         , "TYPE_MODEL"
         , "WAKE"
         ]
       },
       "column_mappings" : {
-        "IATA3"        : 1
-      , "MANUFACTURER" : 2
-      , "TYPE_MODEL"   : 3
-      , "WAKE"         : 4
+        "EQUIPMENTCODE" : 1
+      , "MANUFACTURER"  : 2
+      , "TYPE_MODEL"    : 3
+      , "WAKE"          : 4
       }
     },
     {
@@ -56,7 +56,7 @@
         , "NAME"
         , "CITY"
         , "COUNTRY"
-        , "ALTITUDE"
+        , "ELEVATION"
         , "LATITUDE"
         , "LONGITUDE"
         ]
@@ -66,7 +66,7 @@
       , "NAME"      : 2
       , "CITY"      : 3
       , "COUNTRY"   : 4
-      , "ALTITUDE"  : 5
+      , "ELEVATION" : 5
       , "LATITUDE"  : 6
       , "LONGITUDE" : 7
       }
@@ -83,30 +83,30 @@
           "STARTINGAIRPORT_IATA3"
         , "DESTINATIONAIRPORT_IATA3"
         , "AIRLINE_IATA2"
-        , "EQUIPMENT_AIRCRAFT1_IATA3"
-        , "EQUIPMENT_AIRCRAFT2_IATA3"
-        , "EQUIPMENT_AIRCRAFT3_IATA3"
-        , "EQUIPMENT_AIRCRAFT4_IATA3"
-        , "EQUIPMENT_AIRCRAFT5_IATA3"
-        , "EQUIPMENT_AIRCRAFT6_IATA3"
-        , "EQUIPMENT_AIRCRAFT7_IATA3"
-        , "EQUIPMENT_AIRCRAFT8_IATA3"
-        , "EQUIPMENT_AIRCRAFT9_IATA3"
+        , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE"
+        , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE"
         ]
       },
       "column_mappings" : {
-        "STARTINGAIRPORT_IATA3"     : 1
-      , "DESTINATIONAIRPORT_IATA3"  : 2
-      , "AIRLINE_IATA2"             : 3
-      , "EQUIPMENT_AIRCRAFT1_IATA3" : 4
-      , "EQUIPMENT_AIRCRAFT2_IATA3" : 5
-      , "EQUIPMENT_AIRCRAFT3_IATA3" : 6
-      , "EQUIPMENT_AIRCRAFT4_IATA3" : 7
-      , "EQUIPMENT_AIRCRAFT5_IATA3" : 8
-      , "EQUIPMENT_AIRCRAFT6_IATA3" : 9
-      , "EQUIPMENT_AIRCRAFT7_IATA3" : 10
-      , "EQUIPMENT_AIRCRAFT8_IATA3" : 11
-      , "EQUIPMENT_AIRCRAFT9_IATA3" : 12
+        "STARTINGAIRPORT_IATA3"             : 1
+      , "DESTINATIONAIRPORT_IATA3"          : 2
+      , "AIRLINE_IATA2"                     : 3
+      , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" : 4
+      , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" : 5
+      , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" : 6
+      , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" : 7
+      , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" : 8
+      , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" : 9
+      , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" : 10
+      , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" : 11
+      , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" : 12
       }
 	},
 	{

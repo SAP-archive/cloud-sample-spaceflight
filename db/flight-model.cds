@@ -35,7 +35,7 @@ entity Airports {
 // are the primary source of wake turbulence and for large aircraft, can persist for more than 3 minutes.  This effect
 // is particularly strong during takeoff and landing; therefore, an aircraft of a lower wake catgegory must not enter
 // the same region of airspace (I.E. take off or land) behind an aircraft of a higher wake category without waiting for
-// a designated period of time.  During final approach, aircraft must maintain a desginated separation (measured
+// a designated period of time.  During final approach, aircraft must maintain a desginated separation (measured in
 // nautical miles) to avoid flying into the preceeding aircraft's wake turbulence.
 
 // The wake categories are defined by Maximum Takeoff Weight (MTOW)  (N.B. helicopters having 2 blade rotors often
@@ -48,7 +48,7 @@ entity Airports {
 // ---------------------------------------------------------------------------------------------------------------------
 entity AircraftCodes {
   key IATA3        : String(3);
-      Manufacturer : String(20) @title: "Manufacturer";
+      Manufacturer : String(30) @title: "Manufacturer";
       Type_Model   : String(50) @title: "Type/Model";
       Wake         : String(1);
 };
@@ -71,13 +71,15 @@ entity Airlines {
 //
 // This entity is so named in order to distinguish routes travelled on earth from routes travelled in space
 //
-// Only direct flights are stored in this entity.  If a journey cannot be made using a direct flight, then the ID of
-// each EarthRoute entry will be used to define the legs (or stages) of the journey as stored in EarthItineraries
+// Only direct flights are stored in this entity.  If a journey cannot be made using a direct flight, then each leg of
+// the journey is identified by the start and finish 3-character, IATA location codes stored in Itineraries
+//
+// An Airline company con operate up to 9 different aricraft types on a single route
 // ---------------------------------------------------------------------------------------------------------------------
 entity EarthRoutes {
   key StartingAirport    : Association to Airports;
-      DestinationAirport : Association to Airports;
-      Airline            : Association to Airlines;
+  key DestinationAirport : Association to Airports;
+  key Airline            : Association to Airlines;
       Equipment          : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;
@@ -88,7 +90,7 @@ entity EarthRoutes {
         aircraft7 : Association to AircraftCodes;
         aircraft8 : Association to AircraftCodes;
         aircraft9 : Association to AircraftCodes;
-      }
+      };
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -96,13 +98,15 @@ entity EarthRoutes {
 //
 // This entity represents any journey made on earth and can be broken into a maximum of 5 legs (or stages)
 //
+// Each leg of the journey is identified by the starting and destination 3-character IATA location codes
+//
 // E.G. There is no direct flight from Bangalore, India to the Russian Space Centre at Baikonur, so this journey must
 // first be constructed using multiple legs, then named using the starting and ending airports:
 //   Name = "Bangalore -> Baikonur"
 //   EarthLegs = {
-//     leg1 = ID of Bangalore -> Delhi
-//     leg2 = ID of Delhi     -> Almaty
-//     leg3 = ID of Almaty    -> Yubileyniy
+//     leg1 = BLR,DEL  (Bangalore -> Delhi)
+//     leg2 = DEL,ALA  (Delhi     -> Almaty)
+//     leg3 = ALA,AOX  (Almaty    -> Yubileyniy)
 //   }
 // ---------------------------------------------------------------------------------------------------------------------
 entity Itineraries {

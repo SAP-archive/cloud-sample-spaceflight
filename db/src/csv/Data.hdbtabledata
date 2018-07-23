@@ -22,6 +22,28 @@
       }
     },
     {
+      "target_table": "TECHED_FLIGHT_TRIP_AIRCRAFTCODES",
+      "source_data" : {
+        "data_type" : "CSV"
+      , "file_name" : "aircraftcodes.csv"
+      , "has_header" : true
+      },
+      "import_settings" : {
+        "import_columns" : [
+          "IATA3"
+        , "MANUFACTURER"
+        , "TYPE_MODEL"
+        , "WAKE"
+        ]
+      },
+      "column_mappings" : {
+        "IATA3"        : 1
+      , "MANUFACTURER" : 2
+      , "TYPE_MODEL"   : 3
+      , "WAKE"         : 4
+      }
+    },
+    {
       "target_table": "TECHED_FLIGHT_TRIP_AIRPORTS",
       "source_data" : {
         "data_type" : "CSV"
@@ -58,19 +80,33 @@
       },
       "import_settings" : {
         "import_columns" : [
-          "ID"
-        , "AIRLINE_IATA2"
-        , "STARTINGAIRPORT_IATA3"
+          "STARTINGAIRPORT_IATA3"
         , "DESTINATIONAIRPORT_IATA3"
-        , "EQUIPMENT"
+        , "AIRLINE_IATA2"
+        , "EQUIPMENT_AIRCRAFT1_IATA3"
+        , "EQUIPMENT_AIRCRAFT2_IATA3"
+        , "EQUIPMENT_AIRCRAFT3_IATA3"
+        , "EQUIPMENT_AIRCRAFT4_IATA3"
+        , "EQUIPMENT_AIRCRAFT5_IATA3"
+        , "EQUIPMENT_AIRCRAFT6_IATA3"
+        , "EQUIPMENT_AIRCRAFT7_IATA3"
+        , "EQUIPMENT_AIRCRAFT8_IATA3"
+        , "EQUIPMENT_AIRCRAFT9_IATA3"
         ]
       },
       "column_mappings" : {
-        "ID"                       : 1
-      , "AIRLINE_IATA2"            : 2
-      , "STARTINGAIRPORT_IATA3"    : 3
-      , "DESTINATIONAIRPORT_IATA3" : 4
-      , "EQUIPMENT"                : 5
+        "STARTINGAIRPORT_IATA3"     : 1
+      , "DESTINATIONAIRPORT_IATA3"  : 2
+      , "AIRLINE_IATA2"             : 3
+      , "EQUIPMENT_AIRCRAFT1_IATA3" : 4
+      , "EQUIPMENT_AIRCRAFT2_IATA3" : 5
+      , "EQUIPMENT_AIRCRAFT3_IATA3" : 6
+      , "EQUIPMENT_AIRCRAFT4_IATA3" : 7
+      , "EQUIPMENT_AIRCRAFT5_IATA3" : 8
+      , "EQUIPMENT_AIRCRAFT6_IATA3" : 9
+      , "EQUIPMENT_AIRCRAFT7_IATA3" : 10
+      , "EQUIPMENT_AIRCRAFT8_IATA3" : 11
+      , "EQUIPMENT_AIRCRAFT9_IATA3" : 12
       }
 	},
 	{
@@ -184,11 +220,16 @@
         "import_columns" : [
           "ID"
         , "NAME"
-        , "EARTHLEGS_LEG1_ID"
-        , "EARTHLEGS_LEG2_ID"
-        , "EARTHLEGS_LEG3_ID"
-        , "EARTHLEGS_LEG4_ID"
-        , "EARTHLEGS_LEG5_ID"
+        , "EARTHLEGS_LEG1_STARTINGAIRPORT_IATA3"    
+        , "EARTHLEGS_LEG1_DESTINATIONAIRPORT_IATA3" 
+        , "EARTHLEGS_LEG2_STARTINGAIRPORT_IATA3"    
+        , "EARTHLEGS_LEG2_DESTINATIONAIRPORT_IATA3" 
+        , "EARTHLEGS_LEG3_STARTINGAIRPORT_IATA3"    
+        , "EARTHLEGS_LEG3_DESTINATIONAIRPORT_IATA3" 
+        , "EARTHLEGS_LEG4_STARTINGAIRPORT_IATA3"    
+        , "EARTHLEGS_LEG4_DESTINATIONAIRPORT_IATA3" 
+        , "EARTHLEGS_LEG5_STARTINGAIRPORT_IATA3"    
+        , "EARTHLEGS_LEG5_DESTINATIONAIRPORT_IATA3" 
         , "SPACELEGS_LEG1_ID"
         , "SPACELEGS_LEG2_ID"
         , "SPACELEGS_LEG3_ID"
@@ -201,22 +242,27 @@
         ]
       },
       "column_mappings" : {
-        "ID"                : 1
-      , "NAME"              : 2
-      , "EARTHLEGS_LEG1_ID" : 3
-      , "EARTHLEGS_LEG2_ID" : 4
-      , "EARTHLEGS_LEG3_ID" : 5
-      , "EARTHLEGS_LEG4_ID" : 6
-      , "EARTHLEGS_LEG5_ID" : 7
-      , "SPACELEGS_LEG1_ID" : 8
-      , "SPACELEGS_LEG2_ID" : 9
-      , "SPACELEGS_LEG3_ID" : 10
-      , "SPACELEGS_LEG4_ID" : 11
-      , "SPACELEGS_LEG5_ID" : 12
-      , "SPACELEGS_LEG6_ID" : 13
-      , "SPACELEGS_LEG7_ID" : 14
-      , "SPACELEGS_LEG8_ID" : 15
-      , "SPACELEGS_LEG9_ID" : 16
+        "ID"                                      : 1
+      , "NAME"                                    : 2
+      , "EARTHLEGS_LEG1_STARTINGAIRPORT_IATA3"    : 3
+      , "EARTHLEGS_LEG1_DESTINATIONAIRPORT_IATA3" : 4
+      , "EARTHLEGS_LEG2_STARTINGAIRPORT_IATA3"    : 5
+      , "EARTHLEGS_LEG2_DESTINATIONAIRPORT_IATA3" : 6
+      , "EARTHLEGS_LEG3_STARTINGAIRPORT_IATA3"    : 7
+      , "EARTHLEGS_LEG3_DESTINATIONAIRPORT_IATA3" : 8
+      , "EARTHLEGS_LEG4_STARTINGAIRPORT_IATA3"    : 9
+      , "EARTHLEGS_LEG4_DESTINATIONAIRPORT_IATA3" : 10
+      , "EARTHLEGS_LEG5_STARTINGAIRPORT_IATA3"    : 11
+      , "EARTHLEGS_LEG5_DESTINATIONAIRPORT_IATA3" : 12
+      , "SPACELEGS_LEG1_ID"                       : 13
+      , "SPACELEGS_LEG2_ID"                       : 14
+      , "SPACELEGS_LEG3_ID"                       : 15
+      , "SPACELEGS_LEG4_ID"                       : 16
+      , "SPACELEGS_LEG5_ID"                       : 17
+      , "SPACELEGS_LEG6_ID"                       : 18
+      , "SPACELEGS_LEG7_ID"                       : 19
+      , "SPACELEGS_LEG8_ID"                       : 20
+      , "SPACELEGS_LEG9_ID"                       : 21
       }
 	}
   ]

@@ -1,4 +1,5 @@
-﻿100,Fokker,100,M
+IATA3,MANUFACTURER,TYPE_MODEL,WAKE
+100,Fokker,100,M
 141,BAe,146-100,M
 142,BAe,146-200,M
 143,BAe,146-300,M
@@ -104,7 +105,6 @@
 76F,Boeing,767 Freighter,H
 76W,Boeing,767-300 (winglets),H
 76X,Boeing,767-200 Freighter,H
-76Y,Boeing 767-300 Freighter,H
 76Y,Boeing,767-300 Freighter,H
 772,Boeing,777-200,H
 773,Boeing,777-300,H
@@ -167,7 +167,7 @@ BNI,Britten Norman,BN-2A/B Islander,L
 BNT,Britten Norman,BN-2A Mk III Trislander,L
 CCJ,Canadair,Challenger,M
 CCX,Canadair,Global Express,M
-CD2,Government Aircraft Factories N22B / N24A Nomad,L
+CD2,Government Aircraft Factories,N22B / N24A Nomad,L
 CL4,Canadair,CL-44,M
 CN1,Cessna,Cessna single piston engine,L
 CN2,Cessna,Cessna twin piston engines,L
@@ -286,7 +286,7 @@ ILW,Ilyushin,IL-86,H
 J31,British Aerospace,Jetstream 31,L
 J32,British Aerospace,Jetstream 32,L
 J41,British Aerospace,Jetstream 41,M
-JST,British Aerospace,Jetstream 31 / 32 / 41,L/M
+JST,British Aerospace,Jetstream 31 / 32 / 41,M
 JU5,Junkers,Ju 52/3M,M
 L10,Lockheed,L-1011 Tristar,H
 L11,Lockheed,L-1011 1 / 50 / 100 / 150 / 200 / 250 Tr,H

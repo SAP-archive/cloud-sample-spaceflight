@@ -1,5 +1,4 @@
-﻿IATA,Manufacturer,Type_Model,Wake
-100,Fokker,100,M
+﻿100,Fokker,100,M
 141,BAe,146-100,M
 142,BAe,146-200,M
 143,BAe,146-300,M
@@ -22,6 +21,7 @@
 32B,Airbus,A321 (sharklets),M
 32C,Airbus,A318 (sharklets),M
 32D,Airbus,A319 (sharklets),M
+32S,Airbus,A318/319/320/321,M
 330,Airbus,A330,H
 332,Airbus,A330-200,H
 333,Airbus,A330-300,H
@@ -36,6 +36,7 @@
 358,Airbus,A350-800,H
 359,Airbus,A350-900,H
 380,Airbus,A380,J
+38F,Airbus,A380 Freighter,J
 703,Boeing,707-300,H
 707,Boeing,707/720,H
 70F,Boeing,707 Freighter,H
@@ -93,7 +94,7 @@
 753,Boeing,757-300,H
 757,Boeing,757,H
 75F,Boeing,757 Freighter,H
-75M,Boeing,757 Mixed,H
+75M,Boeing,757 Mixed Configuration,H
 75T,Boeing,757-300 (winglets),H
 75W,Boeing,757-200 (winglets),H
 762,Boeing,767-200,H
@@ -103,6 +104,7 @@
 76F,Boeing,767 Freighter,H
 76W,Boeing,767-300 (winglets),H
 76X,Boeing,767-200 Freighter,H
+76Y,Boeing 767-300 Freighter,H
 76Y,Boeing,767-300 Freighter,H
 772,Boeing,777-200,H
 773,Boeing,777-300,H
@@ -113,11 +115,11 @@
 788,Boeing,787-8,H
 789,Boeing,787-9,H
 A26,Antonov,An-26,L
-A28,Antonov,An-28 / PZL Mielec M-28,L
-A30,Antonov,An-30,L
-A32,Antonov,An-32,L
+A28,Antonov,AN-28 / PZL Miele M-28 Skytruck,L
+A30,Antonov,AN-30,L
+A32,Antonov,AN-32,L
 A40,Antonov,An-140,M
-A4F,Antonov,An-124,H
+A4F,Antonov,AN-124 Ruslan,H
 AB3,Airbus,A300,H
 AB4,Airbus,A300B2/B4/C4,H
 AB6,Airbus,A300-600,H
@@ -125,42 +127,47 @@ ABB,Airbus,A300-600ST Beluga,H
 ABF,Airbus,A300F,H
 ABX,Airbus,A300C4/F4 Freighter,H
 ABY,Airbus,A300-600F,H
-ACD,Rockwell,Commander/Turbo Commander,L
-ACP,Rockwell,Commander,L
+ACD,Gulfstream/Rockwell (Aero),Commander/Turbo Commander,L
+ACP,Gulfstream/Rockwell (Aero),Commander,L
+ACT,Gulfstream/Rockwell (Aero),Turbo Commander,L
 AGH,Agusta / AgustaWestland,A-109,L
-AN4,Antonov,An-24,M
-AN6,Antonov,An-26 / An-30 / An-32,M
-AN7,Antonov,An-72 / An-74,M
-ANF,Antonov,An-12,M
+ALM,Ayres,LM-200 Loadmaster,M
+AN4,Antonov,AN-24,M
+AN6,Antonov,AN-26 / AN-30 /AN-32,M
+AN7,Antonov,AN-72 / AN-74,M
+ANF,Antonov,AN-12,M
 APH,Eurocopter,SA330 Puma / AS332 Super Puma,M
-AR1,BAe,Avro RJ100,M
-AR7,BAe,Avro RJ70,M
-AR8,BAe,Avro RJ85,M
-ARJ,BAe,Avro RJ70 / RJ85 / RJ100,M
+AR1,Avro,RJ100 Avroliner,M
+AR7,Avro,RJ70 Avroliner,M
+AR8,Avro,RJ85 Avroliner,M
+ARJ,Avro,RJ70 / RJ85 / RJ100 Avroliner,M
+ARX,Avro,RJX85 / RJX100,M
 AT4,ATR,ATR 42-300 / 320,M
 AT5,ATR,ATR 42-500,M
 AT7,ATR,ATR 72,M
 ATP,BAe,ATP,M
 ATR,ATR,ATR 42 / ATR 72,M
+AX1,Avro,RJX100,M
+AX8,Avro,RJX85,M
 B11,BAC,One Eleven,M
 B12,BAC,One Eleven 200,M
 B13,BAC,One Eleven 300,M
 B14,BAC,One Eleven 400/47,M
 B15,BAC,One Eleven 500,M
 B72,Boeing,720B,M
-BE1,Beech,1900/1900C/1900D,M
-BE2,Beech,Beech twin piston,L
-BEC,Beech,Beech light aircraft,L
-BEH,Beech,1900D,M
-BEP,Beech,Beech singe piston,L
-BES,Beech,1900/1900C,M
-BET,Beech,Beech twin turboprop,L
+BE1,Beechcraft,1900/1900C/1900D,M
+BE2,Beechcraft,Twin piston engines,L
+BEC,Beechcraft,Light aircraft,L
+BEH,Beechcraft,1900D,M
+BEP,Beechcraft,Light aircraft - single engine,L
+BES,Beechcraft,1900/1900C,M
+BET,Beechcraft,Light aircraft - twin turboprop engine,L
 BH2,Bell Helicopter,Bell Helicopters,L
 BNI,Britten Norman,BN-2A/B Islander,L
 BNT,Britten Norman,BN-2A Mk III Trislander,L
 CCJ,Canadair,Challenger,M
-CCX,Bombardier,Global Express,M
-CD2,GAF,N22B / N24A Nomad,L
+CCX,Canadair,Global Express,M
+CD2,Government Aircraft Factories N22B / N24A Nomad,L
 CL4,Canadair,CL-44,M
 CN1,Cessna,Cessna single piston engine,L
 CN2,Cessna,Cessna twin piston engines,L
@@ -176,7 +183,7 @@ CRA,Canadair,CRJ 705,M
 CRF,Canadair,CRJ Freighter,M
 CRJ,Canadair,CRJ,M
 CRK,Canadair,CRJ 1000,M
-CRV,Sud-Est,SE.210 Caravelle,M
+CRV,Aerospatiale (Sud Aviation),Se.210 Caravelle,M
 CS1,Bombardier,CSeries CS100,M
 CS2,CASA,212 Aviocar,M
 CS3,Bombardier,CSeries CS300,M
@@ -213,7 +220,7 @@ D93,Douglas,DC-9-30,M
 D94,Douglas,DC-9-40,M
 D95,Douglas,DC-9-50,M
 D9C,Douglas,DC-9-30 Freighter,M
-D9F,Douglas,DC-9 Freighter,M
+D9F,Douglas,DC-9-40 Freighter,M
 D9X,Douglas,DC-9-10 Freighter,M
 DC3,Douglas,DC-3,M
 DC6,Douglas,DC-6A/B,M
@@ -255,15 +262,16 @@ F27,Fokker,F27 Friendship,M
 F28,Fokker,F28 Fellowship,M
 F50,Fokker,50,M
 F70,Fokker,70,M
+FA7,Fairchild Dornier,728JET,M
 FK7,Fairchild-Hiller,FH-227,M
-FRJ,Dornier,328JET,M
+FRJ,Fairchild Dornier,328JET,M
 GRG,Grumman,G-21 Goose,L
 GRJ,Gulfstream,G-1159 Gulfstream II / III / IV / V,M
 GRM,Gulfstream,G-73 Turbo Mallard,L
 GRS,Gulfstream,G-159 Gulfstream I,M
 H25,Hawker-Siddeley,HS.125,M
 HEC,Helio,H-250 Courier / H-295 / 385 Super Courier,L
-HS7,BAe,HS.748,M
+HS7,Hawker Siddeley,HS.748,M
 I14,Ilyushin,IL-114,M
 I93,Ilyushin,IL-96-300,H
 I9F,Ilyushin,IL-96 Freighter,H
@@ -275,10 +283,10 @@ IL7,Ilyushin,IL-76,H
 IL8,Ilyushin,IL-18,M
 IL9,Ilyushin,IL-96,H
 ILW,Ilyushin,IL-86,H
-J31,BAe,Jetstream 31,L
-J32,BAe,Jetstream 32,L
-J41,BAe,Jetstream 41,M
-JST,BAe,Jetstream 31 / 32 / 41,L
+J31,British Aerospace,Jetstream 31,L
+J32,British Aerospace,Jetstream 32,L
+J41,British Aerospace,Jetstream 41,M
+JST,British Aerospace,Jetstream 31 / 32 / 41,L/M
 JU5,Junkers,Ju 52/3M,M
 L10,Lockheed,L-1011 Tristar,H
 L11,Lockheed,L-1011 1 / 50 / 100 / 150 / 200 / 250 Tr,H
@@ -289,11 +297,11 @@ L4T,LET,L-410,L
 LOE,Lockheed,L-188 Electra,M
 LOF,Lockheed,L-188 Electra Freighter,M
 LOH,Lockheed,L-182 / 282 / 382 (L-100) Hercules,M
-LOM,Lockheed,L-188 Electra Mixed,M
+LOM,Lockheed,L-188 Electra Mixed Configuration,M
 LRJ,Learjet,Gates Learjet,M
 M11,McDonnell Douglas,MD-11,H
 M1F,McDonnell Douglas,MD-11 Freighter,H
-M1M,McDonnell Douglas,MD-11 Mixed,H
+M1M,McDonnell Douglas,MD-11 Mixed Configuration,H
 M80,McDonnell Douglas,MD-80,M
 M81,McDonnell Douglas,MD-81,M
 M82,McDonnell Douglas,MD-82,M
@@ -301,8 +309,8 @@ M83,McDonnell Douglas,MD-83,M
 M87,McDonnell Douglas,MD-87,M
 M88,McDonnell Douglas,MD-88,M
 M90,McDonnell Douglas,MD-90,M
-MBH,MBB,Bo 105,M
-MD9,MD Helicopters,MD900 Explorer,M
+MBH,Eurocopter (MBB),Bo.105,L
+MD9,MD Helicopters,MD900 Explorer,L
 MIH,Mil,Mi-8 / Mi-17 / Mi-171 / Mil-172,M
 MU2,Mitsubishi,Mu-2,L
 ND2,Nord / SNCAN,N.262,M
@@ -331,7 +339,7 @@ T20,Tupolev,Tu-204 / Tu-214,M
 TU3,Tupolev,Tu-134,M
 TU5,Tupolev,Tu-154,M
 VCV,Vickers,Viscount,M
-WWP,IAI,1124 Westwind,M
+WWP,Israel Aircraft Industries,1124 Westwind,M
 YK2,Yakovlev,Yak 42,M
 YK4,Yakovlev,Yak 40,M
 YN2,HAMC / Harbin,Y12,M

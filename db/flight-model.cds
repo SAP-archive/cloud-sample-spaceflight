@@ -26,6 +26,34 @@ entity Airports {
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Aircraft Codes
+//
+// Lists the 3-character IATA codes used to identify different aircraft types and models
+// E.G. "320" = Airbus A320, "77W" = Boeing 777-300ER etc
+//
+// The "Wake" field describes the degree of wake turbulence created behind an aircraft as it flies.  Wingtip vortices
+// are the primary source of wake turbulence and for large aircraft, can persist for more than 3 minutes.  This effect
+// is particularly strong during takeoff and landing; therefore, an aircraft of a lower wake catgegory must not enter
+// the same region of airspace (I.E. take off or land) behind an aircraft of a higher wake category without waiting for
+// a designated period of time.  During final approach, aircraft must maintain a desginated separation (measured
+// nautical miles) to avoid flying into the preceeding aircraft's wake turbulence.
+
+// The wake categories are defined by Maximum Takeoff Weight (MTOW)  (N.B. helicopters having 2 blade rotors often
+// generate higher wake turbulence than their MTOW might indicate):
+//   "L" : Low     Less than 19,000Kg
+//   "M" : Medium  Between 19,000Kg and 140,000Kg
+//   "H" : High    Greater than 140,000Kg
+//   "J" : Super   Airbus A380
+//
+// ---------------------------------------------------------------------------------------------------------------------
+entity AircraftCodes {
+  key IATA3        : String(3);
+      Manufacturer : String(20) @title: "Manufacturer";
+      Type_Model   : String(50) @title: "Type/Model";
+      Wake         : String(1);
+};
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Airlines
 //
 // Each airline company is stored using its 2-character IATA code as the key
@@ -47,12 +75,20 @@ entity Airlines {
 // each EarthRoute entry will be used to define the legs (or stages) of the journey as stored in EarthItineraries
 // ---------------------------------------------------------------------------------------------------------------------
 entity EarthRoutes {
-  key ID                 : Integer;
-      Name               : String(100) @title: "Earth Route";
-      Airline            : Association to Airlines;
-      StartingAirport    : Association to Airports;
+  key StartingAirport    : Association to Airports;
       DestinationAirport : Association to Airports;
-      Equipment          : String(50);
+      Airline            : Association to Airlines;
+      Equipment          : {
+        aircraft1 : Association to AircraftCodes;
+        aircraft2 : Association to AircraftCodes;
+        aircraft3 : Association to AircraftCodes;
+        aircraft4 : Association to AircraftCodes;
+        aircraft5 : Association to AircraftCodes;
+        aircraft6 : Association to AircraftCodes;
+        aircraft7 : Association to AircraftCodes;
+        aircraft8 : Association to AircraftCodes;
+        aircraft9 : Association to AircraftCodes;
+      }
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -60,7 +96,7 @@ entity EarthRoutes {
 //
 // This entity represents any journey made on earth and can be broken into a maximum of 5 legs (or stages)
 //
-// E.G. There is no direct flight from Banaglore, India to the Russian Space Centre at Baikonur, so this journey must
+// E.G. There is no direct flight from Bangalore, India to the Russian Space Centre at Baikonur, so this journey must
 // first be constructed using multiple legs, then named using the starting and ending airports:
 //   Name = "Bangalore -> Baikonur"
 //   EarthLegs = {

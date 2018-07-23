@@ -80,7 +80,7 @@ ADJ,Amman-Marka International Airport,Amman,Jordan,2555,31.97270012,35.99160004
 ADK,Adak Airport,Adak Island,United States,18,51.87799835,-176.6459961
 ADL,Adelaide International Airport,Adelaide,Australia,20,-34.94499969,138.5310059
 ADM,Ardmore Municipal Airport,Ardmore,United States,777,34.30301,-97.0196342
-ADQ,Kodiak Airport,Kodiak,United States,78,57.75,-152.4940033
+ADQ,Kodiak Benny Benson State Airport,Alaska,United States,80,57.749722,-152.493889
 ADS,Addison Airport,Addison,United States,644,32.96860123,-96.83640289
 ADU,Ardabil Airport,Ardabil,Iran,4315,38.32569885,48.42440033
 ADW,Andrews Air Force Base,Camp Springs,United States,280,38.81079865,-76.86699677
@@ -5654,3 +5654,79 @@ ZYL,Osmany International Airport,Sylhet Osmani,Bangladesh,50,24.96319962,91.8667
 ZZU,Mzuzu Airport,Mzuzu,Malawi,4115,-11.44470024,34.01179886
 ZZV,Zanesville Municipal Airport,Zanesville,United States,900,39.94440079,-81.89209747
 ZZY,Liverpool South Shore Regional Airport,Liverpool,Canada,321,44.2303009,-64.85610199
+TGK,Tangarog Airfield,Tangarog,Russian Federation,20,47.21667,38.91667
+KCK,Kirensk Airport,Irkutsk,Russia,840,57.77278,108.06083
+AOS,Amook Seaplane Base,Alaska,United States,0,57.4713889,-153.815278
+KKB,Kitoi Seaplane Base,Alaska,United States,0,58.190833,-152.370556
+OLH,Old Harbor Airport,Kodiak,United States,55,57.218333,-153269167
+KZB,Zachar Bay Seaplane Base,Zachar Bay,United States,0,57.553333,-153.745833
+SYB,Seal Seaplane Base,Seal Bay,United States,0,52.371667,-152.201667
+ORI,Port Lions Airport,Kodiak,United States,52,57.885278,-152.846111
+KPR,Port Williams Seaplane Base,Shuyak Island,United States,0,58.49,-152.582222
+CGA,Craig Seaplane Base,Craig,United States,0,55.478889,-133.147778
+HYL,Hollis Seaplane Base,Hollis,United States,0,55.49055,-132.623611
+PZI,Panzhihua Bao'anying Airport,Panzhihua,China,6496,26.542313,101.798519
+DCY,Daocheng Yading Airport,Daocheng County,China,14472,29.323055,100.053333
+JIQ,Qianjiang Wulingshan Airport,Chongqing,China,2027,29.5175,108.829167
+NZH,Manzhouli Xijiao Airport,Manzhouli,China,2198,49.566667,117.33
+NTG,Nantong Xingdong Airport,Nantong,China,0,34.070833,120.975556
+TVS,Tangshan Sannühe Airport,Sannühe,China,36,39.725278,117.993333
+TCT,Takotna Airport,Takotna,United States,422,62.993611,-156.028056
+PQM,Palenque International Airport,Palenque,Mexico,197,17.535,92.015
+CXF,Coldfoot Airport,Coldfoot,United States,1042,67.252222,-150.203889
+RMP,Rampart Airport,Ramprt,United States,307,65.507778,-150.140833
+SVS,Stevens Village Airport,Stevens Village,United States,329,66.016944,-149.054444
+TAL,Ralph M. Calhoun Memorial Airport,Tanana,United States,236,65.174444,-152.109444
+MNT,Minto Al Wright Airport,Minto,United States,500,65.148056,-149.368611
+TLT,Tuluksak Airport,Tuluksak,United States,30,61.096944,-160.969444
+ATT,Atmautluak Airport,Atmautluak,United States,17,60.866667,-162.273056
+GNU,Goodnews Airport,Goodnews Bay,United States,15,59.1175,-161.5775
+WTL,Tuntutuliak Airport,Tuntutuliak,United States,15,60.335278,-162.666944
+KKI,Akiachak Airport,Akiachak,United States,25,60.906111,-161.426944
+NUP,Nunapitchuk Airport,Nunapitchuk,United States,12,60.905833,-162.439167
+PQS,Pilot Station Airport,Pilot Station,United States,305,61.934444,-162.899444
+TNK,Tununak Airport,Tununak,United States,14,60.575556,-165.271667
+WWT,Newtok Airport,Newtok,United States,25,60.939167,-164.641111
+HYD,Rajiv Gandhi International Airport,Hyderabad,India,2024,17.24,78.43
+CUK,Caye Caulker Airport,Caye Caulker,Belize,1,17.735,-88.029444
+SQS,Matthew Spain Airport,San Ignacio,Belize,416,17.185889, -89.00975
+SPR,John Greif II Airport,San Pedro,Belize,4,17.913889, -87.971111
+TZA,Sir Barry Bowen Municipal Airport,Belize City,Belize,8,17.516389, -88.191667
+PLI,Palm Island Airport,Palm Island,St Vincent and the Grenadines,3,12.585853,-61.396537
+DGA,Dangriga Airport,Dangriga,Belize,508,16.982389,-88.231
+PLJ,Placencia Airport,Placencia,Belize,3,16.537222,-88.361111
+DOH,Hamad International Airport,Doha,Qatar,13,25.273056,51.608056
+NBE,Enfidha–Hammamet International Airport,Enfidha,Tunisia,36,36.075833,10.438611
+KQT,Qurghonteppa International Airport,Qurghonteppa,Tajikistan,1489,37.862222,68.862778
+MRA,Misrata Airport,Misurata,Libya,59,32.325556,15.059722
+HIA,Huai'an Lianshui Airport,Huai'an,China,23,33.777222,119.147778
+INB,Independence Airport,Independence,Belize,18,16.534583,-88.4415
+CZH,Corozal Airport,Corozal,Belize,43,18.382222,-88.410833
+OGM,Ustupu-Ogobsucum Airport,Ustupo,Panama,10,9.137222,-77.933056
+PVE,El Porvenir Airport,El Porvenir,Panama,8,9.558333,-78.947222
+PYC,Playón Chico Airport,Ukupseni,Panama,105,9.309722,-78.234722
+LMA,Minchumina Airport,Lake Minchumina,United States,682,63.886111,-152.301944
+LMC,la Macarena Airport,La Macarena,Colombia,777,2.173611, -73.786111
+ORU,Juan Mendoza Airport,Oruro,Bolivia,12146,-17.9625,-67.076111
+MLH,EuroAirport Basel Mulhouse Freiburg,BAsel,Switzerland,885,47.59,7.529167
+KSE,Kasese Airport,Kasese,Uganda,3146,0.183056,30.101389
+PHB,Parnaíba-Prefeito Dr. João Silva Filho International Airport,Parnaíba,Brazil,23,-2.893056,-41.729722
+EBH,El Bayadh Airport,El Bayadh,Algeria,4482,33.720833,1.091389
+MZW,Mécheria Airport,Mécheria,Algeria,3855,33.535639,-0.24225
+CFK,Chlef International Airport,Chlef,Algeria,502,36.215278,1.333333
+DDG,Dandong Langtou Airport,Dandong,China,30,40.025951,124.286906
+BUL,Bulolo Airport,Bulolo,Papua New Guinea,2240,-7.216111,146.649444
+LLB,Libo Airport,Libo County,China,2805,25.4525,107.961667
+VUS,Veliky Ustyug Airport,Veliky Ustyug,Russia,331,60.788333,46.26
+DEF,Dezful Airport,Dezful,Iran,466,32.434444,48.397639
+LFM,Lamerd Airport,Lamerd,Iran,1337,27.372744,53.188794
+GCH,Gachsaran Airport,Gachsaran,Iran,2391,30.3375,50.828056
+KHY,Khoy Airport,Khoy,Iran,3981,38.427453,44.973575
+TNW,Jumandy Airport,tena,Ecuador,1234,-1.059722,-77.583333
+BKG,Branson Airport,Branson,United States,1302,36.531944,-93.200556
+LUZ,Lublin Airport,Lublin,Poland,633,51.240278,22.713611
+AEB,Baise Bama Airport,Baise,China,148,23.719444,106.959167
+AGM,Tasiilaq Heliport,Angmagssalik,Greenland,24,65.612222,-37.618333
+EKS,Shakhtyorsk Airport,Shakhtyorsk,Russia,50,49.190300,142.082993
+BNY,Bellona/Anua Airport,Bellona Island,Solomon Islands,56,-11.301667,159.798056
+VDH,Dong Hoi Airport,Dong Hoi,Vietnam,59,17.515,106.590556

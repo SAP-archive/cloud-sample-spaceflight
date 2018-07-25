@@ -3,7 +3,7 @@
 //
 // Uses the Flight data model as its base and then extends it to represent journeys made in space
 //
-// The key difference between travveling on earth and travelling in space, is that on earth, for short journeys, you
+// The key difference between traveling on earth and travelling in space, is that on earth, for short journeys, you
 // think in straight lines, and for longer journeys, you think in "Great Circles".
 // However, when travelling in space, you must think in ellipses. Also, due to the weight and cost of rocket fuel, you
 // will always choose the most energy efficient path between two points.  This path will be an ellipse that approximates

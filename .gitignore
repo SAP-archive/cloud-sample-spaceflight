@@ -1,4 +1,5 @@
 .DS_Store
+*.xlsx
 *.mtar
 *.log
 .che/

@@ -40,10 +40,10 @@ entity Airports {
 // more than 3 minutes after the aircraft has passed.  This effect is particularly strong during takeoff and landing;
 // therefore, an aircraft of a lower wake category must not enter the same airspace (I.E. take off or land) immediately
 // behind an aircraft of a higher wake category.  During final approach, this is achieved by pilots maintaining a
-// desginated separation (in nautical miles).
+// designated separation (in nautical miles).
 //
-// The wake categories are defined by Maximum Takeoff Weight (MTOW)  (N.B. helicopters having 2 blade rotors often
-// generate higher wake turbulence than their MTOW might indicate):
+// The wake categories are defined by the aircraft's Maximum Takeoff Weight (MTOW)  (N.B. helicopters having 2 blade
+// rotors often generate higher wake turbulence than their MTOW might indicate):
 //   "L" : Low     19,000Kg >= MTOW
 //   "M" : Medium  19,000Kg  < MTOW <= 140,000Kg
 //   "H" : High                MTOW  > 140,000Kg
@@ -92,7 +92,7 @@ entity EarthRoutes {
   key StartingAirport    : Association to Airports;
   key DestinationAirport : Association to Airports;
   key Airline            : Association to Airlines;
-      Equipment          : {
+      Equipment : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;
         aircraft3 : Association to AircraftCodes;
@@ -108,7 +108,8 @@ entity EarthRoutes {
 // ---------------------------------------------------------------------------------------------------------------------
 // Itineraries
 //
-// This entity represents any journey made on earth and can be broken into a maximum of 5 legs (or stages)
+// This entity represents any end-to-end journey made on earth. Such journies can be broken into a maximum of 5 legs
+// (or stages)
 //
 // Each leg of the journey is identified by a pair of values - the starting and destination IATA location codes
 //

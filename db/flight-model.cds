@@ -156,8 +156,8 @@ entity Itineraries {
 entity Bookings : Managed {
       BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
       Itinerary          : Association to Itineraries;
-      CustomerName       : String(50)     not null;
-      EmailAddress       : String(50)     not null;
+      CustomerName       : String(50);
+      EmailAddress       : String(50);
       DateOfBooking      : DateTime       not null;
       DateOfTravel       : DateTime       not null;
       Cost               : Decimal(10, 2) not null;

@@ -38,8 +38,8 @@ entity Airports {
 //
 // Wingtip vortices are the primary source of wake turbulence and for large aircraft, such turbulent air can persist for
 // more than 3 minutes after the aircraft has passed.  This effect is particularly strong during takeoff and landing;
-// therefore, an aircraft of a lower wake catgegory must not enter the same airspace (I.E. take off or land) immediately
-// behind an aircraft of a higher wake category.  During final approach, this is achieved by pilots maintining a
+// therefore, an aircraft of a lower wake category must not enter the same airspace (I.E. take off or land) immediately
+// behind an aircraft of a higher wake category.  During final approach, this is achieved by pilots maintaining a
 // desginated separation (in nautical miles).
 //
 // The wake categories are defined by Maximum Takeoff Weight (MTOW)  (N.B. helicopters having 2 blade rotors often

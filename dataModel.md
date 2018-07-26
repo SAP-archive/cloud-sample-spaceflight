@@ -36,7 +36,7 @@ In space travel though, neither of these assumptions are valid.
 
 ### Extra Considerations for Space Travel
 
-Travelling on earth is quite straight forward in that for short journeys, you can think in straight lines, and for long journeys, you can think in "Great Circles".  However, in space, all journeys follow ***elliptical*** paths.
+Travelling on earth is quite straight forward in that for short journeys, you can think in straight lines, and for long journeys, you can think in ["Great Circles"](https://en.wikipedia.org/wiki/Great-circle_distance).  However, in space, all journeys follow ***elliptical*** paths.
 
 Also, due to the weight and cost of rocket fuel, you must always choose the most energy efficient path between two points.  This path will be an ellipse that approximates a [Hohmann Transfer Orbit](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit).
 
@@ -46,18 +46,22 @@ So now, we have some additional considerations:
 1. The stages of a space journey do not necessarily start from or end on the surface of a planet.
 1. It is entirely possible that our space journey does not intend to land on the destination planet, but simply loop around it and return home.
 
-The first question you must therefore answer is this: do I intend to land on the surface of the destination planet?  Yes or no?
+The first question you must therefore answer is this:
+
+> Do I intend to land on the surface of the destination planet?  
+>
+> Yes or no?
 
 The answer to this question will critically determine the type of transfer orbit used to get you from Earth to wherever you're going.
 
 
 #### Landing on the Destination Planet/Moon
 
-For example, let's assume you want to repeat the flight path of Apollo 11 that landed on the Moon.  Such a journey can be simplified into the following 4 stages (in reality, there's a lot more detail...):
+For example, let's assume you want to repeat the flight path of Apollo 11 and land on the Moon.  Such a journey can be simplified into the following 4 stages (the reality is much more conmplex...):
 
 1. From a spaceport such as Cape Canaveral, launch into a low earth orbit (LEO), then orbit the Earth a couple of times
 1. Fire the motors again to enter a transfer orbit that will take you close enough to the Moon to be captured by its gravity (known as trans-lunar injection, or TLI)
-1. The TLI brings you close enough to the Moon that you can enter a low lunar orbit
+1. The TLI brings you close enough to the Moon that you can enter a low lunar orbit.  Here you may orbit the Moon a couple of times.
 1. Finally, you descend to the lunar surface
 
 The return flight is the same sequence in reverse:
@@ -73,7 +77,8 @@ The return flight is the same sequence in reverse:
 Alternatively, if you just want to be a space tourist and simply loop around your destination planet then immediately return home, your flight path will be somewhat simpler. (This is the flight path used by Apollo 8).
 
 1. Launch into low earth orbit (LEO), then orbit the Earth a couple of times.
-1. Fire the motors again to enter a free-return lunar transfer orbit.  This trajectory causes you to be influenced by the Moon's gravity, but not captured by it.  In other words, this trajectory is designed to just miss entering low lunar orbit.  Now you will swing around the Moon and return to Earth without needing to fire the motors again (hence the name "free return", since you can return to Earth for free)
+1. Fire the motors again to enter a free-return lunar transfer orbit.  
+    This trajectory causes you to be influenced by the Moon's gravity, but not captured by it.  In other words, this trajectory is designed to just miss entering low lunar orbit.  Now you will swing around the Moon and return to Earth without needing to fire the motors again (hence the name "free return", since you can return to Earth for free)
 1. Enter LEO
 1. Re-enter Earth's atmosphere and descend to the surface
 

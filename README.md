@@ -12,6 +12,10 @@ Deployed on https://cdsteched2018-cna376-app.cfapps.sap.hana.ondemand.com/.
 
 Administer via [cdsteched2018/cna376](https://account.int.sap.hana.ondemand.com/cockpit#/globalaccount/6a8e3c4e-77ea-482c-b37b-4ce687a8bfe0/subaccount/c64e888a-20be-4bec-a15e-58e81ab4e857/org/4ac89a3b-e56e-4c48-81e1-e6d6008d0751/space/68c15de5-b940-48f3-819e-3f1d89e58ac2/).
 
+# Data Model
+
+The data model used by all these sessions is described [here](dataModel.md).   Please read this description in order to gain a correct understanding how to use the data model.
+
 # [TEAM TO DO]
 
 - [ ] Organize S/4HANA system for all participants or setup mock server for Business Partner service if S/4HANA not available

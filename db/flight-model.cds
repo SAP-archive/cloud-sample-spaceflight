@@ -150,16 +150,15 @@ entity Itineraries {
 // is not human readable.  Therefore, for the purposes of creating a human readable reference for the booking, the
 // BookingNo field will be used.
 //
-// The value in this field is constructed from a Date-Time stamp, followed by the arbitrary code "-SP-" and then a
-// generated UUID value.  Custom code will be written both to generate and then display this value; however, in the
+// The value in this field is constructed from a Date stamp, followed by a short alphanumeric string.
+// Custom code will be written both to generate and then display this value; however, in the
 // exercises that first use this data model, this field will be left blank.
 // ---------------------------------------------------------------------------------------------------------------------
 entity Bookings : Managed {
-      BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
+      BookingNo          : String(25);    // e.g. "20180726/GA1B6"
       Itinerary          : Association to Itineraries;
       CustomerName       : String(50);
       EmailAddress       : String(50);
-      DateOfBooking      : DateTime       not null;
       DateOfTravel       : DateTime       not null;
       Cost               : Decimal(10, 2) not null;
       NumberOfPassengers : Integer        default 1;

@@ -34,7 +34,7 @@ However, traveling on earth is much simpler than travelling in space for the fol
 
 In space travel though, neither of these assumptions are valid.
 
-### Extra Considerations for Space Travel
+## Extra Considerations for Space Travel
 
 Travelling on earth is quite straight forward in that for short journeys, you can think in straight lines, and for long journeys, you can think in ["Great Circles"](https://en.wikipedia.org/wiki/Great-circle_distance).  However, in space, all journeys follow ***elliptical*** paths.
 
@@ -55,9 +55,9 @@ The first question you must therefore answer is this:
 The answer to this question will critically determine the type of transfer orbit used to get you from Earth to wherever you're going.
 
 
-#### Landing on the Destination Planet/Moon
+### Landing on the Destination Planet/Moon
 
-For example, let's assume you want to repeat the flight path of Apollo 11 and land on the Moon.  Such a journey can be simplified into the following 4 stages (the reality is much more conmplex...):
+For example, let's assume you want to repeat the flight path of Apollo 11 and land on the Moon.  Such a journey can be simplified into the following 4 stages (the reality is much more complex...):
 
 1. From a spaceport such as Cape Canaveral, launch into a low earth orbit (LEO), then orbit the Earth a couple of times
 1. Fire the motors again to enter a transfer orbit that will take you close enough to the Moon to be captured by its gravity (known as trans-lunar injection, or TLI)
@@ -72,13 +72,14 @@ The return flight is the same sequence in reverse:
 1. Re-enter Earth's atmosphere and descend to the surface
 
 
-#### Not Landing on the Destination Planet/Moon
+### Not Landing on the Destination Planet/Moon
 
-Alternatively, if you just want to be a space tourist and simply loop around your destination planet then immediately return home, your flight path will be somewhat simpler. (This is the flight path used by Apollo 8).
+Alternatively, if you simply want to be a space tourist and loop around your destination planet then immediately return home, your flight path will be somewhat simpler. (This is the flight path used by Apollo 8).
 
 1. Launch into low earth orbit (LEO), then orbit the Earth a couple of times.
 1. Fire the motors again to enter a free-return lunar transfer orbit.  
-    This trajectory causes you to be influenced by the Moon's gravity, but not captured by it.  In other words, this trajectory is designed to just miss entering low lunar orbit.  Now you will swing around the Moon and return to Earth without needing to fire the motors again (hence the name "free return", since you can return to Earth for free)
+    This trajectory causes you to be influenced by the Moon's gravity, but not captured by it.  
+    In other words, this trajectory is designed to just miss entering low lunar orbit.  Now you will swing around the Moon and return to Earth without needing to fire the motors again (hence the name "free return", since you can return to Earth for free)
 1. Enter LEO
 1. Re-enter Earth's atmosphere and descend to the surface
 

@@ -27,15 +27,17 @@ entity AstronomicalBodies {
 
 #### Structure
 
-The key value used to identify an astronomical body is an arbitrary integer.
 
-`SolarDistance` is that body's average distance from the Sun and is measured in astronomical units (where 1.0 AU is the distance from the Earth to the Sun)
-
-`SurfaceGravity` is that fraction of Earth's gravity experienced on the surface of this body.
+| Field Name | Key | Description
+|---|---|---|
+| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `Name` | | Name of the astronomical body
+| `SolarDistance` | | The body's average distance from the Sun as measured in astronomical units (where 1.0 AU is the distance from the Earth to the Sun)
+| `SurfaceGravity` | | The fraction of Earth's gravity experienced on the surface of this body
 
 #### Content
 
-Only the 8 planets in our solar system, plus Pluto and the Moon are represented here.
+Only the 8 planets in our solar system, plus Pluto and the Earth's Moon are represented here.
 
 ---
 
@@ -57,9 +59,11 @@ entity SpaceFlightCompanies {
 
 #### Structure
 
-The key value used to identify each space company is an arbitrary integer.
-
-A space flight company can operate from up to three different spaceports
+| Field Name | Key | Description
+|---|---|---|
+| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `Name` | | The name of the space flight company
+| `OperatesFrom[1..3]` | | The `ID` of the spaceport from which this space flight company operates
 
 
 #### Content
@@ -92,13 +96,25 @@ entity Spaceports {
 
 #### Structure
 
-The key value used to identify each spaceport is an arbitrary integer.
+| Field Name | Key | Description
+|---|---|---|
+| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `Name` | | The spaceport's name
+| `OnPlanet` | | The `ID` of the planet or moon on which this space port is located
+| `Latitude` | | The spaceports's latitude in decimal notation
+| `Longitude` | | The spaceports's longitude in decimal notation
 
 #### Content
 
-9 spaceports are currently listed from vehicle capable of lunar or trans-lunar flight can take off.
+9 spaceports are currently listed.  These spaceports can handle large space-vehicles capable of lunar or trans-lunar flight.
 
-To allow for future (fictitious) expansion of this data to include Spaceports on other astronomical bodies, this entity also includes the field "OnPlanet" which holds the ID of the Astronomical Body on which the Spaceport is located.  3 non-terrestrial Spaceports have been added; 1 on the Moon at Tranquility Base (the Apollo 11 landing site) and 2 on Mars (two proposed sites for the Mars 2020 mission)
+3 non-terrestrial Spaceports have been added:
+
+1. Tranquility Base on the Moon (the Apollo 11 landing site)
+1. Jezero Crater on Mars
+1. Columbia Crater on Mars
+
+The last two spaceports are the proposed landing sites for NASA's Mars 2020 mission.
 
 ---
 
@@ -130,7 +146,17 @@ entity SpaceRoutes {
 
 #### Structure
 
-The space route categories are identified by the number ranges shown below.  The key field for each route is then an arbitrary integer within the given number range:
+| Field Name | Key | Description | Can be null? |
+|---|---|---|:-:|
+| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer (see below) | No
+|`StartingPlanet`| | The ID of the planet from which this route starts | Yes
+|`DestinationPlanet`| | The ID of the planet on which this route ends | No
+|`StartingSpaceport`| | The ID of the spaceport from which the vehicle is launched | Yes
+|`DestinationSpaceport`| | The ID of the spaceport to which the vehicle returns | Yes
+|`StartsFromOrbit`| | Does this route start on the surface from orbit | No
+|`LandsOnDestinationPlanet`| | Does this route terminate on the destination planet | No
+
+The space route categories listed above are identified by the number ranges shown below.  The key field for each route is then an arbitrary integer within the given number range:
 
 | SpaceRoute ID | Route Category |
 |:-:|---|
@@ -138,15 +164,6 @@ The space route categories are identified by the number ranges shown below.  The
 | 100 - 199 | Enter transfer orbit
 | 200 - 299 | Enter low planetary orbit
 | 300 - 399 | Planetary descent
-
-| Field Name | Description | Can be null? |
-|---|---|:-:|
-|`StartingPlanet`| The ID of the planet from which this route starts | Yes
-|`DestinationPlanet`| The ID of the planet on which this route ends | No
-|`StartingSpaceport`| The ID of the Spaceport from which the vehicle is launched | Yes
-|`DestinationSpaceport`| The ID of the spaceport to which the vehicle returns | Yes
-|`StartsFromOrbit`| Indicates whether this route starts on the surface of a planet or from orbit | No
-|`LandsOnDestinationPlanet`| Indicates whether the route terminates on the destination planet | No
 
 #### Content
 
@@ -253,31 +270,4 @@ The data used to populate the database table generated from this entity has been
 | 20 | Mars (Columbia) | Bangalore | Baikonur | ![Cross](./pictures/cross.png) |
 | 21 | Mars (Columbia) | San Francisco | Cape Canaveral | ![Cross](./pictures/cross.png) |
 
-
-### Entity `Bookings`
-
-Lists each booking of a journey made by one or more travellers
-
-Using the abstract type "Managed", the entries in this entity are keyed using a generated UUID; however, this value is not human readable.  Therefore, for the purposes of creating a human readable reference for the booking, the BookingNo field will be used.
-
-The value in this field is constructed from a Date-Time stamp, followed by the arbitrary code `-SP-` and then a generated UUID value.  Custom code will be written both to generate and then display this value; however, in the exercises that first use this data model, this field will be left blank.
-
-#### Definition
-
-```javascript
-entity Bookings : Managed {
-      BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
-      Itinerary          : Association to Itineraries;
-      CustomerName       : String(50);
-      EmailAddress       : String(50);
-      DateOfBooking      : DateTime       not null;
-      DateOfTravel       : DateTime       not null;
-      Cost               : Decimal(10, 2) not null;
-      NumberOfPassengers : Integer        default 1;
-};
-```
-
-#### Content
-
-The Bookings table is currently not pre-populated.
 

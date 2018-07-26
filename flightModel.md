@@ -13,7 +13,7 @@ The following entities represent master data that will only ever be accessed in 
 
 ### Entity `Airports`
 
-The airports entity describes all the information held for a single airport.
+Lists almost all known airports.
 
 #### Definition
 
@@ -33,13 +33,17 @@ entity Airports {
 
 #### Structure
 
-The key value used to define an airport is the 3-character, IATA location code.  E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
+| Field Name | Key | Description
+|---|---|---|
+| `IATA3` | ![Tick](./pictures/tick.png) | The 3-character IATA location code.<br>E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
+| `Name` | | Airport name in English as a UTF-8 character string 
+| `City` | | The name of the town or city served by this airport
+| `Country` | | The country in which the airport is located
+| `Elevation` | | The airport's height above Mean Sea Level (MSL) measured in feet
+| `Latitude` | | The airports's latitude in decimal notation
+| `Longitude` | | The airports's longitude in decimal notation
 
-The `Name` field contains the airport's name in English as a UTF-8 character string.
-
-The `Elevation` field contains the airfield's height above Mean Sea Level (MSL) measured in feet.
-
-All coordinates are given in decimal notation rather than Degrees, Minutes, Seconds (DMS) notation.  By convention, positive longitude is East and positive latitude is North. 
+All coordinates are given in decimal notation rather than DMS notation (Degrees, Minutes, Seconds).  By convention, positive longitude is East and positive latitude is North. 
 
 Longitude coordinate values must range between ±180.0˚ and latitude values must range between ±90.0˚.
 
@@ -68,9 +72,12 @@ entity AircraftCodes {
 
 #### Structure
 
-The key value used to identify a specific aircraft type is the 3-character IATA Equipment Code.
-
-The `Manufacturer` and `Type_Model` fields are the English names as UTF-8 character strings.
+| Field Name | Key | Description
+|---|---|---|
+| `EquipmentCode` | ![Tick](./pictures/tick.png) | The 3-character IATA equipment code.<br>E.G. Airbus A320 = "320", Boeing 777-8 = "778"
+| `Manufacturer` | | The name of the aircraft manufacturer
+| `Type_Model` | | The type and model of aircraft
+| `Wake` | | The aircraft's wake category.  See below for details
 
 The `Wake` field describes the degree of wake turbulence created behind an aircraft as it flies.
 
@@ -110,7 +117,11 @@ entity Airlines {
 
 #### Structure
 
-The key value used to identify each airline is the 2-character IATA airline code.
+| Field Name | Key | Description
+|---|---|---|
+| `IATA2` | ![Tick](./pictures/tick.png) | The 2-character IATA airline code.<br>E.G. Lufthansa = "LH", British Airways = "BA"
+| `Name` | | The airline company's name
+| `Country` | | The country in which the airline company is based
 
 #### Content
 
@@ -156,13 +167,16 @@ entity EarthRoutes {
 
 Only direct flights are stored in this entity.
 
-Due to the fact that multiple airline companies can operate the same route, this entity requires three key field:
+Due to the fact that multiple airline companies can operate the same route, this entity requires three key fields.
 
-1. Starting airport IATA location code
-1. Destination airport IATA location code
-1. The airline company's 2-character IATA code
+| Field Name | Key | Description
+|---|---|---|
+| `StartingAirport` | ![Tick](./pictures/tick.png) | The starting airport's 3-character IATA location code
+| `DestinationAirport` | ![Tick](./pictures/tick.png) | The destination airport's 3-character IATA location code
+| `Airline` | ![Tick](./pictures/tick.png) | The 2-character IATA code of the airline that operates this route
+| `Equipment` | | A compound data structure holding the equipment codes of up to 9 different aircraft used on this route
+| `aircraft[1..9]` | | The 3-character IATA equipment code of an aircraft used on this route
 
-An Airline company can operate up to 9 different aircraft types on a single route
 
 #### Content
 
@@ -201,13 +215,18 @@ entity Itineraries {
 
 #### Structure
 
-Each itinerary is identified using an arbitrary integer `ID`.
-
-The `Name` field should hold the name of the end-to-end journey.  Before being extended by the `spaceModel`, this table holds only those journey that take place on earth.
+| Field Name | Key | Description
+|---|---|---|
+| `ID` | ![Tick](./pictures/tick.png) | Each itinerary is identified using an arbitrary integer
+| `Name` | | The name of the end-to-end journey.<br>Before being extended by the `spaceModel`, this table holds only those journey that take place on earth
+| `EarthLegs` | | Compound data structure holding the key fields needed to identify one leg of this journey on Earth
+| `leg[1..5]` | | The keys values needed to identify a single route on earth. I.E. The key structure for entity `EarthRoutes` 
 
 #### Content
 
 The pre-populated content exists only for the extended version of this entity.
+
+
 
 ## Entities for Transactional Data
 
@@ -235,6 +254,21 @@ entity Bookings : Managed {
       NumberOfPassengers : Integer        default 1;
 };
 ```
+
+#### Structure
+
+| Field Name | Key | Description
+|---|---|---|
+| `ID` | ![Tick](./pictures/tick.png) | The UUID of this booking
+|`BookingNo`| | Human readable identifier for the booking.<br>The value used in this field must be generated by custom code
+| `Itinerary` | | The `ID` of the itinerary being booked
+| `CustomerName` | | The name of the person making the booking
+| `EmailAddress` | | Contact email address for the person making the booking
+| `DateOfBooking` | | The date on which the booking was made
+| `DateOfTravel` | | The journey's start date
+| `Cost` | | Total cost of this journey
+| `NumberOfPassengers` | | The number of people making this journey
+
 
 #### Content
 

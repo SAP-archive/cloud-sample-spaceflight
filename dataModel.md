@@ -20,7 +20,7 @@ Any journey is represented as a series of between 1 and 5 "legs", where each leg
 
 ### SpaceModel
 
-This data model extends `FlightModel` and represents journeys that either start or end on Earth, but also include space travel.
+This data model extends `FlightModel` and represents journeys that either start or end on Earth, but also include space travel.  For the purposes of simplicity, this data model confines itself to travel within our own Solar System.
 
 For instance, the journey in which you travel from Earth to the Moon would be recorded in two parts:
 

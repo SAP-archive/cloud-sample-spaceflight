@@ -218,7 +218,7 @@ entity Itineraries {
 | Field Name | Key | Description
 |---|---|---|
 | `ID` | ![Tick](./pictures/tick.png) | Each itinerary is identified using an arbitrary integer
-| `Name` | | The name of the end-to-end journey.<br>Before being extended by the `spaceModel`, this table holds only those journey that take place on earth
+| `Name` | | The name of the end-to-end journey.<br>Before being extended by the `spaceModel`, this table holds only those journeys that take place on earth
 | `EarthLegs` | | Compound data structure holding the key fields needed to identify one leg of this journey on Earth
 | `leg[1..5]` | | The keys values needed to identify a single route on earth. I.E. The key structure for entity `EarthRoutes` 
 

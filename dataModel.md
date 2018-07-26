@@ -32,11 +32,17 @@ However, traveling on earth is much simpler than travelling in space for the fol
 1. You never need to care about which planet you're going to land on - its always the same one you took off from!
 1. Any plane that takes off must also land (as all pilots know: take-off is optional, landing is mandatory!)
 
-In space travel though, neither of these assumptions are valid.
+In space travel though, neither of these assumptions are valid
+
+
 
 ## Extra Considerations for Space Travel
 
-Travelling on earth is quite straight forward in that for short journeys, you can think in straight lines, and for long journeys, you can think in ["Great Circles"](https://en.wikipedia.org/wiki/Great-circle_distance).  However, in space, all journeys follow ***elliptical*** paths.
+
+
+Travelling on earth is quite straight forward in that for short journeys, the shortest distance between two points is a straight line, and for longer journeys, the shortest distance is a ["Great Circle"](https://en.wikipedia.org/wiki/Great-circle_distance).
+
+However, in space, all journeys follow ***elliptical*** paths.
 
 Also, due to the weight and cost of rocket fuel, you must always choose the most energy efficient path between two points.  This path will be an ellipse that approximates a [Hohmann Transfer Orbit](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit).
 

@@ -4,7 +4,7 @@ This repository contains the basic data model for the following TechEd 2018 sess
 - [cloud-samples-spaceflight-java](https://github.wdf.sap.corp/te18/cloud-samples-spaceflight-java): CNA 376 - Build Applications with the Programming Model on SAP Cloud Platform
 - [cloud-samples-spaceflight-node](https://github.wdf.sap.corp/te18/cloud-samples-spaceflight-node): CNA 375
 - [cloud-samples-spaceflight-hana](https://github.wdf.sap.corp/te18/cloud-samples-spaceflight-hana): CNA ???
-- [cloud-samples-spaceflight-ui](https://github.wdf.sap.corp/te18/cloud-samples-spaceflight-ui): CNA ???
+- [cloud-samples-spaceflight-ui](https://github.wdf.sap.corp/te18/cloud-samples-spaceflight-ui): CNA 462
 
 
 ## Data Model

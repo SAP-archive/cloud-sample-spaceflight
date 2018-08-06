@@ -140,7 +140,7 @@ E.G. The airline code `DJ` has been variously assigned to AirAsia Japan, Air Dji
 
 ### Entity `Earthroutes`
 
-Lists all direct flights between two airports, the airline company that operates that route, and the different aircraft types flown on that route.
+Lists information about all direct flights between two airports.
 
 #### Definition
 
@@ -175,7 +175,7 @@ Due to the fact that multiple airline companies can operate the same route, this
 | `StartingAirport` | ![](./img/tick.png) | The starting airport's 3-character IATA location code
 | `DestinationAirport` | ![](./img/tick.png) | The destination airport's 3-character IATA location code
 | `Airline` | ![](./img/tick.png) | The 2-character IATA code of the airline that operates this route
-| `Distance` | | The distance between the two airports given to the nearest kilometre
+| `Distance` | | The [Great Circle](https://en.wikipedia.org/wiki/Great-circle_distance) distance between the two airports given to the nearest kilometre.<br>This value is the ***minimum*** travel distance, not the actual distance taken during flight.
 | `Equipment` | | A compound data structure holding the equipment codes of up to 9 different aircraft used on this route
 | `aircraft[1..9]` | | The 3-character IATA equipment code of an aircraft used on this route
 

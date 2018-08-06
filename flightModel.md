@@ -35,15 +35,15 @@ entity Airports {
 
 | Field Name | Key | Description
 |---|---|---|
-| `IATA3` | ![](./pictures/tick.png) | The 3-character IATA location code.<br>E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
-| `Name` | | Airport name in English as a UTF-8 character string 
+| `IATA3` | ![Tick](./img/tick.png) | The 3-character IATA location code.<br>E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
+| `Name` | | Airport name in English as a UTF-8 character string
 | `City` | | The name of the town or city served by this airport
 | `Country` | | The country in which the airport is located
 | `Elevation` | | The airport's height above Mean Sea Level (MSL) measured in feet
 | `Latitude` | | The airports's latitude in decimal notation
 | `Longitude` | | The airports's longitude in decimal notation
 
-All coordinates are given in decimal notation rather than DMS notation (Degrees, Minutes, Seconds).  By convention, positive longitude is East and positive latitude is North. 
+All coordinates are given in decimal notation rather than DMS notation (Degrees, Minutes, Seconds).  By convention, positive longitude is East and positive latitude is North.
 
 Longitude coordinate values must range between ±180.0˚ and latitude values must range between ±90.0˚.
 
@@ -74,7 +74,7 @@ entity AircraftCodes {
 
 | Field Name | Key | Description
 |---|---|---|
-| `EquipmentCode` | ![](./pictures/tick.png) | The 3-character IATA equipment code.<br>E.G. Airbus A320 = "320", Boeing 777-8 = "778"
+| `EquipmentCode` | ![](./img/tick.png) | The 3-character IATA equipment code.<br>E.G. Airbus A320 = "320", Boeing 777-8 = "778"
 | `Manufacturer` | | The name of the aircraft manufacturer
 | `Type_Model` | | The type and model of aircraft
 | `Wake` | | The aircraft's wake category.  See below for details
@@ -119,7 +119,7 @@ entity Airlines {
 
 | Field Name | Key | Description
 |---|---|---|
-| `IATA2` | ![](./pictures/tick.png) | The 2-character IATA airline code.<br>E.G. Lufthansa = "LH", British Airways = "BA"
+| `IATA2` | ![](./img/tick.png) | The 2-character IATA airline code.<br>E.G. Lufthansa = "LH", British Airways = "BA"
 | `Name` | | The airline company's name
 | `Country` | | The country in which the airline company is based
 
@@ -130,7 +130,7 @@ The data used to populate the database table generated from this entity has been
 The data is stored in the file `airlines.csv`, which currently contains about 900 entries.
 
 
-***IMPORTANT***  
+***IMPORTANT***
 In reality, 2-character IATA Airline codes are not guaranteed to be unique!
 
 E.G. The airline code `DJ` has been variously assigned to AirAsia Japan, Air Djibouti, Nordic European Airlines and Virgin Blue Airlines.  However, for simplicity, the data held in the CSV file has been filtered such that all `IATA2` values can be treated as unique.
@@ -171,9 +171,9 @@ Due to the fact that multiple airline companies can operate the same route, this
 
 | Field Name | Key | Description
 |---|---|---|
-| `StartingAirport` | ![](./pictures/tick.png) | The starting airport's 3-character IATA location code
-| `DestinationAirport` | ![](./pictures/tick.png) | The destination airport's 3-character IATA location code
-| `Airline` | ![](./pictures/tick.png) | The 2-character IATA code of the airline that operates this route
+| `StartingAirport` | ![](./img/tick.png) | The starting airport's 3-character IATA location code
+| `DestinationAirport` | ![](./img/tick.png) | The destination airport's 3-character IATA location code
+| `Airline` | ![](./img/tick.png) | The 2-character IATA code of the airline that operates this route
 | `Equipment` | | A compound data structure holding the equipment codes of up to 9 different aircraft used on this route
 | `aircraft[1..9]` | | The 3-character IATA equipment code of an aircraft used on this route
 
@@ -217,10 +217,10 @@ entity Itineraries {
 
 | Field Name | Key | Description
 |---|---|---|
-| `ID` | ![](./pictures/tick.png) | Each itinerary is identified using an arbitrary integer
+| `ID` | ![](./img/tick.png) | Each itinerary is identified using an arbitrary integer
 | `Name` | | The name of the end-to-end journey.<br>Before being extended by the `spaceModel`, this table holds only those journeys that take place on earth
 | `EarthLegs` | | Compound data structure holding the key fields needed to identify one leg of this journey on Earth
-| `leg[1..5]` | | The keys values needed to identify a single route on earth. I.E. The key structure for entity `EarthRoutes` 
+| `leg[1..5]` | | The keys values needed to identify a single route on earth. I.E. The key structure for entity `EarthRoutes`
 
 #### Content
 
@@ -238,17 +238,16 @@ Lists each booking of a journey made by one or more travellers
 
 Using the abstract type "Managed", the entries in this entity are keyed using a generated UUID; however, this value is not human readable.  Therefore, for the purposes of creating a human readable reference for the booking, the BookingNo field will be used.
 
-The value in this field is constructed from a Date-Time stamp, followed by the arbitrary code `-SP-` and then a generated UUID value.  Custom code will be written both to generate and then display this value; however, in the exercises that first use this data model, this field will be left blank.
+The value in this field is constructed from a Date stamp, followed by a short alphanumeric string.  Custom code will be written both to generate and then display this value; however, in the exercises that first use this data model, this field will be left blank.
 
 #### Definition
 
 ```javascript
 entity Bookings : Managed {
-      BookingNo          : String(34);    // yyyyMMddhhmmss-SP-[UUID]
+      BookingNo          : String(25);    // e.g. "20180726/GA1B6"
       Itinerary          : Association to Itineraries;
       CustomerName       : String(50);
       EmailAddress       : String(50);
-      DateOfBooking      : DateTime       not null;
       DateOfTravel       : DateTime       not null;
       Cost               : Decimal(10, 2) not null;
       NumberOfPassengers : Integer        default 1;
@@ -259,12 +258,11 @@ entity Bookings : Managed {
 
 | Field Name | Key | Description
 |---|---|---|
-| `ID` | ![](./pictures/tick.png) | The UUID of this booking
+| `ID` | ![](./img/tick.png) | The UUID of this booking
 |`BookingNo`| | Human readable identifier for the booking.<br>The value used in this field must be generated by custom code
 | `Itinerary` | | The `ID` of the itinerary being booked
 | `CustomerName` | | The name of the person making the booking
 | `EmailAddress` | | Contact email address for the person making the booking
-| `DateOfBooking` | | The date on which the booking was made
 | `DateOfTravel` | | The journey's start date
 | `Cost` | | Total cost of this journey
 | `NumberOfPassengers` | | The number of people making this journey

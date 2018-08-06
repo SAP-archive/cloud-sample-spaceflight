@@ -2,7 +2,7 @@
   "name": "spaceflight-model",
   "version": "0.1.0",
   "dependencies": {
-    "@sap/cds": "*"
+    "@sap/cds": "git://github.wdf.sap.corp/cdx/cds"
   },
   "scripts": {
     "build": "cds build --clean"

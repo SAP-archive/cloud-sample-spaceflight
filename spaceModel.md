@@ -37,7 +37,8 @@ entity AstronomicalBodies {
 
 #### Content
 
-Only the 8 planets in our solar system, plus Pluto and the Earth's Moon are represented here.
+The data is stored in file [`astrobodies.csv`](./db/src/csv/astrobodies.csv) and currently lists only the 8 planets in our solar system, plus Pluto and the Earth's Moon.
+
 
 ---
 
@@ -68,7 +69,9 @@ entity SpaceFlightCompanies {
 
 #### Content
 
-7 companies are currently listed that are all capable of launching vehicles that can travel to the Moon or beyond.
+The data is stored in the file [`spaceflightcompanies.csv`](./db/src/csv/spaceflightcompanies.csv), which currently list 7 companies capable of launching vehicles into Lunar orbit or beyond.
+
+
 
 ---
 
@@ -115,6 +118,8 @@ entity Spaceports {
 1. Columbia Crater on Mars
 
 The last two spaceports are the proposed landing sites for NASA's Mars 2020 mission.
+
+The data is stored in the file [`spaceports.csv`](./db/src/csv/spaceports.csv), which currently contains 12 entries.
 
 ---
 
@@ -210,7 +215,7 @@ In the following tables, null fields have been left blank for visual clarity. (L
 | 303 | Martian Descent (Columbia) | | Mars | | Jezero Crater | TRUE | TRUE
 
 
-The data is stored in the file `spaceroutes.csv`, which currently contains 16 entries.
+The data is stored in the file [`spaceroutes.csv`](./db/src/csv/spaceroutes.csv), which currently contains the 18 entries shown above.
 
 ## Entities for Modifiable Master Data
 
@@ -270,4 +275,5 @@ The data used to populate the database table generated from this entity has been
 | 20 | Mars (Columbia) | Bangalore | Baikonur | ![Cross](./img/cross.png) |
 | 21 | Mars (Columbia) | San Francisco | Cape Canaveral | ![Cross](./img/cross.png) |
 
+The data is stored in the file [`itineraries.csv`](./db/src/csv/itineraries.csv), which currently contains the 21 entries shown above.
 

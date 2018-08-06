@@ -149,6 +149,7 @@ entity EarthRoutes {
   key StartingAirport    : Association to Airports;
   key DestinationAirport : Association to Airports;
   key Airline            : Association to Airlines;
+      Distance  : Integer;
       Equipment : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;
@@ -174,6 +175,7 @@ Due to the fact that multiple airline companies can operate the same route, this
 | `StartingAirport` | ![](./img/tick.png) | The starting airport's 3-character IATA location code
 | `DestinationAirport` | ![](./img/tick.png) | The destination airport's 3-character IATA location code
 | `Airline` | ![](./img/tick.png) | The 2-character IATA code of the airline that operates this route
+| `Distance` | | The distance between the two airports given to the nearest kilometre
 | `Equipment` | | A compound data structure holding the equipment codes of up to 9 different aircraft used on this route
 | `aircraft[1..9]` | | The 3-character IATA equipment code of an aircraft used on this route
 

@@ -81,6 +81,8 @@ entity Airlines {
 //
 // Only direct flights are stored in this entity.
 //
+// The distance between the two airports is given to the nearest kilometre.
+//
 // Because multiple airline companies can operate the same route, this entity requires three key field:
 // 1) Starting airport IATA location code
 // 2) Destination airport IATA location code
@@ -92,6 +94,7 @@ entity EarthRoutes {
   key StartingAirport    : Association to Airports;
   key DestinationAirport : Association to Airports;
   key Airline            : Association to Airlines;
+      Distance  : Integer;
       Equipment : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;

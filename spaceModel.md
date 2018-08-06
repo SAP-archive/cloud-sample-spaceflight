@@ -30,7 +30,7 @@ entity AstronomicalBodies {
 
 | Field Name | Key | Description
 |---|---|---|
-| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `ID` | ![](./pictures/tick.png) | An arbitrary integer
 | `Name` | | Name of the astronomical body
 | `SolarDistance` | | The body's average distance from the Sun as measured in astronomical units (where 1.0 AU is the distance from the Earth to the Sun)
 | `SurfaceGravity` | | The fraction of Earth's gravity experienced on the surface of this body
@@ -61,7 +61,7 @@ entity SpaceFlightCompanies {
 
 | Field Name | Key | Description
 |---|---|---|
-| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `ID` | ![](./pictures/tick.png) | An arbitrary integer
 | `Name` | | The name of the space flight company
 | `OperatesFrom[1..3]` | | The `ID` of the spaceport from which this space flight company operates
 
@@ -98,7 +98,7 @@ entity Spaceports {
 
 | Field Name | Key | Description
 |---|---|---|
-| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer
+| `ID` | ![](./pictures/tick.png) | An arbitrary integer
 | `Name` | | The spaceport's name
 | `OnPlanet` | | The `ID` of the planet or moon on which this space port is located
 | `Latitude` | | The spaceports's latitude in decimal notation
@@ -148,7 +148,7 @@ entity SpaceRoutes {
 
 | Field Name | Key | Description | Can be null? |
 |---|---|---|:-:|
-| `ID` | ![Tick](./pictures/tick.png) | An arbitrary integer (see below) | No
+| `ID` | ![](./pictures/tick.png) | An arbitrary integer (see below) | No
 |`StartingPlanet`| | The ID of the planet from which this route starts | Yes
 |`DestinationPlanet`| | The ID of the planet on which this route ends | No
 |`StartingSpaceport`| | The ID of the spaceport from which the vehicle is launched | Yes
@@ -248,15 +248,15 @@ The data used to populate the database table generated from this entity has been
 
 | ID | Starts from | Destination | Via | Free Return? |
 |--:|---|---|---|:-:|
-| 1 | London | Moon | Cape Canaveral | ![Tick](./pictures/tick.png) |
-| 2 | Bangalore | Moon | Baikonur | ![Tick](./pictures/tick.png) |
-| 3 | San Francisco | Moon | Cape Canaveral | ![Tick](./pictures/tick.png) |
+| 1 | London | Moon | Cape Canaveral | ![](./pictures/tick.png) |
+| 2 | Bangalore | Moon | Baikonur | ![](./pictures/tick.png) |
+| 3 | San Francisco | Moon | Cape Canaveral | ![](./pictures/tick.png) |
 | 4 | London | Moon | Cape Canaveral | ![Cross](./pictures/cross.png) |
 | 5 | Bangalore | Moon | Baikonur | ![Cross](./pictures/cross.png) |
 | 6 | San Francisco | Moon | Cape Canaveral | ![Cross](./pictures/cross.png) |
-| 7 | London | Mars | Cape Canaveral | ![Tick](./pictures/tick.png) | 
-| 8 | Bangalore | Mars | Baikonur | ![Tick](./pictures/tick.png)  |
-| 9 | San Francisco | Mars | Cape Canaveral | ![Tick](./pictures/tick.png) |
+| 7 | London | Mars | Cape Canaveral | ![](./pictures/tick.png) | 
+| 8 | Bangalore | Mars | Baikonur | ![](./pictures/tick.png)  |
+| 9 | San Francisco | Mars | Cape Canaveral | ![](./pictures/tick.png) |
 | 10 | London | Mars | Cape Canaveral | ![Cross](./pictures/cross.png) |
 | 11 | Bangalore | Mars | Baikonur | ![Cross](./pictures/cross.png) |
 | 12 | San Francisco | Mars | Cape Canaveral | ![Cross](./pictures/cross.png) |

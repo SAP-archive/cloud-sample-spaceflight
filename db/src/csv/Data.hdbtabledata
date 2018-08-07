@@ -80,35 +80,37 @@
       },
       "import_settings" : {
         "import_columns" : [
-          "STARTINGAIRPORT_IATA3"
-        , "DESTINATIONAIRPORT_IATA3"
-        , "AIRLINE_IATA2"
+          "ID"
+        , "STARTINGAIRPORT"
+        , "DESTINATIONAIRPORT"
+        , "AIRLINE"
         , "DISTANCE"
-        , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE"
-        , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE"
+        , "EQUIPMENT1"
+        , "EQUIPMENT2"
+        , "EQUIPMENT3"
+        , "EQUIPMENT4"
+        , "EQUIPMENT5"
+        , "EQUIPMENT6"
+        , "EQUIPMENT7"
+        , "EQUIPMENT8"
+        , "EQUIPMENT9"
         ]
       },
       "column_mappings" : {
-        "STARTINGAIRPORT_IATA3"             : 1
-      , "DESTINATIONAIRPORT_IATA3"          : 2
-      , "AIRLINE_IATA2"                     : 3
-      , "DISTANCE"                          : 4
-      , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" : 5
-      , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" : 6
-      , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" : 7
-      , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" : 8
-      , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" : 9
-      , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" : 10
-      , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" : 11
-      , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" : 12
-      , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" : 13
+        "ID"                 : 1
+      , "STARTINGAIRPORT"    : 2
+      , "DESTINATIONAIRPORT" : 3
+      , "AIRLINE2"           : 4
+      , "DISTANCE"           : 5
+      , "EQUIPMENT1"         : 6
+      , "EQUIPMENT2"         : 7
+      , "EQUIPMENT3"         : 8
+      , "EQUIPMENT4"         : 9
+      , "EQUIPMENT5"         : 10
+      , "EQUIPMENT6"         : 11
+      , "EQUIPMENT7"         : 12
+      , "EQUIPMENT8"         : 13
+      , "EQUIPMENT9"         : 14
       }
 	},
 	{

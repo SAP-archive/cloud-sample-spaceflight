@@ -83,19 +83,26 @@ entity Airlines {
 //
 // The distance between the two airports is given to the nearest kilometre.
 //
-// Because multiple airline companies can operate the same route, this entity requires three key field:
-// 1) Starting airport IATA location code
-// 2) Destination airport IATA location code
-// 3) The airline company's 2-character IATA code
+// Due to the fact that HANA Graph requires a table with a single key field, this entity has an ID key field.
+// However, to avoid using an arbitrary (and therefore meaningless) integer as the key, the key is a character string
+// formed by concatenating the following three values:
+//
+// 1) The 3-character IATA location code of the starting airport
+// 2) The 3-character IATA location code of the destination airport
+// 3) The 2-character IATA code of the airline company operating that route
+//
+// E.G. The route from London Heathrow to New York John F. Kennedy operated by British Airways would be:
+// "LHR" + "JFK" + "BA" = "LHRJFKBA"
 //
 // An Airline company can operate up to 9 different aircraft types on a single route
 // ---------------------------------------------------------------------------------------------------------------------
 entity EarthRoutes {
-  key StartingAirport    : Association to Airports;
-  key DestinationAirport : Association to Airports;
-  key Airline            : Association to Airlines;
-      Distance  : Integer;
-      Equipment : {
+  key ID                 : String(8);
+      StartingAirport    : Association to Airports not null;
+      DestinationAirport : Association to Airports not null;
+      Airline            : Association to Airlines;
+      Distance           : Integer;
+      Equipment          : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;
         aircraft3 : Association to AircraftCodes;

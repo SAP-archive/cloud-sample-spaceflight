@@ -1,4 +1,4 @@
-ID,Name,StartingPlanet_Id,DestinationPlanet_Id,StartingSpaceport_Id,DestinationSpaceport_Id,StartsFromOrbit,LandsOnDestinationPlanet
+ID,Name,StartingPlanet,DestinationPlanet,StartingSpaceport,DestinationSpaceport,StartsFromOrbit,LandsOnDestinationPlanet
 0,Cape Canaveral to LEO,3,3,6,,FALSE,FALSE
 1,Baikonur to LEO,3,3,5,,FALSE,FALSE
 2,Tranquility Base to Low Lunar Orbit,4,3,10,,FALSE,FALSE

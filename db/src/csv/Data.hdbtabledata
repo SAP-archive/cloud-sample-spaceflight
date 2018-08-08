@@ -1,56 +1,58 @@
 {
-  "format_version": 1,
-  "imports":
-  [ {
-      "target_table": "TECHED_FLIGHT_TRIP_AIRLINES",
-      "source_data" : {
+  "format_version": 1
+, "imports": [
+    {
+      "target_table": "TECHED_FLIGHT_TRIP_AIRLINES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "airlines.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "IATA2"
         , "NAME"
         , "COUNTRY"
         ]
-      },
-      "column_mappings" : {
-        "IATA2"   : 1
-      , "NAME"    : 2
-      , "COUNTRY" : 3
+      , "import_filter" : []
       }
-    },
-    {
-      "target_table": "TECHED_FLIGHT_TRIP_AIRCRAFTCODES",
-      "source_data" : {
+    , "column_mappings" : {
+        "IATA2"   : "IATA2"
+      , "NAME"    : "Name"
+      , "COUNTRY" : "Country"
+      }
+    }
+  , {
+      "target_table": "TECHED_FLIGHT_TRIP_AIRCRAFTCODES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "aircraftcodes.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "EQUIPMENTCODE"
         , "MANUFACTURER"
         , "TYPE_MODEL"
         , "WAKE"
         ]
-      },
-      "column_mappings" : {
-        "EQUIPMENTCODE" : 1
-      , "MANUFACTURER"  : 2
-      , "TYPE_MODEL"    : 3
-      , "WAKE"          : 4
+      , "import_filter" : []
       }
-    },
-    {
-      "target_table": "TECHED_FLIGHT_TRIP_AIRPORTS",
-      "source_data" : {
+    , "column_mappings" : {
+        "EQUIPMENTCODE" : "EquipmentCode"
+      , "MANUFACTURER"  : "Manufacturer"
+      , "TYPE_MODEL"    : "Type_Model"
+      , "WAKE"          : "Wake_Category"
+      }
+    }
+  , {
+      "target_table": "TECHED_FLIGHT_TRIP_AIRPORTS"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "airports.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "IATA3"
         , "NAME"
@@ -60,67 +62,69 @@
         , "LATITUDE"
         , "LONGITUDE"
         ]
-      },
-      "column_mappings" : {
-        "IATA3"     : 1
-      , "NAME"      : 2
-      , "CITY"      : 3
-      , "COUNTRY"   : 4
-      , "ELEVATION" : 5
-      , "LATITUDE"  : 6
-      , "LONGITUDE" : 7
+      , "import_filter" : []
       }
-    },
-    {
-      "target_table": "TECHED_FLIGHT_TRIP_EARTHROUTES",
-      "source_data" : {
+    , "column_mappings" : {
+        "IATA3"     : "IATA3"
+      , "NAME"      : "Name"
+      , "CITY"      : "City"
+      , "COUNTRY"   : "Country"
+      , "ELEVATION" : "Elevation"
+      , "LATITUDE"  : "Latitude"
+      , "LONGITUDE" : "Longitude"
+      }
+    }
+  , {
+      "target_table": "TECHED_FLIGHT_TRIP_EARTHROUTES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "earthroutes.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
-        "import_columns" : [
-          "ID"
-        , "STARTINGAIRPORT"
-        , "DESTINATIONAIRPORT"
-        , "AIRLINE"
-        , "DISTANCE"
-        , "EQUIPMENT1"
-        , "EQUIPMENT2"
-        , "EQUIPMENT3"
-        , "EQUIPMENT4"
-        , "EQUIPMENT5"
-        , "EQUIPMENT6"
-        , "EQUIPMENT7"
-        , "EQUIPMENT8"
-        , "EQUIPMENT9"
-        ]
-      },
-      "column_mappings" : {
-        "ID"                 : 1
-      , "STARTINGAIRPORT"    : 2
-      , "DESTINATIONAIRPORT" : 3
-      , "AIRLINE"            : 4
-      , "DISTANCE"           : 5
-      , "EQUIPMENT1"         : 6
-      , "EQUIPMENT2"         : 7
-      , "EQUIPMENT3"         : 8
-      , "EQUIPMENT4"         : 9
-      , "EQUIPMENT5"         : 10
-      , "EQUIPMENT6"         : 11
-      , "EQUIPMENT7"         : 12
-      , "EQUIPMENT8"         : 13
-      , "EQUIPMENT9"         : 14
       }
-	},
-	{
-      "target_table": "TECHED_SPACE_TRIP_SPACEPORTS",
-      "source_data" : {
+    , "import_settings" : {
+        "import_columns" : [
+          "ID"                                
+        , "STARTINGAIRPORT_IATA3"             
+        , "DESTINATIONAIRPORT_IATA3"          
+        , "AIRLINE_IATA2"                     
+        , "DISTANCE"                          
+        , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" 
+        , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" 
+        ]
+      , "import_filter" : []
+      }
+    , "column_mappings" : {
+        "ID"                                : "ID"
+      , "STARTINGAIRPORT_IATA3"             : "StartingAirport"
+      , "DESTINATIONAIRPORT_IATA3"          : "DestinationAirport"
+      , "AIRLINE_IATA2"                     : "Airline"
+      , "DISTANCE"                          : "Distance"
+      , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" : "Equipment1"
+      , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" : "Equipment2"
+      , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" : "Equipment3"
+      , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" : "Equipment4"
+      , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" : "Equipment5"
+      , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" : "Equipment6"
+      , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" : "Equipment7"
+      , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" : "Equipment8"
+      , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" : "Equipment9"
+      }
+	}
+  , {
+      "target_table": "TECHED_SPACE_TRIP_SPACEPORTS"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "spaceports.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "ID"
         , "NAME"
@@ -128,45 +132,47 @@
         , "LATITUDE"
         , "LONGITUDE"
         ]
-      },
-      "column_mappings" : {
-        "ID"          : 1
-      , "NAME"        : 2
-      , "ONPLANET_ID" : 3
-      , "LATITUDE"    : 4
-      , "LONGITUDE"   : 5
+      , "import_filter" : []
       }
-	},
-	{
-      "target_table": "TECHED_SPACE_TRIP_ASTRONOMICALBODIES",
-      "source_data" : {
+    , "column_mappings" : {
+        "ID"          : "ID"
+      , "NAME"        : "Name"
+      , "ONPLANET_ID" : "OnPlanet_Id"
+      , "LATITUDE"    : "Latitude"
+      , "LONGITUDE"   : "Longitude"
+      }
+	}
+  , {
+      "target_table": "TECHED_SPACE_TRIP_ASTRONOMICALBODIES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "astrobodies.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "ID"
         , "NAME"
         , "SOLARDISTANCE"
         , "SURFACEGRAVITY"
         ]
-      },
-      "column_mappings" : {
-        "ID"             : 1
-      , "NAME"           : 2
-      , "SOLARDISTANCE"  : 3
-      , "SURFACEGRAVITY" : 4
+      , "import_filter" : []
       }
-	},
-	{
-      "target_table": "TECHED_SPACE_TRIP_SPACEFLIGHTCOMPANIES",
-      "source_data" : {
+    , "column_mappings" : {
+        "ID"             : "ID"
+      , "NAME"           : "Name"
+      , "SOLARDISTANCE"  : "SolarDistance"
+      , "SURFACEGRAVITY" : "SurfaceGravity"
+      }
+	}
+  , {
+      "target_table": "TECHED_SPACE_TRIP_SPACEFLIGHTCOMPANIES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "spaceflightcompanies.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "ID"
         , "NAME"
@@ -174,23 +180,24 @@
         , "OPERATESFROM2_ID"
         , "OPERATESFROM3_ID"
         ]
-      },
-      "column_mappings" : {
-        "ID"               : 1
-      , "NAME"             : 2
-      , "OPERATESFROM1_ID" : 3
-      , "OPERATESFROM2_ID" : 4
-      , "OPERATESFROM3_ID" : 5
+      , "import_filter" : []
       }
-	},
-	{
-      "target_table": "TECHED_SPACE_TRIP_SPACEROUTES",
-      "source_data" : {
+    , "column_mappings" : {
+        "ID"               : "ID"
+      , "NAME"             : "Name"
+      , "OPERATESFROM1_ID" : "OperatesFrom1"
+      , "OPERATESFROM2_ID" : "OperatesFrom2"
+      , "OPERATESFROM3_ID" : "OperatesFrom3"
+      }
+	}
+  , {
+      "target_table": "TECHED_SPACE_TRIP_SPACEROUTES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "spaceroutes.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "ID"
         , "NAME"
@@ -201,39 +208,35 @@
         , "STARTSFROMORBIT"
         , "LANDSONDESTINATIONPLANET"
         ]
-      },
-      "column_mappings" : {
-        "ID"                       : 1
-      , "NAME"                     : 2
-      , "STARTINGPLANET_ID"        : 3
-      , "DESTINATIONPLANET_ID"     : 4
-      , "STARTINGSPACEPORT_ID"     : 5
-      , "DESTINATIONSPACEPORT_ID"  : 6
-      , "STARTSFROMORBIT"          : 7
-      , "LANDSONDESTINATIONPLANET" : 8
+      , "import_filter" : []
       }
-	},
-	{
-      "target_table": "TECHED_FLIGHT_TRIP_ITINERARIES",
-      "source_data" : {
+    , "column_mappings" : {
+        "ID"                       : "ID"
+      , "NAME"                     : "Name"
+      , "STARTINGPLANET_ID"        : "StartingPlanet"
+      , "DESTINATIONPLANET_ID"     : "DestinationPlanet"
+      , "STARTINGSPACEPORT_ID"     : "StartingSpaceport"
+      , "DESTINATIONSPACEPORT_ID"  : "DestinationSpaceport"
+      , "STARTSFROMORBIT"          : "StartsFromOrbit"
+      , "LANDSONDESTINATIONPLANET" : "LandsOnDestinationPlanet"
+      }
+	}
+  , {
+      "target_table": "TECHED_FLIGHT_TRIP_ITINERARIES"
+    , "source_data" : {
         "data_type" : "CSV"
       , "file_name" : "itineraries.csv"
       , "has_header" : true
-      },
-      "import_settings" : {
+      }
+    , "import_settings" : {
         "import_columns" : [
           "ID"
         , "NAME"
-        , "EARTHLEGS_LEG1_STARTINGAIRPORT_IATA3"    
-        , "EARTHLEGS_LEG1_DESTINATIONAIRPORT_IATA3" 
-        , "EARTHLEGS_LEG2_STARTINGAIRPORT_IATA3"    
-        , "EARTHLEGS_LEG2_DESTINATIONAIRPORT_IATA3" 
-        , "EARTHLEGS_LEG3_STARTINGAIRPORT_IATA3"    
-        , "EARTHLEGS_LEG3_DESTINATIONAIRPORT_IATA3" 
-        , "EARTHLEGS_LEG4_STARTINGAIRPORT_IATA3"    
-        , "EARTHLEGS_LEG4_DESTINATIONAIRPORT_IATA3" 
-        , "EARTHLEGS_LEG5_STARTINGAIRPORT_IATA3"    
-        , "EARTHLEGS_LEG5_DESTINATIONAIRPORT_IATA3" 
+        , "EARTHLEGS_LEG1_ID" 
+        , "EARTHLEGS_LEG2_ID" 
+        , "EARTHLEGS_LEG3_ID" 
+        , "EARTHLEGS_LEG4_ID" 
+        , "EARTHLEGS_LEG5_ID" 
         , "SPACELEGS_LEG1_ID"
         , "SPACELEGS_LEG2_ID"
         , "SPACELEGS_LEG3_ID"
@@ -244,29 +247,25 @@
         , "SPACELEGS_LEG8_ID"
         , "SPACELEGS_LEG9_ID"
         ]
-      },
-      "column_mappings" : {
-        "ID"                                      : 1
-      , "NAME"                                    : 2
-      , "EARTHLEGS_LEG1_STARTINGAIRPORT_IATA3"    : 3
-      , "EARTHLEGS_LEG1_DESTINATIONAIRPORT_IATA3" : 4
-      , "EARTHLEGS_LEG2_STARTINGAIRPORT_IATA3"    : 5
-      , "EARTHLEGS_LEG2_DESTINATIONAIRPORT_IATA3" : 6
-      , "EARTHLEGS_LEG3_STARTINGAIRPORT_IATA3"    : 7
-      , "EARTHLEGS_LEG3_DESTINATIONAIRPORT_IATA3" : 8
-      , "EARTHLEGS_LEG4_STARTINGAIRPORT_IATA3"    : 9
-      , "EARTHLEGS_LEG4_DESTINATIONAIRPORT_IATA3" : 10
-      , "EARTHLEGS_LEG5_STARTINGAIRPORT_IATA3"    : 11
-      , "EARTHLEGS_LEG5_DESTINATIONAIRPORT_IATA3" : 12
-      , "SPACELEGS_LEG1_ID"                       : 13
-      , "SPACELEGS_LEG2_ID"                       : 14
-      , "SPACELEGS_LEG3_ID"                       : 15
-      , "SPACELEGS_LEG4_ID"                       : 16
-      , "SPACELEGS_LEG5_ID"                       : 17
-      , "SPACELEGS_LEG6_ID"                       : 18
-      , "SPACELEGS_LEG7_ID"                       : 19
-      , "SPACELEGS_LEG8_ID"                       : 20
-      , "SPACELEGS_LEG9_ID"                       : 21
+      , "import_filter" : []
+      }
+    , "column_mappings" : {
+        "ID"                : "ID"
+      , "NAME"              : "Name"
+      , "EARTHLEGS_LEG1_ID" : "EarthLeg1_Id"
+      , "EARTHLEGS_LEG2_ID" : "EarthLeg2_Id"
+      , "EARTHLEGS_LEG3_ID" : "EarthLeg3_Id"
+      , "EARTHLEGS_LEG4_ID" : "EarthLeg4_Id"
+      , "EARTHLEGS_LEG5_ID" : "EarthLeg5_Id"
+      , "SPACELEGS_LEG1_ID" : "SpaceLeg1_Id"
+      , "SPACELEGS_LEG2_ID" : "SpaceLeg2_Id"
+      , "SPACELEGS_LEG3_ID" : "SpaceLeg3_Id"
+      , "SPACELEGS_LEG4_ID" : "SpaceLeg4_Id"
+      , "SPACELEGS_LEG5_ID" : "SpaceLeg5_Id"
+      , "SPACELEGS_LEG6_ID" : "SpaceLeg6_Id"
+      , "SPACELEGS_LEG7_ID" : "SpaceLeg7_Id"
+      , "SPACELEGS_LEG8_ID" : "SpaceLeg8_Id"
+      , "SPACELEGS_LEG9_ID" : "SpaceLeg9_Id"
       }
 	}
   ]

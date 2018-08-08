@@ -2,6 +2,7 @@
   "name": "spaceflight-model",
   "version": "0.1.0",
   "dependencies": {
+    "@sap/odata-v4": "1.6.2",
     "@sap/cds": "git://github.wdf.sap.corp/cdx/cds"
   },
   "scripts": {

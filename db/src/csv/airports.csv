@@ -97,7 +97,7 @@ AAP,Andrau Airpark,Houston,United States,79,29.72249985,-95.58830261
 AAQ,Anapa Vityazevo Airport,Anapa,Russia,174,45.0021019,37.34730148
 AAR,Aarhus Airport,Aarhus,Denmark,82,56.29999924,10.61900043
 AAT,Altay Airport,Altay,China,2491,47.866667,88.116667
-AAU,Asau Airport,Savai\\'i,Samoa,6,-13.505,-172.627778
+AAU,Asau Airport,Savai'i,Samoa,6,-13.505,-172.627778
 AAV,Allah Valley Airport,Surallah,Philippines,659,6.366819859,124.7509995
 AAX,Romeu Zema Airport,Araxa,Brazil,3276,-19.5632,-46.96039963
 AAY,Al Ghaidah International Airport,Al Ghaidah Intl,Yemen,134,16.19169998,52.17499924
@@ -848,7 +848,7 @@ CBE,Greater Cumberland Regional Airport,Cumberland,United States,775,39.61539841
 CBF,Council Bluffs Municipal Airport,Council Bluffs,United States,1253,41.25920105,-95.76059723
 CBG,Cambridge Airport,Cambridge,United Kingdom,47,52.20500183,0.174999997
 CBH,Béchar Boudghene Ben Ali Lotfi Airport,Béchar,Algeria,2661,31.64570045,-2.269860029
-CBL,"Aeropuerto 'General Tomas de Heres'. Ciudad Bolivar",Ciudad Bolivar,Venezuela,197,8.122160912,-63.53695679
+CBL,Aeropuerto \"General Tomas de Heres\",Ciudad Bolivar,Venezuela,197,8.122160912,-63.53695679
 CBM,Columbus Air Force Base,Colombus,United States,219,33.64379883,-88.44380188
 CBN,Penggung Airport,Cirebon,Indonesia,89,-6.756140232,108.5400009
 CBO,Awang Airport,Cotabato,Philippines,189,7.165239811,124.2099991
@@ -945,7 +945,7 @@ CHM,Teniente FAP Jaime A De Montreuil Morales Airport,Chimbote,Peru,69,-9.149609
 CHN,Jeon Ju Airport,Jhunju,South Korea,96,35.8783989,127.1200027
 CHO,Charlottesville Albemarle Airport,Charlottesville VA,United States,639,38.1385994,-78.45290375
 CHQ,Chania International Airport,Chania,Greece,490,35.53170013,24.14970016
-CHR,"Châteauroux-Déols \Marcel Dassault\"" Airport""",Chateauroux,France,529,46.86027778,1.7211111
+CHR,Châteauroux-Déols \"Marcel Dassault\" Airport,Chateauroux,France,529,46.86027778,1.7211111
 CHS,Charleston Air Force Base-International Airport,Charleston,United States,46,32.89860153,-80.04049683
 CHT,Chatham Islands-Tuuta Airport,Chatham Island,New Zealand,43,-43.81000137,-176.4570007
 CHU,Chuathbaluk Airport,Chuathbaluk,United States,243,61.579167,-159.215556
@@ -1639,7 +1639,7 @@ FOA,Foula Airport,Foula,United Kingdom,0,60.121,-2.052
 FOC,Fuzhou Changle International Airport,Fuzhou,China,46,25.93510056,119.663002
 FOD,Fort Dodge Regional Airport,Fort Dodge,United States,1156,42.55149841,-94.19259644
 FOE,Topeka Regional Airport - Forbes Field,Topeka,United States,1078,38.95090103,-95.66359711
-FOG,"Foggia \Gino Lisa\"" Airport""",Foggia,Italy,265,41.432899,15.535
+FOG,Foggia \"Gino Lisa\" Airport,Foggia,Italy,265,41.432899,15.535
 FOK,Francis S Gabreski Airport,West Hampton Beach,United States,67,40.84370041,-72.63179779
 FOM,Foumban Nkounja Airport,Foumban,Cameroon,3963,5.636919975,10.75080013
 FON,Arenal Airport,La Fortuna/San Carlos,Costa Rica,342,10.47799969,-84.6344986
@@ -1670,7 +1670,7 @@ FSZ,Mt. Fuji Shizuoka Airport,Shizuoka,Japan,433,34.796111,138.189444
 FTA,Futuna Airport,Futuna Island,Vanuatu,95,-19.51639938,170.2319946
 FTE,El Calafate Airport,El Calafate,Argentina,669,-50.2803,-72.053101
 FTG,Front Range Airport,Denver,United States,5512,39.78530121,-104.5429993
-FTI,Fitiuta Airport,Fiti\\'uta,American Samoa,110,-14.2172,-169.425003
+FTI,Fitiuta Airport,Fiti'uta,American Samoa,110,-14.2172,-169.425003
 FTK,Godman Army Air Field,Fort Knox,United States,756,37.90710068,-85.9720993
 FTU,Tôlanaro Airport,Tolagnaro,Madagascar,29,-25.03809929,46.95610046
 FTW,Fort Worth Meacham International Airport,Fort Worth,United States,710,32.81980133,-97.36239624
@@ -2258,7 +2258,7 @@ IRP,Matari Airport,Isiro,Congo (Kinshasa),2438,2.827610016,27.5883007
 IRZ,Tapuruquara Airport,Santa Isabel do Rio Negro,Brazil,223,-0.3786,-64.9923
 ISA,Mount Isa Airport,Mount Isa,Australia,1121,-20.66390038,139.4889984
 ISB,Benazir Bhutto International Airport,Islamabad,Pakistan,1668,33.61669922,73.09919739
-ISC,St. Mary's Airport,ST MARY\\'S,United Kingdom,116,49.91329956,-6.291669846
+ISC,St. Mary's Airport,St Mary's,United Kingdom,116,49.91329956,-6.291669846
 ISE,Süleyman Demirel International Airport,Isparta,Turkey,2835,37.85540009,30.36840057
 ISG,Ishigaki Airport,Ishigaki,Japan,93,24.34449959,124.1869965
 ISJ,Isla Mujeres Airport,Isla Mujeres,Mexico,7,21.24500084,-86.73999786
@@ -3595,7 +3595,7 @@ NOV,Nova Lisboa Airport,Huambo,Angola,5587,-12.80889988,15.76049995
 NOW,Port Angeles Cgas Airport,Port Angeles,United States,13,48.14149857,-123.4140015
 NOZ,Spichenkovo Airport,Novokuznetsk,Russia,1024,53.81140137,86.87719727
 NPA,Pensacola Naval Air Station/Forrest Sherman Field,Pensacola,United States,28,30.35269928,-87.31860352
-NPE,Hawke's Bay Airport,NAPIER,New Zealand,6,-39.465801,176.869995
+NPE,Hawke's Bay Airport,Napier,New Zealand,6,-39.465801,176.869995
 NPL,New Plymouth Airport,New Plymouth,New Zealand,97,-39.00859833,174.1790009
 NPZ,Porter County Municipal Airport,Valparaiso,United States,770,41.4539722,-87.0070833
 NQA,Millington Regional Jetport Airport,Millington,United States,320,35.3567009,-89.87030029
@@ -4436,7 +4436,7 @@ RZS,Sahiwal Airport,Sindh,Pakistan,570,31.88944435,72.39167023
 S10,Lake Chelan Airport,Chelan,United States,1263,47.8660103,-119.9427017
 S27,Kalispell City Airport,Kalispell,United States,2932,48.1785694,-114.3037408
 S40,Prosser Airport,Prosser,United States,697,46.21340179,-119.7910004
-S46,Port O'Connor Private Airport,Port O\\'Connor,United States,8,28.42970085,-96.44439697
+S46,Port O'Connor Private Airport,Port O'Connor,United States,8,28.42970085,-96.44439697
 S52,Methow Valley State Airport,Winthrop,United States,1706,48.4249483,-120.1458856
 SAA,Shively Field,SARATOGA,United States,7012,41.44490051,-106.8239975
 SAB,Juancho E. Yrausquin Airport,Saba,Netherlands Antilles,60,17.64500046,-63.22000122
@@ -4570,7 +4570,7 @@ SHV,Shreveport Regional Airport,Shreveport,United States,258,32.44660187,-93.825
 SHW,Sharurah Airport,Sharurah,Saudi Arabia,2363,17.46689987,47.12139893
 SHX,Shageluk Airport,Shageluk,United States,79,62.69229889,-159.5690002
 SHY,Shinyanga Airport,Shinyanga,Tanzania,3800,-3.6093,33.5035
-SIA,Xi'an Xiguan Airport,Xi\\'AN,China,0,34.376701,109.120003
+SIA,Xi'an Xiguan Airport,Xi'AN,China,0,34.376701,109.120003
 SIC,Sinop Airport,Sinop,Turkey,20,42.01580048,35.06639862
 SID,Amílcar Cabral International Airport,Amilcar Cabral,Cape Verde,177,16.74139977,-22.94939995
 SIF,Simara Airport,Simara,Nepal,450,27.15950012,84.98010254
@@ -4848,7 +4848,7 @@ SZV,Suzhou Guangfu Airport,Suzhou,China,0,31.2631,120.401001
 SZW,Schwerin Parchim Airport,Parchim,Germany,166,53.426998,11.7834
 SZX,Shenzhen Bao'an International Airport,Shenzhen,China,13,22.63929939,113.810997
 SZY,Szczytno-Szymany International Airport,Szczytno-Szymany,Poland,463,53.48189926,20.93770027
-SZZ,"Szczecin-Goleniów \Solidarność\"" Airport""",Szczecin,Poland,154,53.58470154,14.90219975
+SZZ,Szczecin-Goleniów \"Solidarność\" Airport,Szczecin,Poland,154,53.58470154,14.90219975
 TAB,Tobago-Crown Point Airport,Scarborough,Trinidad and Tobago,38,11.14970016,-60.8321991
 TAC,Daniel Z. Romualdez Airport,Tacloban,Philippines,10,11.2276001,125.0279999
 TAE,Daegu Airport,Taegu,South Korea,116,35.89410019,128.6589966
@@ -4862,7 +4862,7 @@ TAM,General Francisco Javier Mina International Airport,Tampico,Mexico,80,22.296
 TAN,Taunton Municipal King Field,Taunton,United States,43,41.87440109,-71.01660156
 TAO,Liuting Airport,Qingdao,China,33,36.26610184,120.3740005
 TAP,Tapachula International Airport,Tapachula,Mexico,97,14.79430008,-92.37000275
-TAR,"Taranto-Grottaglie \Marcello Arlotta\"" Airport""",Grottaglie,Italy,215,40.517502,17.4032
+TAR,Taranto-Grottaglie \"Marcello Arlotta\" Airport,Grottaglie,Italy,215,40.517502,17.4032
 TAS,Tashkent International Airport,Tashkent,Uzbekistan,1417,41.25790024,69.28119659
 TAT,Poprad-Tatry Airport,Poprad,Slovakia,2356,49.07360077,20.24110031
 TAY,Tartu Airport,Tartu,Estonia,219,58.30749893,26.69039917
@@ -6085,5 +6085,4 @@ ZYI,Zunyi Xinzhou Airport,Zunyi,China,2920,27.5895,107.0007
 ZYL,Osmany International Airport,Sylhet Osmani,Bangladesh,50,24.96319962,91.8667984
 ZZU,Mzuzu Airport,Mzuzu,Malawi,4115,-11.44470024,34.01179886
 ZZV,Zanesville Municipal Airport,Zanesville,United States,900,39.94440079,-81.89209747
-ИКУ,Issyk-Kul International Airport,Tamchy,Kyrgyzstan,5426,42.3527,76.4278
-,Liverpool South Shore Regional Airport,Liverpool,Canada,321,44.2303009,-64.85610199
+YAU,Liverpool South Shore Regional Airport,Liverpool,Canada,321,44.2303009,-64.85610199

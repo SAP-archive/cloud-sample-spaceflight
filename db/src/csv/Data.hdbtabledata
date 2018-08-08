@@ -100,7 +100,7 @@
         "ID"                 : 1
       , "STARTINGAIRPORT"    : 2
       , "DESTINATIONAIRPORT" : 3
-      , "AIRLINE2"           : 4
+      , "AIRLINE"            : 4
       , "DISTANCE"           : 5
       , "EQUIPMENT1"         : 6
       , "EQUIPMENT2"         : 7

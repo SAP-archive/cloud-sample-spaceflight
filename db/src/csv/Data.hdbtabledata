@@ -14,7 +14,7 @@
         , "NAME"
         , "COUNTRY"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "IATA2"   : "IATA2"
@@ -36,7 +36,7 @@
         , "TYPE_MODEL"
         , "WAKE"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "EQUIPMENTCODE" : "EquipmentCode"
@@ -62,7 +62,7 @@
         , "LATITUDE"
         , "LONGITUDE"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "IATA3"     : "IATA3"
@@ -98,7 +98,7 @@
         , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" 
         , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" 
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"                                : "ID"
@@ -132,7 +132,7 @@
         , "LATITUDE"
         , "LONGITUDE"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"          : "ID"
@@ -156,7 +156,7 @@
         , "SOLARDISTANCE"
         , "SURFACEGRAVITY"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"             : "ID"
@@ -180,7 +180,7 @@
         , "OPERATESFROM2_ID"
         , "OPERATESFROM3_ID"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"               : "ID"
@@ -208,7 +208,7 @@
         , "STARTSFROMORBIT"
         , "LANDSONDESTINATIONPLANET"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"                       : "ID"
@@ -247,7 +247,7 @@
         , "SPACELEGS_LEG8_ID"
         , "SPACELEGS_LEG9_ID"
         ]
-      , "import_filter" : []
+      , "include_filter" : []
       }
     , "column_mappings" : {
         "ID"                : "ID"

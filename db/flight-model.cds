@@ -139,7 +139,7 @@ entity EarthRoutes {
 //   Name = "Bangalore to Moon via Baikonur (Free Return)"
 // ---------------------------------------------------------------------------------------------------------------------
 entity Itineraries {
-  key ID    : Integer;
+  key ID    : String(10);
   Name      : String(100) @title: "Itinerary";
   EarthLegs : {
     leg1  : Association to EarthRoutes;

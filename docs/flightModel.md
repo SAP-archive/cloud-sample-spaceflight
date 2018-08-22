@@ -5,6 +5,9 @@ TechEd 2018 Session Journey For Track CRO2
 
 The FlightData model acts as the base model for the TechEd CR02 sessions.
 
+<object data="./flightModel.pdf" type="application/pdf" width="100%" height="490px">
+    <embed src="./flightModel.pdf"></embed>
+</object>
 
 
 ## Entities for Read-Only Master Data

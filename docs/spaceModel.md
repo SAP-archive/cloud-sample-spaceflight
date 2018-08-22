@@ -5,6 +5,10 @@ TechEd 2018 Session Journey For Track CRO2
 
 The `space-model` extends `flight-model` in order to represent journeys taken into space.
 
+<object data="./spaceModel.pdf" type="application/pdf" width="100%" height="490px">
+    <embed src="./spaceModel.pdf"></embed>
+</object>
+
 ## Entities for Read-Only Master Data
 
 ### Entity `AstronomicalBodies`

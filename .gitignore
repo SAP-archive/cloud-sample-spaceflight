@@ -1,11 +1,14 @@
 .DS_Store
 *.xlsx
+*.pptx
 *.mtar
 *.log
-.che/
+.*.log
 .classpath
-.mta/
 .project
+
+.che/
+.mta/
 .settings/
 .xmake/
 edmx/
@@ -19,4 +22,3 @@ dist/
 
 connection.properties
 metadata.xml
-.cds_gen.log

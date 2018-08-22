@@ -51,7 +51,7 @@ Longitude coordinate values must range between ±180.0˚ and latitude values mus
 
 The data used to populate the database table generated from this entity has been derived from a filtered and reduced version of the file [airports-extended.dat](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports-extended.dat) available from the [Open Flights](https://openflights.org/data.html) website.
 
-The data is stored in the file [`airports.csv`](./db/src/csv/airports.csv), which currently contains just over 6000 entries.
+The runtime data is stored in the file [`airports.csv`](./db/src/csv/airports.csv).
 
 ---
 
@@ -96,7 +96,7 @@ The wake categories are defined by aircraft's Maximum Takeoff Weight (MTOW)  (N.
 
 The data used to populate the database table generated from this entity has been derived from [flugzeuginfo.net](http://www.flugzeuginfo.net/table_accodes_iata_en.php).
 
-The data is stored in the file [`aircraftcodes.csv`](./db/src/csv/aircraftcodes.csv), which currently contains about 350 entries.
+The runtime data is stored in the file [`aircraftcodes.csv`](./db/src/csv/aircraftcodes.csv).
 
 ---
 
@@ -127,11 +127,11 @@ entity Airlines {
 
 The data used to populate the database table generated from this entity has been derived from a filtered and reduced version of the file [airlines.dat](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airlines.dat) available from the [Open Flights](https://openflights.org/data.html) website.
 
-The data is stored in the file [`airlines.csv`](./db/src/csv/airlines.csv), which currently contains about 900 entries.
+The runtime data is stored in the file [`airlines.csv`](./db/src/csv/airlines.csv).
 
 
-***IMPORTANT***
-In reality, 2-character IATA Airline codes are not guaranteed to be unique!
+***IMPORTANT***  
+In reality, 2-character IATA Airline codes are ***not*** guaranteed to be unique!
 
 E.G. The airline code `DJ` has been variously assigned to AirAsia Japan, Air Djibouti, Nordic European Airlines and Virgin Blue Airlines.  However, for simplicity, the data held in the CSV file has been filtered such that all `IATA2` values can be treated as unique.
 
@@ -184,7 +184,7 @@ Due to the fact that multiple airline companies can operate the same route, this
 
 The data used to populate the database table generated from this entity has been derived from a filtered and reduced version of the file [routes.dat](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat) available from the [Open Flights](https://openflights.org/data.html) website.
 
-The data is stored in the file [`earthroutes.csv`](./db/src/csv/earthroutes.csv), which currently contains about 57600 entries.
+The runtime data is stored in the file [`earthroutes.csv`](./db/src/csv/earthroutes.csv).
 
 
 
@@ -226,7 +226,7 @@ entity Itineraries {
 
 #### Content
 
-The pre-populated content exists only for the extended version of this entity.
+Runtime data exists only for the extended version of this entity.
 
 
 

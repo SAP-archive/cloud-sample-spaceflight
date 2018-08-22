@@ -9,7 +9,7 @@ The `space-model` extends `flight-model` in order to represent journeys taken in
 
 ### Entity `AstronomicalBodies`
 
-Any planet or moon that could act as a travel destination.
+Any astronomical body such as a planet or a moon that could act as a travel destination.
 
 #### Definition
 
@@ -37,7 +37,7 @@ entity AstronomicalBodies {
 
 #### Content
 
-The data is stored in file [`astrobodies.csv`](./db/src/csv/astrobodies.csv) and currently lists only the 8 planets in our solar system, plus Pluto and the Earth's Moon.
+The runtime data is stored in file [`astrobodies.csv`](./db/src/csv/astrobodies.csv) and currently lists only the 8 planets in our solar system, plus Pluto and the Earth's Moon.
 
 
 ---
@@ -69,7 +69,7 @@ entity SpaceFlightCompanies {
 
 #### Content
 
-The data is stored in the file [`spaceflightcompanies.csv`](./db/src/csv/spaceflightcompanies.csv), which currently list 7 companies capable of launching vehicles into Lunar orbit or beyond.
+The runtime data is stored in the file [`spaceflightcompanies.csv`](./db/src/csv/spaceflightcompanies.csv).  There are currently only 7 companies worldwide capable of launching vehicles into Lunar orbit or beyond.
 
 
 
@@ -119,7 +119,7 @@ entity Spaceports {
 
 The last two spaceports are the proposed landing sites for NASA's Mars 2020 mission.
 
-The data is stored in the file [`spaceports.csv`](./db/src/csv/spaceports.csv), which currently contains 12 entries.
+The runtime data is stored in the file [`spaceports.csv`](./db/src/csv/spaceports.csv).
 
 ---
 
@@ -127,8 +127,8 @@ The data is stored in the file [`spaceports.csv`](./db/src/csv/spaceports.csv), 
 
 Lists all the routes that involve some aspect of space travel.  For ease of understanding, each space route can be grouped into one of four general categories:
 
-1. Vehicle launch into low planetary orbit
-1. Entering some type of transfer orbit (this will take you to your destination planet)
+1. Surface launch of the vehicle into low planetary orbit
+1. From low planetary orbit, enter some type of transfer orbit (this will take you to your destination planet)
 1. Transition from transfer orbit into low planetary orbit
 1. Descent to planetary surface
 
@@ -153,7 +153,7 @@ entity SpaceRoutes {
 
 | Field Name | Key | Description | Can be null? |
 |---|---|---|:-:|
-| `ID` | ![Tick](./img/tick.png) | An arbitrary integer (see below) | No
+| `ID` | ![Tick](./img/tick.png) | An arbitrary integer belonging to a number range<br>See below for details | No
 |`StartingPlanet`| | The ID of the planet from which this route starts | Yes
 |`DestinationPlanet`| | The ID of the planet on which this route ends | No
 |`StartingSpaceport`| | The ID of the spaceport from which the vehicle is launched | Yes
@@ -165,10 +165,10 @@ The space route categories listed above are identified by the number ranges show
 
 | SpaceRoute ID | Route Category |
 |:-:|---|
-| 000 - 099 | Launch into low planetary orbit
+| 000 - 099 | Surface launch into low planetary orbit
 | 100 - 199 | Enter transfer orbit
 | 200 - 299 | Enter low planetary orbit
-| 300 - 399 | Planetary descent
+| 300 - 399 | Descend to planetary surface
 
 #### Content
 
@@ -176,7 +176,7 @@ As described in [the introduction](./dataModel.md), a journey taken in space con
 
 In the following tables, null fields have been left blank for visual clarity. (LEO = Low Earth Orbit)
 
-##### Launches (00 - 99)
+##### Surface Launches (00 - 99)
 
 | ID | Route Name | Starting Planet | Destination Planet | Starting Spaceport | Destination Spaceport | Starts From Orbit? | Lands On Destination Planet? |
 |---|---|---|---|---|---|:-:|:-:|
@@ -215,7 +215,7 @@ In the following tables, null fields have been left blank for visual clarity. (L
 | 303 | Martian Descent (Columbia) | | Mars | | Jezero Crater | TRUE | TRUE
 
 
-The data is stored in the file [`spaceroutes.csv`](./db/src/csv/spaceroutes.csv), which currently contains the 18 entries shown above.
+The runtime data is stored in the file [`spaceroutes.csv`](./db/src/csv/spaceroutes.csv), which currently contains the 18 entries shown above.
 
 ## Entities for Modifiable Master Data
 
@@ -275,5 +275,5 @@ The data used to populate the database table generated from this entity has been
 | 20 | Mars (Columbia) | Bangalore | Baikonur | ![Cross](./img/cross.png) |
 | 21 | Mars (Columbia) | San Francisco | Cape Canaveral | ![Cross](./img/cross.png) |
 
-The data is stored in the file [`itineraries.csv`](./db/src/csv/itineraries.csv), which currently contains the 21 entries shown above.
+The runtime data is stored in the file [`itineraries.csv`](./db/src/csv/itineraries.csv), which currently contains the 21 entries shown above.
 

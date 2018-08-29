@@ -10,51 +10,8 @@ The FlightData model acts as the base model for the TechEd CR02 sessions.
 
 ## Entities for Read-Only Master Data
 
-The following entities represent master data that will only ever be accessed in a read-only manner (unless of course you plan on building a new airport or the Death Star...)
+The following entities represent master data that will only ever be accessed in a read-only manner (unless of course you plan on building a new type of aircraft, a new airport or the Death Star...)
 
-### Entity `Airports`
-
-Lists almost all known airports.
-
-#### Definition
-
-```javascript
-entity Airports {
-  key IATA3      : String(3);
-      Name       : String(100) @title: "Airport";
-      City       : String(30)  @title: "City";
-      Country    : String(50)  @title: "Country";
-      Elevation  : Integer default 0;
-      Latitude   : Decimal(12, 9);
-      Longitude  : Decimal(12, 9);
-      Departures : Association to many EarthRoutes on Departures.StartingAirport=$self;
-      Arrivals   : Association to many EarthRoutes on Arrivals.DestinationAirport=$self;
-};
-```
-
-#### Structure
-
-| Field Name | Key | Description
-|---|---|---|
-| `IATA3` | ![Tick](./img/tick.png) | The 3-character IATA location code.<br>E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
-| `Name` | | Airport name in English as a UTF-8 character string
-| `City` | | The name of the town or city served by this airport
-| `Country` | | The country in which the airport is located
-| `Elevation` | | The airport's height above Mean Sea Level (MSL) measured in feet
-| `Latitude` | | The airports's latitude in decimal notation
-| `Longitude` | | The airports's longitude in decimal notation
-
-All coordinates are given in decimal notation rather than DMS notation (Degrees, Minutes, Seconds).  By convention, positive longitude is East and positive latitude is North.
-
-Longitude coordinate values must range between ±180.0˚ and latitude values must range between ±90.0˚.
-
-#### Content
-
-The data used to populate the database table generated from this entity has been derived from a filtered and reduced version of the file [airports-extended.dat](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports-extended.dat) available from the [Open Flights](https://openflights.org/data.html) website.
-
-The runtime data is stored in the file [`airports.csv`](../db/src/csv/airports.csv).
-
----
 
 ### Entity `AircraftCodes`
 
@@ -101,9 +58,52 @@ The runtime data is stored in the file [`aircraftcodes.csv`](../db/src/csv/aircr
 
 ---
 
+### Entity `Airports`
+
+Lists almost all known airports.
+
+#### Definition
+
+```javascript
+entity Airports {
+  key IATA3      : String(3);
+      Name       : String(100) @title: "Airport";
+      City       : String(30)  @title: "City";
+      Country    : String(50)  @title: "Country";
+      Elevation  : Integer default 0;
+      Latitude   : Decimal(12, 9);
+      Longitude  : Decimal(12, 9);
+      Departures : Association to many EarthRoutes on Departures.StartingAirport=$self;
+      Arrivals   : Association to many EarthRoutes on Arrivals.DestinationAirport=$self;
+};
+```
+
+#### Structure
+
+| Field Name | Key | Description
+|---|---|---|
+| `IATA3` | ![Tick](./img/tick.png) | The 3-character IATA location code.<br>E.G. London's Heathrow Airport = "LHR", New York's John F. Kennedy Airport = "JFK".
+| `Name` | | Airport name in English as a UTF-8 character string
+| `City` | | The name of the town or city served by this airport
+| `Country` | | The country in which the airport is located
+| `Elevation` | | The airport's height above Mean Sea Level (MSL) measured in feet
+| `Latitude` | | The airports's latitude in decimal notation
+| `Longitude` | | The airports's longitude in decimal notation
+
+All coordinates are given in decimal notation rather than DMS notation (Degrees, Minutes, Seconds).  By convention, positive longitude is East and positive latitude is North.
+
+Longitude coordinate values must range between ±180.0˚ and latitude values must range between ±90.0˚.
+
+#### Content
+
+The data used to populate the database table generated from this entity has been derived from a filtered and reduced version of the file [airports-extended.dat](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports-extended.dat) available from the [Open Flights](https://openflights.org/data.html) website.
+
+The runtime data is stored in the file [`airports.csv`](../db/src/csv/airports.csv).
+
+---
 ### Entity `Airlines`
 
-Lists information about each airline company.
+Lists almost all known airline companies.
 
 #### Definition
 
@@ -198,6 +198,13 @@ The data used to populate the database table generated from this entity has been
 The runtime data is stored in the file [`earthroutes.csv`](../db/src/csv/earthroutes.csv).
 
 
+---
+
+### Data Consistency between `Airports` and `Earthroutes`
+
+The airport and route information obtained directly from OpenFlights.org is not entirely consistent.  Airport location codes are listed in the `routes.dat` file that are not listed in the `airports.dat` file.  Without first cleaning up this data, it would be possible to fly from a known airport to an unknown airport!
+
+Please refer to the Git repository <https://github.com/ChrisWhealy/clean_airport_routes> for the NodeJS app that cleans up this data and then generates the CSV files needed to load the `Airports` and `Earthroutes` entities.
 
 
 ## Entities for Modifiable Master Data

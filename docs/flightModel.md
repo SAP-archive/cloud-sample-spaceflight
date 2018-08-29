@@ -141,17 +141,18 @@ E.G. The airline code `DJ` has been variously assigned to AirAsia Japan, Air Dji
 
 ### Entity `Earthroutes`
 
-Lists information about all direct flights between two airports.
+Lists information about all direct flights between two airports listed in the `Airports` entity.
 
 #### Definition
 
 ```javascript
 entity EarthRoutes {
-  key StartingAirport    : Association to Airports;
-  key DestinationAirport : Association to Airports;
-  key Airline            : Association to Airlines;
-      Distance  : Integer;
-      Equipment : {
+  key ID                 : String(8);
+      StartingAirport    : Association to Airports not null;
+      DestinationAirport : Association to Airports not null;
+      Airline            : Association to Airlines;
+      Distance           : Integer;
+      Equipment          : {
         aircraft1 : Association to AircraftCodes;
         aircraft2 : Association to AircraftCodes;
         aircraft3 : Association to AircraftCodes;
@@ -167,15 +168,24 @@ entity EarthRoutes {
 
 #### Structure
 
-Only direct flights are stored in this entity.
+Due to the fact that HANA Graph requires a table with a single key field, this entity uses an ID key field.  However, to avoid using an arbitrary (and therefore meaningless) integer as the key, the key is a character string formed by concatenating the following three values:
 
-Due to the fact that multiple airline companies can operate the same route, this entity requires three key fields.
+1. The 3-character IATA location code of the starting airport
+1. The 3-character IATA location code of the destination airport
+1. The 2-character IATA code of the airline company operating that route
+
+E.G. The route from London Heathrow to New York John F. Kennedy operated by British Airways would be:
+
+`"LHR" + "JFK" + "BA" = "LHRJFKBA"`
+
+An Airline company can operate up to 9 different aircraft types on a single route.
 
 | Field Name | Key | Description
 |---|---|---|
-| `StartingAirport` | ![](./img/tick.png) | The starting airport's 3-character IATA location code
-| `DestinationAirport` | ![](./img/tick.png) | The destination airport's 3-character IATA location code
-| `Airline` | ![](./img/tick.png) | The 2-character IATA code of the airline that operates this route
+| `ID` | ![](./img/tick.png) | The composite key value
+| `StartingAirport` | | The starting airport's 3-character IATA location code
+| `DestinationAirport` | | The destination airport's 3-character IATA location code
+| `Airline` | | The 2-character IATA code of the airline that operates this route
 | `Distance` | | The [Great Circle](https://en.wikipedia.org/wiki/Great-circle_distance) distance between the two airports given to the nearest kilometre.<br>This value is the ***minimum*** travel distance, not the actual distance taken during flight.
 | `Equipment` | | A compound data structure holding the equipment codes of up to 9 different aircraft used on this route
 | `aircraft[1..9]` | | The 3-character IATA equipment code of an aircraft used on this route

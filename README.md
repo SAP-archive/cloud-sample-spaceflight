@@ -13,7 +13,7 @@ This repository contains the basic data model for the following TechEd 2018 sess
 
 ## Data Model
 
-The data model used by all these sessions is described [here](./docs/dataModel.md).   Please read this description in order to gain a correct understanding how to use the data model.
+The data model used by all these sessions is described [here](./docs/README.md).   Please read this description in order to gain a correct understanding how to use the data model.
 
 ## Core Data Services (CDS) Build Tool
 

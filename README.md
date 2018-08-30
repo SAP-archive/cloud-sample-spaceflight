@@ -5,10 +5,10 @@ This repository contains the basic data model for the following TechEd 2018 sess
 
 | Session Code | Repository | Description |
 |---|---|---|
-| CNA262 | [cloud-samples-spaceflight-hana](https://github.com/SAP/cloud-samples-spaceflight-hana) | Developing SAP HANA Database Modules with an Application Programming Model |
-| CNA375 | [cloud-samples-spaceflight-node](https://github.com/SAP/cloud-samples-spaceflight-node) | Build Node Applications Using the Programming Model with SAP Cloud Platform |
-| CNA376 | [cloud-samples-spaceflight-java](https://github.com/SAP/cloud-samples-spaceflight-java) | Build (Java) Applications with the Programming Model on SAP Cloud Platform |
-| CNA462 | [cloud-samples-spaceflight-ui](https://github.com/SAP/cloud-samples-spaceflight-ui) | Develop UIs for Microservices-Based Applications on SAP Cloud Platform |
+| CNA262 | [cloud-sample-spaceflight-hana](https://github.com/SAP/cloud-sample-spaceflight-hana) | Developing SAP HANA Database Modules with an Application Programming Model |
+| CNA375 | [cloud-sample-spaceflight-node](https://github.com/SAP/cloud-sample-spaceflight-node) | Build Node Applications Using the Programming Model with SAP Cloud Platform |
+| CNA376 | [cloud-sample-spaceflight-java](https://github.com/SAP/cloud-sample-spaceflight-java) | Build (Java) Applications with the Programming Model on SAP Cloud Platform |
+| CNA462 | [cloud-sample-spaceflight-ui](https://github.com/SAP/cloud-sample-spaceflight-ui) | Develop UIs for Microservices-Based Applications on SAP Cloud Platform |
 
 
 ### Data Model

@@ -18,11 +18,24 @@ The data model used by all these sessions is described [here](./docs/README.md).
 A brief overview of the default behaviour of the CDS Build Tool given [here](./docs/cdsCompile.md).
 
 
-## Requirements
-Please refer to the README document of the above repositories.
+### For SAP TechEd
+SAP TechEd will provide you with a full environment to develop this sample application.  The instructions below are only needed if you wish to run the application in your own account on SAP cloud platform.
+
+### Development in SAP Cloud Platform Web IDE
+
+SAP Web IDE Full-Stack access is needed. For more information, see [Open SAP Web IDE](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/51321a804b1a4935b0ab7255447f5f84.html).
+
+Read the [getting started tutorial](https://help.sap.com/viewer//65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5ec8c983a0bf43b4a13186fcf59015fc.html) to learn more about working with SAP Cloud Platform Web IDE.
+
+Now clone your fork of this repository (*File -> Git -> Clone Repository*).
+
+#### Develop, Build, Deploy
+
+Build and deploy the DB module by choosing *Build* from the context menu of the db folder.
+
 
 ## Known Issues
-Please refer to the README document of the above repositories.
+None
 
 ## Support
 This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.

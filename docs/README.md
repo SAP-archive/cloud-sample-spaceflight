@@ -5,48 +5,44 @@ TechEd 2018 Session Journey For Track CRO2
 
 ### Data Model Structure
 
-The data model is divided into two parts:
+The data model is divided into two parts - a base part and an extension:
 
 1. [***FlightModel***](./flightModel.md)  
-   Those entities needed for representing travel on earth (very similar to data structures used by the ABAP FlightModel)
+   The base data model holding those entities needed to represent travel on earth.  This data model uses entities very similar to the data structures used by the ABAP FlightModel
 1. [***SpaceModel***](./spaceModel.md)  
-   Those entities needed to represent space travel
+   An extension to the base data model holding those entities needed to extend a journey into space
 
 ### FlightModel
 
-This data model acts as the base data model and represents journeys made by airplane on Earth.
+This data model represents journeys made by airplane on Earth.
 
 Any journey is represented as a series of between 1 and 5 "legs", where each leg represents a direct flight between two airports.
 
 ### SpaceModel
 
-This data model extends `FlightModel` and represents journeys that either start or end on Earth, but also include space travel.  For the purposes of simplicity, this data model confines itself to travel within our own Solar System.
+This data model extends `FlightModel` and represents journeys that include some aspect of space travel.  Such journeys usually  start or end on Earth.  For the purposes of simplicity, this data model confines itself to travel within our own Solar System.
 
-For instance, the journey in which you travel from Earth to the Moon would be recorded in two parts:
+For instance, if you wish to travel from Earth to the Moon, such as journey would be recorded in two parts:
 
-1. Travelling from your home city on earth to the spaceport (say, Cape Canaveral)
-1. Travelling from the spaceport to some destination in space
+1. Travelling by airplane from your home city on earth to some spaceport (say, Cape Canaveral)
+1. Travelling in some space vehicle from the spaceport to a destination in space
 
-However, traveling on earth is much simpler than travelling in space for the following reasons:
+However, traveling on earth is much simpler than travelling in space for the following reasons.  When you travel on earth:
 
-1. You never need to care about which planet you're going to land on - its always the same one you took off from!
-1. Any plane that takes off must also land (as all pilots know: take-off is optional, landing is mandatory!)
+1. You never need to care about which planet you're going to land on - its always the same one from which you took off!
+1. If you travel in an airplane, then as all pilots know, take-off is optional, landing is mandatory!  In other words, you are *going* to land back on the surface of the planet.
 
 In space travel though, neither of these assumptions are valid
 
+## Extra Considerations for Space Travel
 
+Navigation on earth is quite straight forward in that for short journeys, the shortest distance between two points is a straight line, and for longer journeys, the shortest distance is a ["Great Circle"](https://en.wikipedia.org/wiki/Great-circle_distance).
 
-## Extra Considerations for Space Travel
+In space however, due to the fact that you are moving between the gravitational fields of different planets/moons, all journeys follow must ***elliptical*** paths.
 
+In addition to this, the weight and cost of rocket fuel must be considered.  Consequently, we will always choose the most energy efficient path between two points.  This path will be an ellipse that approximates a [Hohmann Transfer Orbit](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit).
 
-
-Travelling on earth is quite straight forward in that for short journeys, the shortest distance between two points is a straight line, and for longer journeys, the shortest distance is a ["Great Circle"](https://en.wikipedia.org/wiki/Great-circle_distance).
-
-However, in space, all journeys follow ***elliptical*** paths.
-
-Also, due to the weight and cost of rocket fuel, you must always choose the most energy efficient path between two points.  This path will be an ellipse that approximates a [Hohmann Transfer Orbit](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit).
-
-So now, we have some additional considerations:
+So now, we have some additional factors to consider:
 
 1. The shortest (I.E. cheapest) path between two bodies in space is never a straight line, but always an ellipse.
 1. The stages of a space journey do not necessarily start from or end on the surface of a planet.

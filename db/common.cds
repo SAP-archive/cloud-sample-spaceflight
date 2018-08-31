@@ -19,14 +19,3 @@ abstract entity Managed : AdminData {
 annotate sap.common.Languages  @(cds.persistence.skip);
 annotate sap.common.Countries  @(cds.persistence.skip);
 annotate sap.common.Currencies @(cds.persistence.skip);
-
-
-
-// ------- Temporary stuff -----------------------
-// TODO remove once sap/cds 2.8.0 is released
-annotate Managed with {
-  createdAt  @odata.on.insert: #now;
-  createdBy  @odata.on.insert: #user;
-  modifiedAt @odata.on.update: #now;
-  modifiedBy @odata.on.update: #user;
-}

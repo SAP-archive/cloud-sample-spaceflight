@@ -1,35 +1,70 @@
 #!/usr/bin/env node
 
-// Copies csv files from reuse modules to the local db/src/gen folder for deployment.
-// Only reuse modules in the sap namespace which are directly referenced in the package.json are considered (no recursive evaluation).
-// A reuse module must provide an hdbtabledata file declaring its csv files. In case there is no hdbtabledata file, no csv files are copied.
-// The hdbtabledata file maps the fully qualified table name to the csv filename.
-// If there is a csv file for the same table:
-// 1. ... on consumption level and on reuse level => only the file from the consumption level is taken (no merge of data)
-// 2. ... in different reuse modules => the file from the reuse module being declared first in the package.json is taken
-// All csv files declared in hdbtabledata files are copied according to the rules above, no matter whether the corresponding table is used on consumption level or not.
-// In case of structural table changes, it is necessary to provide an 'overwriting' csv file on the consumption level, reflecting the new table structure.
-//
+/**
+ * =====================================================================================================================
+ * @fileOverview Copy CSV files from a reference repository into the local db/src/gen folder
+ * 
+ * IMPORTANT: No recursive evaluation is performed
+ *            Only reuse modules in the SAP namespace which are directly referenced in the package.json are considered 
+ * 
+ * A reuse module must provide a .hdbtabledata file in which all the required .csv files are declared.
+ * If a .hdbtabledata file cannot be found, then no csv files are copied
+ * 
+ * The .hdbtabledata file maps qualified table names to corresponding .csv filenames
+ * 
+ * If there is a .csv file for the same table at both the consumption and reuse levels
+ * then only the file from the consumption level is taken (no data merge is performed)
+ * 
+ * If however, there is a .csv file for the same table in different reuse modules
+ * then the .csv files belonging to the first reuse module encountered in package.json will be taken
+ * 
+ * All .csv files declared in the .hdbtabledata files are copied according to the rules above, no matter whether the
+ * corresponding table is used at the consumption level or not.
+ * 
+ * In case of structural table changes, it is necessary to provide an 'overwriting' .csv file at the consumption level
+ * that reflects the new table structure
+ * 
+ * Author   : Christian Georgi   christian.georgi@sap.com
+ * Modified : Chris Whealy       chris.whealy@sap.com
+ * =====================================================================================================================
+ **/
 
-const fs = require('fs')
+const fs   = require('fs')
 const path = require('path')
-const EOL = require('os').EOL
-const dependencyFilter = dep => dep.startsWith("space") // only  consider space* modules
+const EOL  = require('os').EOL
 
-const localTableData = _getTableDataSync(path.join('db/src/csv')) // local *.hdbtabledata to be filtered out
-const tableNames = [] // gather all locally declared table names
-localTableData.forEach(filePath => {
-  const jsonTableDataContent = JSON.parse(fs.readFileSync(filePath))
-  jsonTableDataContent.imports.forEach(entry => {
-    tableNames.push(entry.target_table)
-  })
-})
+// A useful version of Array push that returns the modified array rather than the index of the newly added item...
+const push = (arr, newEl) => (_ => arr)(arr.push(newEl))
 
+// Files containing table data
+const tableDataFileSuffixes = [".hdbtabledata"]
+
+// Only consider space* modules
+const dependencyFilter = dep => dep.startsWith("space")
+
+// Discover all .hdbtabledata files in the db/src/csv folder
+const localTableData = _getTableDataSync(path.join('db/src/csv'))
+
+// Gather all locally declared table names
+var tableNames = localTableData.
+  reduce(
+    (accOuter, filePath) =>
+      JSON.
+        parse(fs.readFileSync(filePath)).
+        imports.
+        reduce((accInner, entry) => push(accInner, entry.target_table), accOuter)
+  , [])
+
+console.log("Found %i locally declared tables\n%s", tableNames.length, tableNames.join('\n  '))
+
+// Pull in the top level package.json file
 const packages = JSON.parse(fs.readFileSync(path.join('package.json')))
-const reuseTableDataFiles = [] // all potential *.hdbtabledata to be copied
-Object.keys(packages.dependencies).filter(dependencyFilter).forEach(dependency => {
-  _getTableDataSync(path.join('node_modules', dependency), reuseTableDataFiles)
-})
+
+// Discover all *.hdbtabledata that might be present in dependent node modules
+const reuseTableDataFiles = Object.
+  keys(packages.dependencies).
+  filter(dependencyFilter).
+  reduce((acc, dependency) => _getTableDataSync(path.join('node_modules', dependency), acc), [])
 
 reuseTableDataFiles.forEach(filePath => { // filter out tables declared locally and copy csv data
   console.log(`Reusing table data from '${path.relative(process.cwd(), filePath)}'`)
@@ -101,15 +136,25 @@ function _mkdirSync(pathName) {
   }, initDir)
 }
 
-function _getTableDataSync(directory, tableDataList) {
-  const files = fs.readdirSync(directory)
-  tableDataList = tableDataList || []
-  files.forEach(file => {
-    if (fs.statSync(path.join(directory, file)).isDirectory()) {
-      tableDataList = _getTableDataSync(path.join(directory, file), tableDataList)
-    } else if (file.toString().endsWith('.hdbtabledata')) {
-      tableDataList.push(path.join(directory, file))
-    }
-  })
-  return tableDataList
-}
+/**
+ * ---------------------------------------------------------------------------------------------------------------------
+ * Recursively discover all .hdbtabledata files starting from the specified directory
+ * Returns an array of fully qualified file names
+ */
+const _getTableDataSync =
+  (directory, tableDataList) =>
+    fs.existsSync(directory)
+    ? fs.readdirSync(directory)
+        .reduce((acc, fName) =>
+            (fqName => 
+              tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
+              ? push(acc, fqName)
+              : (fs.statSync(fqName).isDirectory())
+                ? _getTableDataSync(fqName, acc)
+                : acc)
+            (path.join(directory, fName))
+        , tableDataList || [])
+    : []
+
+
+

@@ -141,20 +141,18 @@ function _mkdirSync(pathName) {
  * Recursively discover all .hdbtabledata files starting from the specified directory
  * Returns an array of fully qualified file names
  */
-const _getTableDataSync =
-  (directory, tableDataList) =>
-    fs.existsSync(directory)
-    ? fs.readdirSync(directory)
-        .reduce((acc, fName) =>
-            (fqName => 
-              tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
-              ? push(acc, fqName)
-              : (fs.statSync(fqName).isDirectory())
-                ? _getTableDataSync(fqName, acc)
-                : acc)
-            (path.join(directory, fName))
-        , tableDataList || [])
-    : []
-
+function _getTableDataSync(directory, tableDataList) {
+  return fs.existsSync(directory) ? fs.readdirSync(directory)
+                                      .reduce((acc, fName) =>
+                                          (fqName => 
+                                            tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
+                                            ? push(acc, fqName)
+                                            : (fs.statSync(fqName).isDirectory())
+                                              ? _getTableDataSync(fqName, acc)
+                                              : acc)
+                                          (path.join(directory, fName))
+                                      , tableDataList || [])
+                                  : []
+}
 
 

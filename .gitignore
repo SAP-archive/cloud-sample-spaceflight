@@ -22,3 +22,5 @@ dist/
 
 connection.properties
 metadata.xml
+
+.cds_gen.log

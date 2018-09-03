@@ -59,15 +59,12 @@ const _getTableDataSync =
         , tableDataList || [])
     : []
 
-
 // Only consider space* modules
 const dependencyFilter = dep => dep.startsWith("space")
 
-// Discover all .hdbtabledata files in the db/src/csv folder
-const localTableData = _getTableDataSync(path.join('db/src/csv'))
-
-// Gather all locally declared table names
-var tableNames = localTableData.
+// Discover all .hdbtabledata files in the local db/src/csv folder, then from this list, gather all locally declared
+// table names
+var tableNames = _getTableDataSync(path.join('db/src/csv')).
   reduce(
     (accOuter, filePath) =>
       JSON.
@@ -76,19 +73,24 @@ var tableNames = localTableData.
         reduce((accInner, entry) => push(accInner, entry.target_table), accOuter)
   , [])
 
-console.log("Found %i locally declared tables\n%s", tableNames.length, tableNames.join('\n  '))
+console.log("\n---------------------------------------------------------------------------------")
+console.log("\nFound %i locally declared tables\n%s", tableNames.length, tableNames.join('\n  '))
 
 // Pull in the top level package.json file
 const packages = JSON.parse(fs.readFileSync(path.join('package.json')))
 
-// Discover all *.hdbtabledata that might be present in dependent node modules
+// Discover all *.hdbtabledata files that might be present in dependent node modules declared in package.json
 const reuseTableDataFiles = Object.
   keys(packages.dependencies).
   filter(dependencyFilter).
   reduce((acc, dependency) => _getTableDataSync(path.join('node_modules', dependency), acc), [])
 
-reuseTableDataFiles.forEach(filePath => { // filter out tables declared locally and copy csv data
-  console.log(`Reusing table data from '${path.relative(process.cwd(), filePath)}'`)
+/**
+ * ---------------------------------------------------------------------------------------------------------------------
+ * Filter out locally declared tables and copy CSV data
+ */
+reuseTableDataFiles.forEach(filePath => {
+  console.log(`Importing CSV files based on table data from '${path.relative(process.cwd(), filePath)}'`)
   const newFiles = []
   const jsonTableDataContent = JSON.parse(fs.readFileSync(filePath))
   const nonFilteredImports = [] // will contain imports with locally declared and/or duplicate tables filtered out

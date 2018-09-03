@@ -39,6 +39,27 @@ const push = (arr, newEl) => (_ => arr)(arr.push(newEl))
 // Files containing table data
 const tableDataFileSuffixes = [".hdbtabledata"]
 
+/**
+ * ---------------------------------------------------------------------------------------------------------------------
+ * Recursively discover all .hdbtabledata files starting from the specified directory
+ * Returns an array of fully qualified file names
+ */
+const _getTableDataSync =
+  (directory, tableDataList) =>
+    fs.existsSync(directory)
+    ? fs.readdirSync(directory)
+        .reduce((acc, fName) =>
+            (fqName => 
+              tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
+              ? push(acc, fqName)
+              : (fs.statSync(fqName).isDirectory())
+                ? _getTableDataSync(fqName, acc)
+                : acc)
+            (path.join(directory, fName))
+        , tableDataList || [])
+    : []
+
+
 // Only consider space* modules
 const dependencyFilter = dep => dep.startsWith("space")
 
@@ -136,25 +157,6 @@ function _mkdirSync(pathName) {
   }, initDir)
 }
 
-/**
- * ---------------------------------------------------------------------------------------------------------------------
- * Recursively discover all .hdbtabledata files starting from the specified directory
- * Returns an array of fully qualified file names
- */
-const _getTableDataSync =
-  (directory, tableDataList) =>
-    fs.existsSync(directory)
-    ? fs.readdirSync(directory)
-        .reduce((acc, fName) =>
-            (fqName => 
-              tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
-              ? push(acc, fqName)
-              : (fs.statSync(fqName).isDirectory())
-                ? _getTableDataSync(fqName, acc)
-                : acc)
-            (path.join(directory, fName))
-        , tableDataList || [])
-    : []
 
 
 

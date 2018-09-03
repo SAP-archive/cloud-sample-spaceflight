@@ -157,27 +157,5 @@ function _mkdirSync(pathName) {
   }, initDir)
 }
 
-<<<<<<< HEAD
-
-=======
-/**
- * ---------------------------------------------------------------------------------------------------------------------
- * Recursively discover all .hdbtabledata files starting from the specified directory
- * Returns an array of fully qualified file names
- */
-function _getTableDataSync(directory, tableDataList) {
-  return fs.existsSync(directory) ? fs.readdirSync(directory)
-                                      .reduce((acc, fName) =>
-                                          (fqName => 
-                                            tableDataFileSuffixes.some(sfx => fqName.endsWith(sfx))
-                                            ? push(acc, fqName)
-                                            : (fs.statSync(fqName).isDirectory())
-                                              ? _getTableDataSync(fqName, acc)
-                                              : acc)
-                                          (path.join(directory, fName))
-                                      , tableDataList || [])
-                                  : []
-}
->>>>>>> 6b59affaee7893be109e8b4be3935f95fce9ca67
 
 

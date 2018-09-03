@@ -10,5 +10,5 @@
   "bin": {
     "reuseTableData": "db/reuseTableData.js"
   },
-  "license": "ISC"
+  "license": "SEE LICENSE IN LICENSE"
 }

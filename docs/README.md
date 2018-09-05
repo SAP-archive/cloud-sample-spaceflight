@@ -38,7 +38,7 @@ In space travel though, neither of these assumptions are valid
 
 Navigation on earth is quite straight forward in that for short journeys, the shortest distance between two points is a straight line, and for longer journeys, the shortest distance is a ["Great Circle"](https://en.wikipedia.org/wiki/Great-circle_distance).
 
-In space however, due to the fact that you are moving between the gravitational fields of different planets/moons, all journeys follow must ***elliptical*** paths.
+In space however, due to the fact that you are moving between the gravitational fields of different planets/moons, all journeys must follow ***elliptical*** paths.
 
 In addition to this, the weight and cost of rocket fuel must be considered.  Consequently, we will always choose the most energy efficient path between two points.  This path will be an ellipse that approximates a [Hohmann Transfer Orbit](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit).
 
@@ -46,20 +46,21 @@ So now, we have some additional factors to consider:
 
 1. The shortest (I.E. cheapest) path between two bodies in space is never a straight line, but always an ellipse.
 1. The stages of a space journey do not necessarily start from or end on the surface of a planet.
-1. It is entirely possible that our space journey does not intend to land on the destination planet, but simply loop around it and return home.
+1. It is entirely possible that our space journey does not intend to land on the destination planet.  
+    In this case, gravitational assistance of the destination planet/moon is used to loop around it and then return home.  This is known as a "free return" trajectory.
 
-The first question you must therefore answer is this:
+So, the first question you must answer is this:
 
 > Do I intend to land on the surface of the destination planet?  
 >
 > Yes or no?
 
-The answer to this question will critically determine the type of transfer orbit used to get you from Earth to wherever you're going.
+The answer to this question will critically determine the flight path used to get you from Earth to wherever you're going.
 
 
 ### Landing on the Destination Planet/Moon
 
-For example, let's assume you want to repeat the flight path of Apollo 11 and land on the Moon.  Such a journey can be simplified into the following 4 stages (the reality is much more complex...):
+For example, let's assume you want to repeat the flight path of Apollo 11 and land on the Moon.  Such a journey can be simplified into the following 4 stages (in reality however, the [Apollo 11](https://history.nasa.gov/afj/ap11fj/index.html) flight plan was hugely more complex!):
 
 1. From a spaceport such as Cape Canaveral, launch into a low earth orbit (LEO), then orbit the Earth a couple of times
 1. Fire the motors again to enter a transfer orbit that will take you close enough to the Moon to be captured by its gravity (known as trans-lunar injection, or TLI)
@@ -76,7 +77,7 @@ The return flight is the same sequence in reverse:
 
 ### Not Landing on the Destination Planet/Moon
 
-Alternatively, if you simply want to be a space tourist and loop around your destination planet then immediately return home, your flight path will be somewhat simpler. (This is the flight path used by Apollo 8).
+Alternatively, if you simply want to be a space tourist and loop around your destination planet then immediately return home, your flight path will be somewhat simpler. (This route copies the flight path used by [Apollo 8](https://history.nasa.gov/afj/ap08fj/index.html)).
 
 1. Launch into low earth orbit (LEO), then orbit the Earth a couple of times.
 1. Fire the motors again to enter a free-return lunar transfer orbit.  

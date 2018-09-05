@@ -31,7 +31,7 @@ Now clone your fork of this repository (*File -> Git -> Clone Repository*).
 
 #### Develop, Build, Deploy
 
-Build and deploy the DB module by choosing *Build* from the context menu of the db folder.
+Build and deploy the DB module by choosing *Build* from the context menu of the `db` folder.
 
 
 ## Known Issues

@@ -1,5 +1,9 @@
 # Space Travel Sample for TechEd 2018
 
+***This repository is no longer maintained***
+
+The active repository is <https://github.com/SAP/cloud-sample-spaceflight>
+
 ## Description
 This repository contains the basic data model for the following TechEd 2018 sessions
 

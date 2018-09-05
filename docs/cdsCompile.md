@@ -22,13 +22,13 @@ You are free to use as many of these three layers as are relevant for your requi
 
 ## CDS Compiler Conventions
 
-In Web IDE, when you select "Build CDS" from the project context menu, or "Build" from the "db" folder's context menu, the CDS compiler will be invoked.  Although it is possible to configure the behaviour of this compiler, in the absence of any explicit configuration, it will follow certain conventions concerning directory and file names.
+In Web IDE, when you select "Build CDS" from the project context menu, or "Build" from the `db` folder's context menu, the CDS compiler will be invoked.  Although it is possible to configure the behaviour of this compiler, in the absence of any explicit configuration, it will follow certain conventions concerning directory and file names.
 
 In keeping with the strict order described above, the CDS compiler first examines the contents of the `db` folder, then the `srv` folder, then finally the `app` folder.
 
 ### The `index.cds` file
 
-The CDS compiler's default behaviour is to look in each of the above directories firstly for an `index.cds` file.  If this file is found, then the compiler behaves in the following manner:
+The CDS compiler's default behaviour is to look in each of the above directories for an `index.cds` file.  If this file is found, then the compiler behaves in the following manner:
 
 1. Only the `index.cds` file will be opened explicitly.  Since this is a normal CDS file, it can contain any CDS statements you like - which includes references to other `.cds` files
 1. If your data model is described by multiple `.cds` files, then these files must be referenced within `index.cds`, otherwise they will ***not*** be processed

@@ -1,5 +1,7 @@
-_schema-version: "2.0.0"
 ID: spacetravel
+description: Base Spaceflight CDS data model
+provider: SAP
+_schema-version: "3.1"
 version: 1.0.0
 
 modules:
@@ -10,10 +12,10 @@ modules:
      memory: 256M
      disk-quota: 256M
    requires:
-     - name: spacetravel-hdi2
+     - name: spacetravel-hdi
 
 resources:
- - name: spacetravel-hdi2
+ - name: spacetravel-hdi
    properties:
      hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container

@@ -2,24 +2,6 @@
 # Space Travel Sample for TechEd 2018
 
 
-
-
-<a name="contents"></a>
-## Table of Contents
-1. [Description](#description)
-1. [Requirements](#requirements)
-1. [Download & Installation](#download)
-1. [Configuration](#configuration)
-1. [Limitations](#limitations)
-1. [Known Issues](#issues)
-1. [Support](#support)
-1. [Contributing](#contributing)
-1. [License](#license)
-
-
-
-
-
 <a name="description"></a>
 ## Description
 

@@ -42,7 +42,7 @@ For attendees of SAP TechEd 2018, the session instructors will provide you with 
 Once SAP TechEd 2018 has finished, the exercises shown in the above sessions will be available for use to anyone with an SAP Cloud Platform (Cloud Foundry) account containing at least the services listed below:
 
 * Application Runtime
-* SAP HANA Database (Enterprise)
+* SAP HANA Database (Standard or Enterprise)
 * SAP HANA Schemas & HDI Containers (hdi-shared)
 
 The instructions below are only needed if you wish to run the application in your own account on SAP cloud platform.

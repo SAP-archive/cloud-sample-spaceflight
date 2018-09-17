@@ -102,7 +102,7 @@ None
 <a name="limitations"></a>
 ## Limitations
 
-When using SAP Web IDE in the Firefox Quantum browser, a small number editor features are known not function correctly; therefore it is recommended to use an up-to-date version of Google Chrome when working in SAP Web IDE.
+When using SAP Web IDE in the Firefox Quantum browser, a small number editor features are known not to function correctly; therefore it is recommended to use an up-to-date version of Google Chrome when working in SAP Web IDE.
 
 
 

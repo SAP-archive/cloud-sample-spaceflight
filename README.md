@@ -23,9 +23,9 @@
 <a name="description"></a>
 ## Description
 
-This repository contains the base data model for the following TechEd 2018 sessions:
+This repository contains the base CDS data model for the following TechEd 2018 sessions:
 
-| Session Code | Repository | Description |
+| TechEd Session Code | Repository | Session Description |
 |---|---|---|
 | CNA262 | [cloud-sample-spaceflight-hana](https://github.com/SAP/cloud-sample-spaceflight-hana) | Developing SAP HANA Database Modules with an Application Programming Model |
 | CNA375 | [cloud-sample-spaceflight-node](https://github.com/SAP/cloud-sample-spaceflight-node) | Build Node Applications Using the Programming Model with SAP Cloud Platform |

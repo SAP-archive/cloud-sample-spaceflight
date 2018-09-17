@@ -67,7 +67,7 @@ The instructions below are only needed if you wish to run the application in you
 
 ### Development in SAP Cloud Platform Web IDE
 
-An SAP Cloud Platform (Neo) account in needed in order have access to the Full-stack version of the SAP Web IDE. For more information, see [Open SAP Web IDE](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/51321a804b1a4935b0ab7255447f5f84.html).
+An SAP Cloud Platform (Neo) account is needed in order have access to the Full-stack version of the SAP Web IDE. For more information, see [Open SAP Web IDE](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/51321a804b1a4935b0ab7255447f5f84.html).
 
 Read the [getting started tutorial](https://help.sap.com/viewer//65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5ec8c983a0bf43b4a13186fcf59015fc.html) to learn more about working with SAP Cloud Platform Web IDE.
 
@@ -84,7 +84,7 @@ Build and deploy the DB module by choosing *Build* from the context menu of the 
 <a name="download"></a>
 ## Download and Installation
 
-The exercises for the sessions listed above are entirely Cloud-based.  Although you are at liberty to use any software editor you choose, the exercise instructions assume the use of SAP Web IDE; therefore, no software need be installed locally.
+The exercises for the sessions listed above are entirely Cloud-based.  Although you are at liberty to use any software editor you choose, the exercise instructions assume the use of SAP Web IDE; therefore based on this assumption, no software need be installed locally.
 
 
 

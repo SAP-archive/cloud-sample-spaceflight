@@ -1,6 +1,6 @@
 {
   "name": "spaceflight-model",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "@sap/cds": "^2.8"
   },

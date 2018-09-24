@@ -7,19 +7,19 @@
 
 This repository contains the base CDS data model for the following TechEd 2018 sessions:
 
-| TechEd Session Code | Repository | Session Description |
+| TechEd<br>Session<br>Code | Repository | Session Description |
 |---|---|---|
-| CNA262 | [cloud-sample-spaceflight-hana](https://github.com/SAP/cloud-sample-spaceflight-hana) | Developing SAP HANA Database Modules with an Application Programming Model |
-| CNA375 | [cloud-sample-spaceflight-node](https://github.com/SAP/cloud-sample-spaceflight-node) | Build Node Applications Using the Programming Model with SAP Cloud Platform |
-| CNA376 | [cloud-sample-spaceflight-java](https://github.com/SAP/cloud-sample-spaceflight-java) | Build (Java) Applications with the Programming Model on SAP Cloud Platform |
-| CNA462 | [cloud-sample-spaceflight-ui](https://github.com/SAP/cloud-sample-spaceflight-ui) | Develop UIs for Microservices-Based Applications on SAP Cloud Platform |
+| CNA262 | [cloud&#8209;sample&#8209;spaceflight&#8209;hana](https://github.com/SAP/cloud-sample-spaceflight-hana) | Developing SAP HANA Database Modules with an Application Programming Model |
+| CNA375 | [cloud&#8209;sample&#8209;spaceflight&#8209;node](https://github.com/SAP/cloud-sample-spaceflight-node) | Build Node Applications Using the Programming Model with SAP Cloud Platform |
+| CNA376 | [cloud&#8209;sample&#8209;spaceflight&#8209;java](https://github.com/SAP/cloud-sample-spaceflight-java) | Build (Java) Applications with the Programming Model on SAP Cloud Platform |
+| CNA462 | [cloud&#8209;sample&#8209;spaceflight&#8209;ui](https://github.com/SAP/cloud-sample-spaceflight-ui) | Develop UIs for Microservices-Based Applications on SAP Cloud Platform |
 
 This data model has been defined using SAP's [Core Data Services](https://help.sap.com/viewer/09b6623836854766b682356393c6c416/2.0.03/en-US) 
 
 
 ### Data Model
 
-The data model used by all these sessions is described [here](./docs/README.md).   Please read this description in order to gain a correct understanding firstly of the data model's structure, and secondly, how it can be used.
+The data model used by the sessions listed above is described [here](./docs/README.md).   Please read this description in order to gain a correct understanding of both the data model's structure and use.
 
 ### Core Data Services (CDS) Build Tool
 
@@ -29,17 +29,18 @@ A brief overview of the default behaviour of the CDS Build Tool is given [here](
 
 
 
+<a href="#top">Top</a>
 
 <a name="requirements"></a>
 ## Requirements
 
 ### For SAP TechEd 2018
 
-For attendees of SAP TechEd 2018, the session instructors will provide you with access to the full environment in which you can develop the various sample applications used in the sessions listed above.
+For attendees of SAP TechEd 2018, the session instructors will provide you with access to the full environment in which you can develop the various applications described in the session exercises.
 
 ### For General Use
 
-Once SAP TechEd 2018 has finished, the exercises shown in the above sessions will be available for use to anyone with an SAP Cloud Platform (Cloud Foundry) account containing at least the services listed below:
+After SAP TechEd 2018 has finished, the exercises from the above sessions will still be available for use to anyone with an SAP Cloud Platform (Cloud Foundry) account containing at least the services listed below:
 
 * Application Runtime
 * SAP HANA Database (Standard or Enterprise)
@@ -61,7 +62,7 @@ Build and deploy the DB module by choosing *Build* from the context menu of the 
 
 
 
-
+<a href="#top">Top</a>
 
 <a name="download"></a>
 ## Download and Installation
@@ -70,7 +71,7 @@ The exercises for the sessions listed above are entirely Cloud-based.  Although 
 
 
 
-
+<a href="#top">Top</a>
 
 <a name="configuration"></a>
 ## Configuration
@@ -80,6 +81,7 @@ None
 
 
 
+<a href="#top">Top</a>
 
 <a name="limitations"></a>
 ## Limitations
@@ -88,6 +90,7 @@ When using SAP Web IDE in the Firefox Quantum browser, a small number editor fea
 
 
 
+<a href="#top">Top</a>
 
 <a name="issues"></a>
 ## Known Issues
@@ -96,6 +99,8 @@ None so far...
 
 
 
+
+<a href="#top">Top</a>
 
 <a name="support"></a>
 <a name="contributing"></a>
@@ -106,9 +111,12 @@ This project is provided "as-is": there is no guarantee that raised issues will 
 
 
 
+<a href="#top">Top</a>
 
 <a name="license"></a>
 ## License
 
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
 This project is licensed under the Apache Software License, Version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+
+<a href="#top">Top</a>

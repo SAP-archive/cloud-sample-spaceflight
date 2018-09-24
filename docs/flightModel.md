@@ -32,7 +32,7 @@ entity AircraftCodes {
 
 | Field Name | Key | Description
 |---|---|---|
-| `EquipmentCode` | ![](./img/tick.png) | The 3-character IATA equipment code.<br>E.G. Airbus A320 = "320", Boeing 777-8 = "778"
+| `EquipmentCode` | ![](./img/tick.png) | The 3-character IATA equipment code.<br>E.G. Airbus A320 = "320", Boeing 777-200 = "772"
 | `Manufacturer` | | The name of the aircraft manufacturer
 | `Type_Model` | | The type and model of aircraft
 | `Wake` | | The aircraft's wake category.  See below for details

@@ -217,8 +217,8 @@
       , "DESTINATIONPLANET_ID"     : "DestinationPlanet_ID"
       , "STARTINGSPACEPORT_ID"     : "StartingSpaceport_ID"
       , "DESTINATIONSPACEPORT_ID"  : "DestinationSpaceport_ID"
-      , "STARTSFROMORBIT"          : "StartsFromOrbit_ID"
-      , "LANDSONDESTINATIONPLANET" : "LandsOnDestinationPlanet_ID"
+      , "STARTSFROMORBIT"          : "StartsFromOrbit"
+      , "LANDSONDESTINATIONPLANET" : "LandsOnDestinationPlanet"
       }
 	}
   , {

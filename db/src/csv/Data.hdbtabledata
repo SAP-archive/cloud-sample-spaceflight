@@ -102,19 +102,19 @@
       }
     , "column_mappings" : {
         "ID"                                : "ID"
-      , "STARTINGAIRPORT_IATA3"             : "StartingAirport"
-      , "DESTINATIONAIRPORT_IATA3"          : "DestinationAirport"
-      , "AIRLINE_IATA2"                     : "Airline"
+      , "STARTINGAIRPORT_IATA3"             : "StartingAirport_IATA3"
+      , "DESTINATIONAIRPORT_IATA3"          : "DestinationAirport_IATA3"
+      , "AIRLINE_IATA2"                     : "Airline_IATA2"
       , "DISTANCE"                          : "Distance"
-      , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" : "Equipment1"
-      , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" : "Equipment2"
-      , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" : "Equipment3"
-      , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" : "Equipment4"
-      , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" : "Equipment5"
-      , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" : "Equipment6"
-      , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" : "Equipment7"
-      , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" : "Equipment8"
-      , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" : "Equipment9"
+      , "EQUIPMENT_AIRCRAFT1_EQUIPMENTCODE" : "Equipment_aircraft1_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT2_EQUIPMENTCODE" : "Equipment_aircraft2_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT3_EQUIPMENTCODE" : "Equipment_aircraft3_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT4_EQUIPMENTCODE" : "Equipment_aircraft4_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT5_EQUIPMENTCODE" : "Equipment_aircraft5_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT6_EQUIPMENTCODE" : "Equipment_aircraft6_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT7_EQUIPMENTCODE" : "Equipment_aircraft7_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT8_EQUIPMENTCODE" : "Equipment_aircraft8_EquipmentCode"
+      , "EQUIPMENT_AIRCRAFT9_EQUIPMENTCODE" : "Equipment_aircraft9_EquipmentCode"
       }
 	}
   , {
@@ -137,7 +137,7 @@
     , "column_mappings" : {
         "ID"          : "ID"
       , "NAME"        : "Name"
-      , "ONPLANET_ID" : "OnPlanet_Id"
+      , "ONPLANET_ID" : "OnPlanet_ID"
       , "LATITUDE"    : "Latitude"
       , "LONGITUDE"   : "Longitude"
       }
@@ -185,9 +185,9 @@
     , "column_mappings" : {
         "ID"               : "ID"
       , "NAME"             : "Name"
-      , "OPERATESFROM1_ID" : "OperatesFrom1"
-      , "OPERATESFROM2_ID" : "OperatesFrom2"
-      , "OPERATESFROM3_ID" : "OperatesFrom3"
+      , "OPERATESFROM1_ID" : "OperatesFrom1_ID"
+      , "OPERATESFROM2_ID" : "OperatesFrom2_ID"
+      , "OPERATESFROM3_ID" : "OperatesFrom3_ID"
       }
 	}
   , {
@@ -213,12 +213,12 @@
     , "column_mappings" : {
         "ID"                       : "ID"
       , "NAME"                     : "Name"
-      , "STARTINGPLANET_ID"        : "StartingPlanet"
-      , "DESTINATIONPLANET_ID"     : "DestinationPlanet"
-      , "STARTINGSPACEPORT_ID"     : "StartingSpaceport"
-      , "DESTINATIONSPACEPORT_ID"  : "DestinationSpaceport"
-      , "STARTSFROMORBIT"          : "StartsFromOrbit"
-      , "LANDSONDESTINATIONPLANET" : "LandsOnDestinationPlanet"
+      , "STARTINGPLANET_ID"        : "StartingPlanet_ID"
+      , "DESTINATIONPLANET_ID"     : "DestinationPlanet_ID"
+      , "STARTINGSPACEPORT_ID"     : "StartingSpaceport_ID"
+      , "DESTINATIONSPACEPORT_ID"  : "DestinationSpaceport_ID"
+      , "STARTSFROMORBIT"          : "StartsFromOrbit_ID"
+      , "LANDSONDESTINATIONPLANET" : "LandsOnDestinationPlanet_ID"
       }
 	}
   , {
@@ -252,20 +252,20 @@
     , "column_mappings" : {
         "ID"                : "ID"
       , "NAME"              : "Name"
-      , "EARTHLEGS_LEG1_ID" : "EarthLeg1_Id"
-      , "EARTHLEGS_LEG2_ID" : "EarthLeg2_Id"
-      , "EARTHLEGS_LEG3_ID" : "EarthLeg3_Id"
-      , "EARTHLEGS_LEG4_ID" : "EarthLeg4_Id"
-      , "EARTHLEGS_LEG5_ID" : "EarthLeg5_Id"
-      , "SPACELEGS_LEG1_ID" : "SpaceLeg1_Id"
-      , "SPACELEGS_LEG2_ID" : "SpaceLeg2_Id"
-      , "SPACELEGS_LEG3_ID" : "SpaceLeg3_Id"
-      , "SPACELEGS_LEG4_ID" : "SpaceLeg4_Id"
-      , "SPACELEGS_LEG5_ID" : "SpaceLeg5_Id"
-      , "SPACELEGS_LEG6_ID" : "SpaceLeg6_Id"
-      , "SPACELEGS_LEG7_ID" : "SpaceLeg7_Id"
-      , "SPACELEGS_LEG8_ID" : "SpaceLeg8_Id"
-      , "SPACELEGS_LEG9_ID" : "SpaceLeg9_Id"
+      , "EARTHLEGS_LEG1_ID" : "EarthLegs_leg1_ID"
+      , "EARTHLEGS_LEG2_ID" : "EarthLegs_leg2_ID"
+      , "EARTHLEGS_LEG3_ID" : "EarthLegs_leg3_ID"
+      , "EARTHLEGS_LEG4_ID" : "EarthLegs_leg4_ID"
+      , "EARTHLEGS_LEG5_ID" : "EarthLegs_leg5_ID"
+      , "SPACELEGS_LEG1_ID" : "SpaceLegs_leg1_ID"
+      , "SPACELEGS_LEG2_ID" : "SpaceLegs_leg2_ID"
+      , "SPACELEGS_LEG3_ID" : "SpaceLegs_leg3_ID"
+      , "SPACELEGS_LEG4_ID" : "SpaceLegs_leg4_ID"
+      , "SPACELEGS_LEG5_ID" : "SpaceLegs_leg5_ID"
+      , "SPACELEGS_LEG6_ID" : "SpaceLegs_leg6_ID"
+      , "SPACELEGS_LEG7_ID" : "SpaceLegs_leg7_ID"
+      , "SPACELEGS_LEG8_ID" : "SpaceLegs_leg8_ID"
+      , "SPACELEGS_LEG9_ID" : "SpaceLegs_leg9_ID"
       }
 	}
   ]

@@ -1,4 +1,4 @@
-ID,Name,EarthLeg1_Id,EarthLeg2_Id,EarthLeg3_Id,EarthLeg4_Id,EarthLeg5_Id,SpaceLeg1_Id,SpaceLeg2_Id,SpaceLeg3_Id,SpaceLeg4_Id,SpaceLeg5_Id,SpaceLeg6_Id,SpaceLeg7_Id,SpaceLeg8_Id,SpaceLeg9_Id
+ID,Name,EarthLegs_leg1_ID,EarthLegs_leg2_ID,EarthLegs_leg3_ID,EarthLegs_leg4_ID,EarthLegs_leg5_ID,SpaceLegs_leg1_ID,SpaceLegs_leg2_ID,SpaceLegs_leg3_ID,SpaceLegs_leg4_ID,SpaceLegs_leg5_ID,SpaceLegs_leg6_ID,SpaceLegs_leg7_ID,SpaceLegs_leg8_ID,SpaceLegs_leg9_ID
 1,London to Moon via Cape Canaveral (Free return),LHRATLDL,ATLMLBDL,,,,0,104,200,300,,,,,
 2,Bangalore to Moon via Baikonur (Free return),BLRDELAI,DELALAKC,ALAAOXKC,,,1,104,200,300,,,,,
 3,San Francisco to Moon via Cape Canaveral (Free return),SFOATLDL,ATLMLBDL,,,,0,104,200,300,,,,,

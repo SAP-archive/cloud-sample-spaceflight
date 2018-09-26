@@ -1,4 +1,4 @@
-ID,StartingAirport,DestinationAirport,Airline,Distance,Equipment1,Equipment2,Equipment3,Equipment4,Equipment5,Equipment6,Equipment7,Equipment8,Equipment9
+ID,StartingAirport_IATA3,DestinationAirport_IATA3,Airline_IATA2,Distance,Equipment_aircraft1_EquipmentCode,Equipment_aircraft2_EquipmentCode,Equipment_aircraft3_EquipmentCode,Equipment_aircraft4_EquipmentCode,Equipment_aircraft5_EquipmentCode,Equipment_aircraft6_EquipmentCode,Equipment_aircraft7_EquipmentCode,Equipment_aircraft8_EquipmentCode,Equipment_aircraft9_EquipmentCode
 AERKZN2B,AER,KZN,2B,1507,CR2,,,,,,,,
 ASFKZN2B,ASF,KZN,2B,1041,CR2,,,,,,,,
 ASFMRV2B,ASF,MRV,2B,448,CR2,,,,,,,,

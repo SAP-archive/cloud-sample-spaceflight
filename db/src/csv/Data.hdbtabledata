@@ -42,7 +42,7 @@
         "EQUIPMENTCODE" : "EquipmentCode"
       , "MANUFACTURER"  : "Manufacturer"
       , "TYPE_MODEL"    : "Type_Model"
-      , "WAKE"          : "Wake_Category"
+      , "WAKE"          : "Wake"
       }
     }
   , {

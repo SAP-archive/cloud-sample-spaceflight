@@ -1,11 +1,10 @@
 <a name="top"></a>
-# Space Travel Sample for TechEd 2018
+# TechEd 2018
 
+<a name="intro"></a>
+## Data Model for Space Itinerary Company (Spicy)
 
-<a name="description"></a>
-## Description
-
-This repository contains the base CDS data model for the following TechEd 2018 sessions:
+This repository contains the base CDS data model used during the Keynote speech by Bjoern Goerke in Barcelona, and also for the following TechEd 2018 sessions:
 
 | TechEd<br>Session<br>Code | Repository | Session Description |
 |---|---|---|

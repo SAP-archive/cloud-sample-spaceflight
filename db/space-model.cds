@@ -3,11 +3,15 @@
 //
 // Uses the Flight data model as its base and then extends it to represent journeys made in space
 //
-// The key difference between traveling on earth and travelling in space, is that on earth, for short journeys, you
-// think in straight lines, and for longer journeys, you think in "Great Circles".
-// However, when travelling in space, you must think in ellipses. Also, due to the weight and cost of rocket fuel, you
-// will always choose the most energy efficient path between two points.  This path will be an ellipse that approximates
-// a Hohmann Transfer Orbit.
+// The key difference between earth travel and space travel is that on earth, you never leave the earth's gravitaional
+// field; therefore, for short distances, you can think of the journey as a simple straight line, and for longer
+// distances, you think in "Great Circles".
+//
+// However, when travelling in space, you are moving between the gravitaional fields of two (or more) planets; therefore
+// the journey always follows an elliptical path.
+//
+// In addition to this, due to the weight and cost of rocket fuel, you will always choose the most energy efficient path
+// between two points.  This path will be an ellipse that approximates a Hohmann Transfer Orbit.
 // *********************************************************************************************************************
 namespace teched.space.trip;
 
@@ -17,9 +21,12 @@ using teched.flight.trip as flight from './flight-model';
 // ---------------------------------------------------------------------------------------------------------------------
 // AstronomicalBodies
 //
-// Any planet or moon that could act as a travel destination.  This data should be treated a read-only
+// This entity holds basic information about any planet or moon that could act as a travel destination.
 //
-// SolarDistance is measured in astronomical units (AUs) where the distance from the Earth to the Sun = 1.0
+// This data should be treated a read-only
+//
+// SolarDistance is measured in astronomical units (AUs) where the average distance from the Earth to the Sun = 1.0
+//
 // SurfaceGravity is that fraction of Earth's gravity experienced on the surface of this body
 // ---------------------------------------------------------------------------------------------------------------------
 entity AstronomicalBodies {
@@ -40,8 +47,10 @@ entity AstronomicalBodies {
 //
 // To allow for future (fictitious) expansion of this data to include Spaceports on other astronomical bodies, this
 // entity also includes the field "OnPlanet" which holds the ID of the Astronomical Body on which the Spaceport is
-// located.  3, non-terrestrial Spaceports have been added; 1 on the Moon at Tranquility Base (the Apollo 11 landing
-// site) and 2 on Mars (two proposed sites for the Mars 2020 mission)
+// located.
+//
+// Three, non-terrestrial Spaceports have been added; one on the Moon at Tranquility Base (the Apollo 11 landing site)
+// and two on Mars (the two proposed sites for the Mars 2020 mission)
 // ---------------------------------------------------------------------------------------------------------------------
 entity Spaceports {
   key ID         : Integer;
@@ -74,8 +83,8 @@ entity SpaceFlightCompanies {
 // ---------------------------------------------------------------------------------------------------------------------
 // SpaceRoutes
 //
-// This entity serves the same purpose EarthRoutes in the base model; however, travelling through space is not a simple
-// matter of taking off from one planet and landing on another.  Interplanetary flight is divided into distinct stages,
+// This entity serves the same purpose as EarthRoutes in the base model; however, travelling through space is not simply
+// a matter of taking off from one planet and landing on another.  Interplanetary flight is divided into distinct stages,
 // and not all of these stages start from, or end on the surface of a planet.
 //
 // By contrast to the Earthroutes entity, each route in this entity uses an aribrary integer id as its key.
@@ -101,6 +110,8 @@ entity SpaceFlightCompanies {
 //
 // Each one of these stages of the journey is represented as separate route in the SpaceRoutes entity
 //
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//
 // If however, we want to follow the Apollo 11 flight path and actually land on the surface of the Moon, then the
 // journey will be comprised of the following slightly different stages:
 //
@@ -122,7 +133,7 @@ entity SpaceFlightCompanies {
 //
 // As can be seen from the examples above, a SpaceRoute is not required to start or end on the surface of a planet.
 // Therefore, it is valid for the fields StartingSpaceport, DestinationSpaceport and StartingPlanet to remain null;
-// however, the DestinationPlanet field shoudl always be populated.
+// however, the DestinationPlanet field should always be populated.
 // ---------------------------------------------------------------------------------------------------------------------
 entity SpaceRoutes {
   key ID                       : Integer;
@@ -139,8 +150,8 @@ entity SpaceRoutes {
 // ---------------------------------------------------------------------------------------------------------------------
 // Extension to Itineraries
 //
-// This extension is used to represent the legs (or stages) of a journey in space.  Due to the extra complexity of
-// space travel (compared to travelling on earth), each space journey can be comprised of up to 9 legs.
+// This extension is used to represent the legs (or stages) of a journey in space.  Due to the extra complexity of space
+// travel, each space journey can be comprised of up to 9 legs.
 // ---------------------------------------------------------------------------------------------------------------------
 extend flight.Itineraries {
   SpaceLegs : {

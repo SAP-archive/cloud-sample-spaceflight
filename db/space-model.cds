@@ -3,12 +3,12 @@
 //
 // Uses the Flight data model as its base and then extends it to represent journeys made in space
 //
-// The key difference between earth travel and space travel is that on earth, you never leave the earth's gravitaional
+// The key difference between earth travel and space travel is that on earth, you never leave the earth's gravitational
 // field; therefore, for short distances, you can think of the journey as a simple straight line, and for longer
 // distances, you think in "Great Circles".
 //
-// However, when travelling in space, you are moving between the gravitaional fields of two (or more) planets; therefore
-// the journey always follows an elliptical path.
+// However, when travelling in space, you are moving between the gravitational fields of two planets; therefore, the
+// journey always follows an elliptical path.
 //
 // In addition to this, due to the weight and cost of rocket fuel, you will always choose the most energy efficient path
 // between two points.  This path will be an ellipse that approximates a Hohmann Transfer Orbit.
@@ -43,7 +43,9 @@ entity AstronomicalBodies {
 // Spaceports
 //
 // This entity performs the same role as "Airports" in the base data model, but is used exclusively to represent launch
-// sites for space flights.  These launch sites are not necessarily located on Earth.
+// sites for vehicles capable of flying to (or beyond) the Moon.
+//
+// These launch sites are not necessarily located on Earth.
 //
 // To allow for future (fictitious) expansion of this data to include Spaceports on other astronomical bodies, this
 // entity also includes the field "OnPlanet" which holds the ID of the Astronomical Body on which the Spaceport is
@@ -152,6 +154,16 @@ entity SpaceRoutes {
 //
 // This extension is used to represent the legs (or stages) of a journey in space.  Due to the extra complexity of space
 // travel, each space journey can be comprised of up to 9 legs.
+//
+// A valid space journey must comprise of at least four legs (see comments above for entity "SpaceRoutes")
+// E.G. for a space tourist wishing to follow the Apollo 8 flight plan, the legs of their itenerary would be built from
+// the following 4 routes:
+//
+// 1) Take off into low earth orbit
+// 2) Injection into a lunar, free return orbit
+// 3) Return to low earth orbit
+// 4) Descend to earth's surface
+//
 // ---------------------------------------------------------------------------------------------------------------------
 extend flight.Itineraries {
   SpaceLegs : {

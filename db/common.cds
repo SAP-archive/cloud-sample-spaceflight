@@ -14,8 +14,3 @@ using {
 abstract entity Managed : AdminData {
   key ID : UUID;
 }
-
-// exclude superfluous imported entities from persistence
-annotate sap.common.Languages  @(cds.persistence.skip);
-annotate sap.common.Countries  @(cds.persistence.skip);
-annotate sap.common.Currencies @(cds.persistence.skip);

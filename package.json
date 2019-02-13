@@ -2,7 +2,7 @@
   "name": "spaceflight-model",
   "version": "1.0.1",
   "dependencies": {
-    "@sap/cds": "^2.8"
+    "@sap/cds": "^3.5"
   },
   "scripts": {
     "build": "cds build --clean"

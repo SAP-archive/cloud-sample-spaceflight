@@ -112,7 +112,7 @@ entity SpaceFlightCompanies {
 //
 // Each one of these stages of the journey is represented as separate route in the SpaceRoutes entity
 //
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 //
 // If however, we want to follow the Apollo 11 flight path and actually land on the surface of the Moon, then the
 // journey will be comprised of the following slightly different stages:
@@ -166,15 +166,15 @@ entity SpaceRoutes {
 //
 // ---------------------------------------------------------------------------------------------------------------------
 extend flight.Itineraries {
-  SpaceLegs : {
-    leg1  : Association to SpaceRoutes;
-    leg2  : Association to SpaceRoutes;
-    leg3  : Association to SpaceRoutes;
-    leg4  : Association to SpaceRoutes;
-    leg5  : Association to SpaceRoutes;
-    leg6  : Association to SpaceRoutes;
-    leg7  : Association to SpaceRoutes;
-    leg8  : Association to SpaceRoutes;
-    leg9  : Association to SpaceRoutes;
-  };
+  // SpaceLegs : {  // redirections for targets in sub elements not supported yet
+    SpaceLegs_leg1  : Association to SpaceRoutes;
+    SpaceLegs_leg2  : Association to SpaceRoutes;
+    SpaceLegs_leg3  : Association to SpaceRoutes;
+    SpaceLegs_leg4  : Association to SpaceRoutes;
+    SpaceLegs_leg5  : Association to SpaceRoutes;
+    SpaceLegs_leg6  : Association to SpaceRoutes;
+    SpaceLegs_leg7  : Association to SpaceRoutes;
+    SpaceLegs_leg8  : Association to SpaceRoutes;
+    SpaceLegs_leg9  : Association to SpaceRoutes;
+  // };
 };

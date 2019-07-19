@@ -1,6 +1,5 @@
 <a name="top"></a>
-# Description: cloud-sample-spaceflight
-
+# Description
 <a name="intro"></a>
 ## Data Model for Space Itinerary Company (Spicy)
 

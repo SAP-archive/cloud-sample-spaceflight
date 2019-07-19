@@ -1,10 +1,10 @@
 <a name="top"></a>
-# TechEd 2018
+# Description: cloud-sample-spaceflight
 
 <a name="intro"></a>
 ## Data Model for Space Itinerary Company (Spicy)
 
-This repository contains the base CDS data model used during the Keynote speech by Bjoern Goerke in Barcelona, and also for the following TechEd 2018 sessions:
+This repository contains the base CDS data model used during the SAP TechEd 2018 keynote speech by Bjoern Goerke in Barcelona, and also for the following SAP TechEd 2018 sessions:
 
 | TechEd<br>Session<br>Code | Repository | Session Description |
 |---|---|---|
@@ -115,7 +115,6 @@ This project is provided "as-is": there is no guarantee that raised issues will 
 <a name="license"></a>
 ## License
 
-Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
-This project is licensed under the Apache Software License, Version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the SAP Sample Code License, except as noted otherwise in the [LICENSE](LICENSE) file.
 
 <a href="#top">Top</a>
